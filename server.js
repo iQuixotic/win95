@@ -25,7 +25,6 @@ if (process.env.NODE_ENV === "production") {
 
 // start server
 app.listen(globals.PORT, () => {
-  console.log(insp.gen())
   console.log("You know I'll always be there for you on port " + globals.PORT);
 });
  

@@ -7,9 +7,10 @@ const router = require('express').Router();
 // router.use('/list', listRoutes);
 // router.use('/history', historyRoutes);
 
+console.log(path.join(__dirname, '../../client/build'))
 // if no routes are hit, go to react app
 router.use(function(req, res) {
-    res.sendFile(path.join(__dirname, '../client/build'));
+    res.sendFile(path.join(__dirname, '../../client/build'));
 });
 
 module.exports = router;
