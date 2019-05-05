@@ -15,3 +15,5 @@ export { default as NavItems } from './nav/navItems/navItems';
 
 // export backdrop
 export { default as Backdrop } from './backdrop/backdrop';
+
+export { default as Icon } from './icon/icon';

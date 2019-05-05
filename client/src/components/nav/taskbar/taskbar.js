@@ -1,15 +1,20 @@
 import * as React from "react";
-import { NavItems } from '../../../components';
+import { Logo } from '../../../assets';
 // import {Icon} from 'react-fa';
 import './style.css';
 
 const Taskbar = (props) => {
     return (
         <nav className='toolbar'>
-            <ul>
+            {/* <ul>
                 <NavItems
                     link1='home' />
-            </ul>
+            </ul> */}
+            
+            <button class='start-btn'>
+                <img className='logo-btn' src={Logo} alt='#'></img>
+                <span className='txt-btn'>Start</span>
+            </button>
         </nav>
     );
 }
