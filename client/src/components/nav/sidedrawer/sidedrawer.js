@@ -1,5 +1,5 @@
 import * as React from "react";
-import { NavItems } from '../../../components';
+// import { NavItems } from '../../../components';
 import './style.css';
 
 // will be used for mobile devices
@@ -7,11 +7,11 @@ const Sidedrawer = () => {
     return ( 
         <div id='SD' className='Sidedrawer' >
             <nav>
-            <ul>
+            {/* <ul>
                 <NavItems
                     link1='home'
                     link2='history' />
-            </ul>
+            </ul> */}
             </nav>
         </div>
     );
