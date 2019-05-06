@@ -102,3 +102,24 @@
     float:right;
     margin-right:5px;
 }
+
+#notifications {
+    margin-right: 2px;
+    border-top: inset 2px grey;
+    border-left: inset 2px grey;
+    border-bottom: inset 2px white;
+    border-right: inset 2px white;
+    padding: 0 10px 5px 0;
+    display: inline-block;
+    float: right;
+    width: 52px;
+    height: 15px;
+}
+
+#clock {
+    padding-top: 3px;
+    display: inline-block;
+    float: right;
+    font-size: 1.2rem;
+    font-weight: 900;
+}

@@ -18,6 +18,11 @@
     animation: moveOut 1s;
 }
 
+.invisible {
+    display: none;
+    visibility: hidden;
+}
+
 @keyframes moveOut {
     0% {
         transform: translateX(0);        

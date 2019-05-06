@@ -11,7 +11,6 @@ class Main extends React.Component {
     render() {
     return(
         <Layout>
-            something new ....
             <Icon src={RecycleBin_I} />
             <Icon src={Computer_I} />
             <Icon src={IE_I} />
