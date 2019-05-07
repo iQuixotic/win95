@@ -14,6 +14,9 @@ export { default as Burger } from './nav/sidedrawer/burger/burger';
 
 export { default as Li } from './nav/li/li';
 
+export { default as Panel } from './panel/panel';
+
+
 // export backdrop
 export { default as Backdrop } from './backdrop/backdrop';
 

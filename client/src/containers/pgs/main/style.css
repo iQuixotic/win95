@@ -2,3 +2,20 @@ body {
     background: rgb(0, 146, 127);
 }
 
+.gray-box {
+    position: fixed;
+    left: 17rem;
+    
+    background: rgb(194, 194, 194);
+}
+
+.gray-box ul {
+    list-style: none;
+    padding: 6px;
+    margin: 0;
+}
+
+.gray-box ul li {
+    font-size: 1.4rem;
+    padding: 7px;
+}

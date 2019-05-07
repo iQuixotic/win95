@@ -15,7 +15,6 @@ class Layout extends Component {
       // date: new Date()
     };
     this.sideDrawerToggle = this.sideDrawerToggle.bind(this);
-    this.startButtonToggle = this.startButtonToggle.bind(this);
   }
 
   componentDidMount = () => {
@@ -57,47 +56,15 @@ checkTime = (i) => {
     }
   }
 
-  startButtonToggle = () => {
-    const toggle = !this.state.startButtonActive;
-    const sm = document.getElementById('start-menu');
-    if(this.state.startButtonActive) {
-      sm.className += ' invisible';
-      this.setState({ startButtonActive: toggle });
-    } else {
-      this.setState({ startButtonActive: toggle });
-    sm.className -= ' invisible';
-    }
-  }
-  
-//   checkTime = (i) => {
-//     if (i < 10) {
-//         i = "0" + i;
-//     }
-//     return i;
-// }
-
-  // getTime = () => {
-  //   let clock = document.getElementById('clock');
-  //     let today = new Date();
-  //     let h = today.getHours();
-  //     let m = today.getMinutes();
-  //     let s = today.getSeconds();
-  //     clock.innerHTML = h;
-  //     console.log(h, m, s, today)
-//       // add a zero in front of numbers<10
-//       m = checkTime(m);
-//       s = checkTime(s);
-//       let hd = h;
-//       clock.innerHTML = ((hd = 0 ? "12" : hd > 12 ? hd - 12 : hd) + ":" + m + " " + (h < 12 ? "AM" : "PM"));
-//       t = setTimeout( () => { startTime() }, 500);
-  // }
 
   render() {
     return (
             <div className='Layout'>
               <MQ lowerLimit={600}>
                 <Taskbar 
-                click={this.startButtonToggle}
+                click={this.props.sbClick}
+                hover={this.props.hover}
+                noHover={this.props.noHover}
                 // time={this.getTime}
                 /> 
               </MQ>

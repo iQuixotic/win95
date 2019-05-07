@@ -14,12 +14,12 @@ const Taskbar = (props) => {
             <div id='start-menu' className='invisible'>
                 <div id="left">
                     <div className="b">
-                        Windows
+                        iQuixotic
                         <span className="num95">95</span>
                     </div>
                 </div>
                 <ul className='menu-items'>
-                    <li className='menu-item expander'>Programs</li>
+                    <li className='menu-item expander' onMouseEnter={props.hover} onMouseLeave={props.noHover}>Projects</li>
                     <li className='menu-item'>Calculator</li>
                     <li className='menu-item'>Paint</li>
                     <li className='menu-item'>Help</li>
