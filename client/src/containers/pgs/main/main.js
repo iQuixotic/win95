@@ -22,6 +22,7 @@ class Main extends React.Component {
         };
         this.startButtonToggle = this.startButtonToggle.bind(this);
       }
+      
 
       panelShowingStatusUpdate = () => {
           let panelOpen = !this.state.panelOpen
@@ -88,11 +89,11 @@ class Main extends React.Component {
             }
             {
                 this.state.panelOpen ? (
-                    // <Panel
-                    //     panelId='Portfolio'
-                    //     head='Portfolio' 
-                    //     clickClosed={this.panelShowingStatusUpdate}/>
-                    <Panel />
+                    <Panel
+                        panelId='Portfolio'
+                        head='Portfolio' 
+                        clickClosed={this.panelShowingStatusUpdate}/>
+                    // <Panel />
                 ): <div></div>
             }
             
