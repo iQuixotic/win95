@@ -1,6 +1,9 @@
 import * as React from "react";
 import { Icon, Panel } from "../../../components";
-import { Layout } from "../../../containers";
+import { 
+  Layout, 
+  // ResizableDiv
+} from "../../../containers";
 import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
 
 // import { API } from "../../../utils";
@@ -71,6 +74,7 @@ class Main extends React.Component {
             <Icon src={Computer_I} />
             <Icon src={IE_I} />
             <Icon src={File_I} />
+            {/* <ResizableDiv/> */}
             {
                 this.state.projArrowHover || this.state.panelHover ? (
                     <div 
@@ -84,10 +88,11 @@ class Main extends React.Component {
             }
             {
                 this.state.panelOpen ? (
-                    <Panel
-                        panelId='Portfolio'
-                        head='Portfolio' 
-                        clickClosed={this.panelShowingStatusUpdate}/>
+                    // <Panel
+                    //     panelId='Portfolio'
+                    //     head='Portfolio' 
+                    //     clickClosed={this.panelShowingStatusUpdate}/>
+                    <Panel />
                 ): <div></div>
             }
             

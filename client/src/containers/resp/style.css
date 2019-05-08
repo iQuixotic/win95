@@ -32,3 +32,13 @@
         transform: translateX(-100%);  
     }
 }
+
+.drag {
+    border: 1px solid rebeccapurple;
+    background: blue;
+    font-size: 3rem;
+    width: 200px;
+    height: 200px;
+    resize: both;
+    overflow: hidden;
+}
