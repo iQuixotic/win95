@@ -3,13 +3,12 @@
 }
 
 .panel {
-    /* background: rgb(194, 194, 194); */
-    
     width: 650px;
     height: 400px;
 }
 
 .inner-frame {
+    overflow-x: hidden;
     border: 2px solid rgb(194, 194, 194);
     border-top: none;
     border-bottom: 2px solid rgb(194, 194, 194);
@@ -48,7 +47,9 @@
 
 .panel-starting-position {
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     top: 20%;
     left: 30%;
+
+    background: red;
 }
