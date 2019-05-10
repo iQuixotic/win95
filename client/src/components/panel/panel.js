@@ -6,24 +6,35 @@ import './style.css';
 
 const panel = (props) => {
     return (
-                <Draggable>
-                {/* className='panel-starting-position panel'> */}
-                    <div id={props.panelId} className='panel-starting-position panel'>    
-            <Resizable className='panel'>
+        <div id={props.panelId} className='panel-starting-position panel'>  
+        {
+            props.dragDropRes ? ( 
+            <Draggable>
+                <Resizable 
+                    enable={{top:true, right:false, bottom:false, left:true, 
+                    topRight:false, bottomRight:false, bottomLeft:false, topLeft:true}}
+                    className='panel'>
                         <div  className='blue-top-box'>
                             <h4 className='panel_header'>{props.head}</h4>
                             <button onClick={props.clickClosed} className='panel_btn'>X</button>
-                            <button className='panel_btn'>S</button>
+                            <button onClick={props.expShr} className='panel_btn'>S</button>
                             <button className='panel_btn'>-</button>
                         </div>
                         <iframe title='winder' className='inner-frame' src="http://www.iquixotic.com"></iframe>
-                        {/* <Corners cn='corner top-right'/>
-                        <Corners cn='corner top-left'/>
-                        <Corners cn='corner bottom-right'/>
-                        <Corners cn='corner bottom-left'/> */}
                 </Resizable>
-                    </div>
             </Draggable>
+                    ): (
+                        <span>
+                            <div  className='blue-top-box'>
+                                <h4 className='panel_header'>{props.head}</h4>
+                                <button onClick={props.clickClosed} className='panel_btn'>X</button>
+                                <button onClick={props.expShr} className='panel_btn'>S</button>
+                                <button className='panel_btn'>-</button>
+                            </div>
+                            <iframe title='winder' className='inner-frame' src="http://www.iquixotic.com"></iframe>
+                        </span>)
+        }  
+        </div>
     );
 }
 

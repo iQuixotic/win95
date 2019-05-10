@@ -3,7 +3,7 @@
 }
 
 .panel {
-    width: 650px;
+    width: 400px;
     height: 400px;
 }
 
@@ -50,6 +50,4 @@
     z-index: 10;
     top: 20%;
     left: 30%;
-
-    background: red;
 }

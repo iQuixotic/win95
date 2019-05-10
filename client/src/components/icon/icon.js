@@ -1,11 +1,14 @@
 import React from "react";
+import Draggable from 'react-draggable';
 import './style.css';
 
 const Icon = (props) => {
     return(
-        <div className='icon'>
-            <img className='icon' src={props.src} alt='#'></img>
-        </div>
+        <Draggable>
+            <div className='icon'>
+                <img className='icon' src={props.src} alt='#'></img>
+            </div>
+        </Draggable>
     );
 }
 

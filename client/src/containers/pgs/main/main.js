@@ -1,35 +1,41 @@
 import * as React from "react";
 import { Icon, Panel } from "../../../components";
 import { 
-  Layout, 
-  // ResizableDiv
+  Layout
 } from "../../../containers";
 import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
-
 // import { API } from "../../../utils";
-
 import './style.css';
-// drummand
+
+
 class Main extends React.Component {
     constructor(props) {  
         super(props);
         this.state = {
             panelOpen: true,
+            panelSizeFull: true,
             panelShowing: 'Portfolio',
             startButtonActive: false,
             projArrowHover: false,
             panelHover: false
-        };
-        this.startButtonToggle = this.startButtonToggle.bind(this);
-      }
-      
-
-      panelShowingStatusUpdate = () => {
+          };
+          this.startButtonToggle = this.startButtonToggle.bind(this);
+        }
+        
+        
+        panelShowingStatusUpdate = () => {
           let panelOpen = !this.state.panelOpen
           this.setState({
-              panelOpen: panelOpen
+            panelOpen: panelOpen
           })
-      }
+        }
+
+        panelSizeUpdate = () => {
+          let panelSize = !this.state.panelSizeFull
+          this.setState({
+            panelSizeFull: panelSize
+          })
+        }
 
       startButtonToggle = () => {
         const toggle = !this.state.startButtonActive;
@@ -65,6 +71,7 @@ class Main extends React.Component {
           } 
       }
 
+
     render() {
     return(
         <Layout
@@ -75,7 +82,6 @@ class Main extends React.Component {
             <Icon src={Computer_I} />
             <Icon src={IE_I} />
             <Icon src={File_I} />
-            {/* <ResizableDiv/> */}
             {
                 this.state.projArrowHover || this.state.panelHover ? (
                     <div 
@@ -89,11 +95,23 @@ class Main extends React.Component {
             }
             {
                 this.state.panelOpen ? (
+                  this.state.panelSizeFull ? (
                     <Panel
-                        panelId='Portfolio'
-                        head='Portfolio' 
-                        clickClosed={this.panelShowingStatusUpdate}/>
-                    // <Panel />
+                      panelId='Portfolio-full-size'
+                      head='Portfolio' 
+                      dragDropRes={false}
+                      clickClosed={this.panelShowingStatusUpdate}
+                      expShr={this.panelSizeUpdate}
+                      />
+
+                  ) : 
+                  <Panel
+                  panelId='Portfolio'
+                  head='Portfolio' 
+                  dragDropRes={true}
+                  clickClosed={this.panelShowingStatusUpdate}
+                  expShr={this.panelSizeUpdate}
+                  />
                 ): <div></div>
             }
             
