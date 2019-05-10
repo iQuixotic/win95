@@ -6,7 +6,7 @@ import './style.css';
 
 const panel = (props) => {
     return (
-        <div id={props.panelId} className='panel-starting-position panel'>  
+        <div id={props.panelId} className='panel-starting-position'>  
         {
             props.dragDropRes ? ( 
             <Draggable>

@@ -8,6 +8,19 @@
     border-top: ridge 2px white;
 }
 
+.minimizer-btn {
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 85%;
+    margin: 2px 0 4px 6px;
+    background: rgb(194, 194, 194);
+    border-top: ridge 2px white;
+    border-left: ridge 2px white;
+    border-bottom: ridge 2px black;
+    border-right: ridge 2px black;
+}
+
 .start-btn {
     margin: 2px 0 4px 4px;
     background: rgb(194, 194, 194);

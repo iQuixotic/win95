@@ -8,7 +8,6 @@
 }
 
 .inner-frame {
-    overflow-x: hidden;
     border: 2px solid rgb(194, 194, 194);
     border-top: none;
     border-bottom: 2px solid rgb(194, 194, 194);
