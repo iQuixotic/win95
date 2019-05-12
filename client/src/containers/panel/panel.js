@@ -53,7 +53,7 @@ class Panel extends Component {
                         <iframe title='winder' className='inner-frame' src="http://www.iquixotic.com"></iframe>
                 </Resizable>
             </Draggable>
-            </div>
+        </div>
                     ): (
         <div id='Portfolio-full-size' className='panel-starting-position'>  
         
