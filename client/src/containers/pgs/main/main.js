@@ -25,6 +25,16 @@ class Main extends React.Component {
   }
 
 
+  minUpdate = () => {
+    console.log(this.state.isMinimized, this.state.minClass)
+    let isMinimized = !this.state.isMinimized
+    if(this.state.minClass === 'minimizer-btn-open') {
+      this.setState({ isMinimized: isMinimized, minClass: 'minimizer-btn' })
+    } else {
+      this.setState({ isMinimized: isMinimized, minClass: 'minimizer-btn-open' })
+    }
+  }
+
   panelShowingStatusUpdate = () => {
     let panelOpen = !this.state.panelOpen
     this.setState({
@@ -77,6 +87,7 @@ class Main extends React.Component {
   render() {
     return (
       <Layout
+        minClick={this.minUpdate}
         minimized={this.state.isMinimized}
         minCn={this.state.minClass}
         sbClick={this.startButtonToggle}
