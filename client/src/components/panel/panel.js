@@ -20,7 +20,7 @@ const panel = (props) => {
                             <h4 className='panel_header'>{props.head}</h4>
                             <button onClick={props.clickClosed} className='panel_btn'>X</button>
                             <button onClick={props.expShr} className='panel_btn'>S</button>
-                            <button className='panel_btn'>-</button>
+                            <button  onClick={props.minimize} className='panel_btn'>-</button>
                         </div>
                         <iframe title='winder' className='inner-frame' src="http://www.iquixotic.com"></iframe>
                 </Resizable>
@@ -33,7 +33,7 @@ const panel = (props) => {
                                 <h4 className='panel_header'>{props.head}</h4>
                                 <button onClick={props.clickClosed} className='panel_btn'>X</button>
                                 <button onClick={props.expShr} className='panel_btn'>S</button>
-                                <button className='panel_btn'>-</button>
+                                <button onClick={props.minimize} className='panel_btn'>-</button>
                             </div>
                             <iframe title='winder' className='inner-frame' src="http://www.iquixotic.com"></iframe>
                         </div>)

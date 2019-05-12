@@ -21,6 +21,19 @@
     border-right: ridge 2px black;
 }
 
+.minimizer-btn-open {
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 85%;
+    margin: 2px 0 4px 6px;
+    background: rgb(223, 223, 223);
+    border-top: ridge 2px rgb(0, 0, 0);
+    border-left: ridge 2px rgb(0, 0, 0);
+    border-bottom: ridge 2px rgb(255, 255, 255);
+    border-right: ridge 2px rgb(255, 255, 255);
+}
+
 .start-btn {
     margin: 2px 0 4px 4px;
     background: rgb(194, 194, 194);

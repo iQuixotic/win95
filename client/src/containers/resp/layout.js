@@ -62,10 +62,12 @@ checkTime = (i) => {
             <div className='Layout'>
               <MQ lowerLimit={600}>
                 <Taskbar 
-                click={this.props.sbClick}
-                hover={this.props.hover}
-                noHover={this.props.noHover}
-                // time={this.getTime}
+                  minClick={this.props.minClick}
+                  minCn={this.props.minCn}
+                  minimized={this.props.minimized}
+                  click={this.props.sbClick}
+                  hover={this.props.hover}
+                  noHover={this.props.noHover}
                 /> 
               </MQ>
               <MQ upperLimit={599}>
