@@ -11,7 +11,11 @@ const Taskbar = (props) => {
                 <img className='logo-btn' src={Logo} alt='#'></img>
                 <span className='txt-btn'>Start</span>
             </button>
-                <button onClick={props.minClick} className={props.minCn}>Portfolio</button>
+            {
+                props.panelOpen ? (
+                <button onClick={props.minClick} className={props.minCn}>{props.head}</button>
+                ): <div></div>
+            }
             <div id='start-menu' className='invisible'>
                 <div id="left">
                     <div className="b">

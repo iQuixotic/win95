@@ -62,6 +62,8 @@ checkTime = (i) => {
             <div className='Layout'>
               <MQ lowerLimit={600}>
                 <Taskbar 
+                  head={this.props.head}
+                  panelOpen={this.props.panelOpen}
                   minClick={this.props.minClick}
                   minCn={this.props.minCn}
                   minimized={this.props.minimized}

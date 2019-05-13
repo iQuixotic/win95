@@ -9,6 +9,7 @@
 }
 
 .minimizer-btn {
+    font-size: 1.6rem;
     position: absolute;
     top: 0;
     width: 20%;
@@ -22,6 +23,8 @@
 }
 
 .minimizer-btn-open {
+    font-size: 1.6rem;
+    /* font-weight: bold; */
     position: absolute;
     top: 0;
     width: 20%;

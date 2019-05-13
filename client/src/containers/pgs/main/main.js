@@ -12,6 +12,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      head: 'Portfolio',
       isMinimized: false,
       minClass: 'minimizer-btn-open',
       panelOpen: true,
@@ -83,10 +84,11 @@ class Main extends React.Component {
     }
   }
 
-
   render() {
     return (
       <Layout
+        head={this.state.head}
+        panelOpen={this.state.panelOpen}
         minClick={this.minUpdate}
         minimized={this.state.isMinimized}
         minCn={this.state.minClass}
@@ -109,11 +111,11 @@ class Main extends React.Component {
           ) : <div></div>
         }
         {
-          this.state.panelOpen ? (
+          this.state.panelOpen && !this.state.isMinimized ? (
             <Panel
               panelSizeFull={this.state.panelSizeFull}
               panelId='Portfolio-full-size'
-              head='Portfolio'
+              head={this.state.head}
               dragDropRes={false}
               clickClosed={this.panelShowingStatusUpdate}
               expShr={this.panelSizeUpdate}
