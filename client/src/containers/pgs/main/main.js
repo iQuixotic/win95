@@ -90,7 +90,7 @@ class Main extends React.Component {
         head={this.state.head}
         panelOpen={this.state.panelOpen}
         minClick={this.minUpdate}
-        minimized={this.state.isMinimized}
+        // minimized={this.state.isMinimized}
         minCn={this.state.minClass}
         sbClick={this.startButtonToggle}
         hover={this.projArrowHover}
@@ -113,6 +113,7 @@ class Main extends React.Component {
         {
           this.state.panelOpen && !this.state.isMinimized ? (
             <Panel
+              minimize={this.minUpdate}
               panelSizeFull={this.state.panelSizeFull}
               panelId='Portfolio-full-size'
               head={this.state.head}

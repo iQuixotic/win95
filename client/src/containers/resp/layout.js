@@ -66,7 +66,7 @@ checkTime = (i) => {
                   panelOpen={this.props.panelOpen}
                   minClick={this.props.minClick}
                   minCn={this.props.minCn}
-                  minimized={this.props.minimized}
+                  // minimized={this.props.minimized}
                   click={this.props.sbClick}
                   hover={this.props.hover}
                   noHover={this.props.noHover}
