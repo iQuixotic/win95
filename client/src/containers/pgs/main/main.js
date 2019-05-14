@@ -7,6 +7,15 @@ import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
 // import { API } from "../../../utils";
 import './style.css';
 
+const panels = {
+  'Portfolio': 'http://www.iquixotic.com',
+  'Zenith': 'https://bank-manager-app-9485.herokuapp.com/',
+  'Cat Clicker': 'https://iquixotic.github.io/cat-clicker-game/',
+  'Picture Puzzles': 'https://picture-puzzles.herokuapp.com/',
+  'Lil Libs': 'https://req-libs.herokuapp.com/',
+  'Avatar Cards': 'https://avatar-card-tribute-game-89458.herokuapp.com/',
+  'Github': 'https://github.com/iQuixotic'
+}
 
 class Main extends React.Component {
   constructor(props) {
@@ -16,14 +25,6 @@ class Main extends React.Component {
       isMinimized: false,
       minClass: 'minimizer-btn-open',
       panelOpen: true,
-      panels: {
-        'Portfolio': 'http://www.iquixotic.com',
-        'Zenith': 'https://bank-manager-app-9485.herokuapp.com/',
-        'Cat Clicker': 'https://iquixotic.github.io/cat-clicker-game/',
-        'Picture Puzzles': 'https://picture-puzzles.herokuapp.com/',
-        'Lil Libs': 'https://req-libs.herokuapp.com/',
-        'Avatar Cards': 'https://avatar-card-tribute-game-89458.herokuapp.com/'
-      },
       panelSizeFull: false,
       panelShowing: 'http://www.iquixotic.com',
       startButtonActive: false,
@@ -44,16 +45,22 @@ class Main extends React.Component {
     }
   }
 
-  panelShowingStatusUpdate = (arg) => {
-    console.log(arg)
-    console.log('this state panels args', arg, this.state.panels[arg])
+  togglePanel = () => {
     let panelOpen = !this.state.panelOpen
     this.setState({
-      panelOpen: panelOpen, 
-      head: arg,
-      panelShowing: this.state.panels[arg]
+      panelOpen: panelOpen
     })
-    console.log(this.state)
+  }
+
+  panelShowingStatusUpdate = (arg) => {
+    this.setState({
+      panelOpen: true,
+      head: arg,
+      panelShowing: panels[arg]
+    })
+    const iframe = document.getElementById('iframe')
+    console.log(iframe)
+    iframe.src = iframe.src;
   }
 
   panelSizeUpdate = () => {
@@ -90,11 +97,10 @@ class Main extends React.Component {
   }
 
   openPanel = (e) => {
-    console.log(e.target.innerHTML)
     this.panelHover();
     this.startButtonToggle();
+    this.panelShowingStatusUpdate(e.target.innerHTML);
     if (this.state.panelOpen === false) {
-      this.panelShowingStatusUpdate(e.target.innerHTML);
     }
   }
 
@@ -130,14 +136,15 @@ class Main extends React.Component {
           ) : <div></div>
         }
         {
-          this.state.panelOpen && !this.state.isMinimized ? (
+          this.state.panelOpen ? (
             <Panel
+              cn={this.state.isMinimized ? 'invisible' : ''}
               minimize={this.minUpdate}
               panelSizeFull={this.state.panelSizeFull}
               panelId='Portfolio-full-size'
               head={this.state.head}
               dragDropRes={false}
-              clickClosed={this.panelShowingStatusUpdate}
+              clickClosed={this.togglePanel}
               expShr={this.panelSizeUpdate}
               src={this.state.panelShowing}
             />

@@ -5,7 +5,7 @@ import './style.css';
 const panel = (props) => {
 
     return (
-        <div>  
+        <div className={props.cn}>  
         {
             !props.panelSizeFull ? ( 
         <div id='Portfolio' className='panel-starting-position panel-size'>  
@@ -25,7 +25,7 @@ const panel = (props) => {
                             <button onClick={props.expShr} className='panel_btn'>S</button>
                             <button  onClick={props.minimize} className='panel_btn'>-</button>
                         </div>
-                        <iframe title='winder' className='inner-frame' src={props.src}></iframe>
+                        <iframe id='iframe' title='winder' className='inner-frame' src={props.src}></iframe>
                 </Resizable>
             </Draggable>
         </div>
@@ -38,7 +38,7 @@ const panel = (props) => {
                                 <button onClick={props.expShr} className='panel_btn'>S</button>
                                 <button onClick={props.minimize} className='panel_btn'>-</button>
                             </div>
-                            <iframe title='winder' className='inner-frame' src={props.src}></iframe>
+                            <iframe id='iframe' title='winder' className='inner-frame' src={props.src}></iframe>
                         </div>)
         }  
         </div>

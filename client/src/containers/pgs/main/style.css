@@ -26,3 +26,7 @@ body {
     font-size: 1.4rem;
     padding: 7px;
 }
+
+.invisible {
+    display: none;
+}
