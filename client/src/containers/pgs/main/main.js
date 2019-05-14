@@ -18,7 +18,11 @@ class Main extends React.Component {
       panelOpen: true,
       panels: {
         'Portfolio': 'http://www.iquixotic.com',
-        'Zenith': 'https://bank-manager-app-9485.herokuapp.com/'
+        'Zenith': 'https://bank-manager-app-9485.herokuapp.com/',
+        'Cat Clicker': 'https://iquixotic.github.io/cat-clicker-game/',
+        'Picture Puzzles': 'https://picture-puzzles.herokuapp.com/',
+        'Lil Libs': 'https://req-libs.herokuapp.com/',
+        'Avatar Cards': 'https://avatar-card-tribute-game-89458.herokuapp.com/'
       },
       panelSizeFull: false,
       panelShowing: 'http://www.iquixotic.com',
@@ -48,7 +52,6 @@ class Main extends React.Component {
       panelOpen: panelOpen, 
       head: arg,
       panelShowing: this.state.panels[arg]
-      // panelShowingStatusUpdate: arg
     })
     console.log(this.state)
   }
@@ -87,7 +90,6 @@ class Main extends React.Component {
   }
 
   openPanel = (e) => {
-    // console.log(e.target.innerHTML)
     console.log(e.target.innerHTML)
     this.panelHover();
     this.startButtonToggle();
@@ -102,7 +104,6 @@ class Main extends React.Component {
         head={this.state.head}
         panelOpen={this.state.panelOpen}
         minClick={this.minUpdate}
-        // minimized={this.state.isMinimized}
         minCn={this.state.minClass}
         sbClick={this.startButtonToggle}
         hover={this.projArrowHover}
@@ -116,7 +117,6 @@ class Main extends React.Component {
             <div
               onMouseEnter={this.panelHover}
               onMouseLeave={this.panelHover}
-              // onClick={this.openPanel}
               className='gray-box'>
               <ul>
                 <li onClick={this.openPanel}>Portfolio</li>
@@ -139,7 +139,6 @@ class Main extends React.Component {
               dragDropRes={false}
               clickClosed={this.panelShowingStatusUpdate}
               expShr={this.panelSizeUpdate}
-              // src='https://bank-manager-app-9485.herokuapp.com/'
               src={this.state.panelShowing}
             />
           ) : <div></div>

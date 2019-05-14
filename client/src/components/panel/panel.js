@@ -38,7 +38,7 @@ const panel = (props) => {
                                 <button onClick={props.expShr} className='panel_btn'>S</button>
                                 <button onClick={props.minimize} className='panel_btn'>-</button>
                             </div>
-                            <iframe title='winder' className='inner-frame' src="http://www.iquixotic.com"></iframe>
+                            <iframe title='winder' className='inner-frame' src={props.src}></iframe>
                         </div>)
         }  
         </div>
