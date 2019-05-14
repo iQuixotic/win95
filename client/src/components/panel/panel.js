@@ -25,7 +25,11 @@ const panel = (props) => {
                             <button onClick={props.expShr} className='panel_btn'>S</button>
                             <button  onClick={props.minimize} className='panel_btn'>-</button>
                         </div>
+                        {
+                        props.src !== '' ? (
                         <iframe id='iframe' title='winder' className='inner-frame' src={props.src}></iframe>
+                        ) : props.children
+                    }
                 </Resizable>
             </Draggable>
         </div>
@@ -38,7 +42,11 @@ const panel = (props) => {
                             <button onClick={props.expShr} className='panel_btn'>S</button>
                             <button onClick={props.minimize} className='panel_btn'>-</button>
                         </div>
+                        {
+                        props.src !== '' ? (
                         <iframe id='iframe' title='winder' className='inner-frame' src={props.src}></iframe>
+                        ) : props.children
+                        }
                     </div>)
         }  
         </div>

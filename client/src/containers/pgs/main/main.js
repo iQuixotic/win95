@@ -34,7 +34,7 @@ class Main extends React.Component {
 
 
   minUpdate = () => {
-    console.log(this.state.isMinimized, this.state.minClass)
+    // console.log(this.state.isMinimized, this.state.minClass)
     let isMinimized = !this.state.isMinimized
     if(this.state.minClass === 'minimizer-btn-open') {
       this.setState({ isMinimized: isMinimized, minClass: 'minimizer-btn' })
@@ -98,12 +98,15 @@ class Main extends React.Component {
   openPanel = (e) => {
     this.panelHover();
     this.startButtonToggle();
-    if(typeof(e.target.innerHTML) === '' ) {
-      console.log('okay')
-    }
-    // this.panelShowingStatusUpdate(e.target.innerHTML);
-    if (this.state.panelOpen === false) {
-    }
+    // console.log(panels[e.target.innerHTML].substring(0, 4))
+    if(e.target.innerHTML === '' ) {
+      console.log(e.target.id)
+      this.panelShowingStatusUpdate(e.target.id);
+    } else {
+      this.panelShowingStatusUpdate(e.target.innerHTML);
+    }      
+    // if (this.state.panelOpen === false) {
+    // }
   }
 
   openInternet = () => {
@@ -122,7 +125,7 @@ class Main extends React.Component {
         noHover={this.projArrowHover}>
         <Icon src={RecycleBin_I} />
         <Icon src={Computer_I} />
-        <Icon onDoubleClick={this.openPanel} src={IE_I} />
+        <Icon id='Internet' onDoubleClick={this.openPanel} src={IE_I} />
         <Icon src={File_I} />
         {/* <DialUpPanel /> */}
         
@@ -156,8 +159,11 @@ class Main extends React.Component {
               dragDropRes={false}
               clickClosed={this.togglePanel}
               expShr={this.panelSizeUpdate}
-              src={this.state.panelShowing}
-            />
+              src={typeof this.state.panelShowing === 'string' && (this.state.panelShowing).substring(0,4) === 'http' ? this.state.panelShowing : ''}
+            >
+            <h1>Something good will go here</h1>
+            {this.state.panelShowing}
+            </Panel>
           ) : <div></div>
         }
       </Layout>
