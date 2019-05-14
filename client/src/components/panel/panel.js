@@ -16,7 +16,7 @@ const panel = (props) => {
                     topRight:false, bottomRight:false, bottomLeft:false, topLeft:true}}
                     className='panel'
                     defaultSize={{
-                        width:320,
+                        width:620,
                         height:470
                       }}>
                         <div  className='blue-top-box'>
@@ -32,14 +32,14 @@ const panel = (props) => {
                     ): (
         <div id='Portfolio-full-size' className='panel-starting-position'>  
         
-                            <div  className='blue-top-box'>
-                                <h4 className='panel_header'>{props.head}</h4>
-                                <button onClick={props.clickClosed} className='panel_btn'>X</button>
-                                <button onClick={props.expShr} className='panel_btn'>S</button>
-                                <button onClick={props.minimize} className='panel_btn'>-</button>
-                            </div>
-                            <iframe id='iframe' title='winder' className='inner-frame' src={props.src}></iframe>
-                        </div>)
+                        <div  className='blue-top-box'>
+                            <h4 className='panel_header'>{props.head}</h4>
+                            <button onClick={props.clickClosed} className='panel_btn'>X</button>
+                            <button onClick={props.expShr} className='panel_btn'>S</button>
+                            <button onClick={props.minimize} className='panel_btn'>-</button>
+                        </div>
+                        <iframe id='iframe' title='winder' className='inner-frame' src={props.src}></iframe>
+                    </div>)
         }  
         </div>
     );

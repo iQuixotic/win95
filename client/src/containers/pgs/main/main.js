@@ -3,8 +3,7 @@ import { Icon, Panel } from "../../../components";
 import {
   Layout
 } from "../../../containers";
-import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
-// import { API } from "../../../utils";
+import { RecycleBin_I, Computer_I, File_I, IE_I, DialUpGif } from '../../../assets';
 import './style.css';
 
 const panels = {
@@ -58,9 +57,10 @@ class Main extends React.Component {
       head: arg,
       panelShowing: panels[arg]
     })
-    const iframe = document.getElementById('iframe')
-    console.log(iframe)
-    iframe.src = iframe.src;
+    // const iframe = document.getElementById('iframe')
+    // console.log(iframe)
+    // iframe.src = iframe.src;
+    // iframe.contentWindow.location.reload();
   }
 
   panelSizeUpdate = () => {
@@ -118,6 +118,7 @@ class Main extends React.Component {
         <Icon src={Computer_I} />
         <Icon src={IE_I} />
         <Icon src={File_I} />
+        <img className='this-un' src={DialUpGif} alt='#'></img>
         {
           this.state.projArrowHover || this.state.panelHover ? (
             <div
@@ -141,7 +142,7 @@ class Main extends React.Component {
               cn={this.state.isMinimized ? 'invisible' : ''}
               minimize={this.minUpdate}
               panelSizeFull={this.state.panelSizeFull}
-              panelId='Portfolio-full-size'
+              // panelId='Portfolio-full-size'
               head={this.state.head}
               dragDropRes={false}
               clickClosed={this.togglePanel}
