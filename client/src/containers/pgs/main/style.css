@@ -30,9 +30,3 @@ body {
 .invisible {
     display: none;
 }
-
-.this-un {
-    object-fit: scale-down;
-    width: 35rem;
-    height: 20rem;
-}

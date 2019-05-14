@@ -1,9 +1,7 @@
 import * as React from "react";
-import { Icon, Panel } from "../../../components";
-import {
-  Layout
-} from "../../../containers";
-import { RecycleBin_I, Computer_I, File_I, IE_I, DialUpGif } from '../../../assets';
+import { Icon, Panel, DialUpPanel } from "../../../components";
+import { Layout } from "../../../containers";
+import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
 import './style.css';
 
 const panels = {
@@ -118,7 +116,7 @@ class Main extends React.Component {
         <Icon src={Computer_I} />
         <Icon src={IE_I} />
         <Icon src={File_I} />
-        <img className='this-un' src={DialUpGif} alt='#'></img>
+        <DialUpPanel />
         {
           this.state.projArrowHover || this.state.panelHover ? (
             <div

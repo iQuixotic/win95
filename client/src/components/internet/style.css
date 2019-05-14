@@ -1,0 +1,17 @@
+.dial-up-panel {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background: rgb(194, 194, 194);
+    width: 40rem;
+    height: 47rem;
+}
+
+.dial-up-gif {
+    /* position: absolute; */
+    width: 90%;
+    height: 30%;
+    top: 10%;
+    padding: 5%;
+    
+}
