@@ -1,11 +1,11 @@
 .blue {
     background: purple;
 }
-
+/* 
 .panel {
     width: 400px;
     height: 400px;
-}
+} */
 
 .inner-frame {
     border: 2px solid rgb(194, 194, 194);
@@ -46,6 +46,11 @@
 .panel-starting-position {
     position: absolute;
     z-index: 10;
-    top: 20%;
-    left: 30%;
+    top: 10%;
+    left: 70%;
 }
+
+/* .panel-size {
+    width: 1000px;
+    height:
+} */

@@ -16,8 +16,12 @@ class Main extends React.Component {
       isMinimized: false,
       minClass: 'minimizer-btn-open',
       panelOpen: true,
+      panels: {
+        'Portfolio': 'http://www.iquixotic.com',
+        'Zenith': 'https://bank-manager-app-9485.herokuapp.com/'
+      },
       panelSizeFull: false,
-      panelShowing: 'Portfolio',
+      panelShowing: 'http://www.iquixotic.com',
       startButtonActive: false,
       projArrowHover: false,
       panelHover: false
@@ -36,11 +40,17 @@ class Main extends React.Component {
     }
   }
 
-  panelShowingStatusUpdate = () => {
+  panelShowingStatusUpdate = (arg) => {
+    console.log(arg)
+    console.log('this state panels args', arg, this.state.panels[arg])
     let panelOpen = !this.state.panelOpen
     this.setState({
-      panelOpen: panelOpen
+      panelOpen: panelOpen, 
+      head: arg,
+      panelShowing: this.state.panels[arg]
+      // panelShowingStatusUpdate: arg
     })
+    console.log(this.state)
   }
 
   panelSizeUpdate = () => {
@@ -76,11 +86,13 @@ class Main extends React.Component {
     })
   }
 
-  openPanel = () => {
+  openPanel = (e) => {
+    // console.log(e.target.innerHTML)
+    console.log(e.target.innerHTML)
     this.panelHover();
     this.startButtonToggle();
     if (this.state.panelOpen === false) {
-      this.panelShowingStatusUpdate();
+      this.panelShowingStatusUpdate(e.target.innerHTML);
     }
   }
 
@@ -104,9 +116,16 @@ class Main extends React.Component {
             <div
               onMouseEnter={this.panelHover}
               onMouseLeave={this.panelHover}
-              onClick={this.openPanel}
+              // onClick={this.openPanel}
               className='gray-box'>
-              <ul><li>Old Portfolio</li></ul>
+              <ul>
+                <li onClick={this.openPanel}>Portfolio</li>
+                <li onClick={this.openPanel}>Zenith</li>
+                <li onClick={this.openPanel}>Cat Clicker</li>
+                <li onClick={this.openPanel}>Picture Puzzles</li>
+                <li onClick={this.openPanel}>Lil Libs</li>
+                <li onClick={this.openPanel}>Avatar Cards</li>
+              </ul>
             </div>
           ) : <div></div>
         }
@@ -120,6 +139,8 @@ class Main extends React.Component {
               dragDropRes={false}
               clickClosed={this.panelShowingStatusUpdate}
               expShr={this.panelSizeUpdate}
+              // src='https://bank-manager-app-9485.herokuapp.com/'
+              src={this.state.panelShowing}
             />
           ) : <div></div>
         }

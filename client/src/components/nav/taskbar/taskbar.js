@@ -25,8 +25,8 @@ const Taskbar = (props) => {
                 </div>
                 <ul className='menu-items'>
                     <li className='menu-item expander' onMouseEnter={props.hover} onMouseLeave={props.noHover}>Projects</li>
-                    <li className='menu-item'>Calculator</li>
-                    <li className='menu-item'>Paint</li>
+                    {/* <li className='menu-item'></li> */}
+                    <li className='menu-item'>About</li>
                     <li className='menu-item'>Help</li>
                 </ul>
             </div>
