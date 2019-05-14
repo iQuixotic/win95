@@ -7,7 +7,7 @@ import './style.css';
 const Taskbar = (props) => {
     return (
         <nav className='toolbar'>            
-            <button className='start-btn' onClick={props.click}>
+            <button className='start-btn windows-btn' onClick={props.click}>
                 <img className='logo-btn' src={Logo} alt='#'></img>
                 <span className='txt-btn'>Start</span>
             </button>
@@ -25,7 +25,6 @@ const Taskbar = (props) => {
                 </div>
                 <ul className='menu-items'>
                     <li className='menu-item expander' onMouseEnter={props.hover} onMouseLeave={props.noHover}>Projects</li>
-                    {/* <li className='menu-item'></li> */}
                     <li className='menu-item'>About</li>
                     <li className='menu-item'>Help</li>
                 </ul>

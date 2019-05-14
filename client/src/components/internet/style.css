@@ -1,17 +1,63 @@
+h5, p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
 .dial-up-panel {
     position: absolute;
+    z-index: 100;
     top: 10%;
     left: 20%;
     background: rgb(194, 194, 194);
+    border: 2px solid rgb(194, 194, 194);
     width: 40rem;
-    height: 47rem;
+    height: 48rem;
+}
+
+#internet-blue-top-box {
+    border: none;
+}
+
+.cancel-btn {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.cancel-btn button {
+    padding: 4px 8px;
+}
+
+.cancel-btn button span {
+    font-size: 1.4rem;
+    padding: 2px 9px;
+    outline: 1px dotted black;
 }
 
 .dial-up-gif {
-    /* position: absolute; */
+    width: 92%;
+    height: 12rem;
+    top: 8%;
+    padding: 4%;
+    padding-bottom: 0%;
+}
+
+.dial-up-txt {
     width: 90%;
-    height: 30%;
-    top: 10%;
     padding: 5%;
-    
+    padding-top: 0%;
+}
+
+.dial-up-txt p {
+    border: 1px solid gray;
+    padding: 3rem;
+    margin-top: 3.1rem;
+    margin-bottom: 2.2rem;
+}
+
+.dial-up-txt .on-border {
+    background: rgb(194, 194, 194);
+    position: absolute;
+    margin: 0;
+    left: 3rem;
 }

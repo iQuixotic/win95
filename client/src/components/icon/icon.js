@@ -5,7 +5,7 @@ import './style.css';
 const Icon = (props) => {
     return(
         <Draggable>
-            <div className='icon'>
+            <div onDoubleClick={props.onDoubleClick} className='icon'>
                 <img className='icon' src={props.src} alt='#'></img>
             </div>
         </Draggable>

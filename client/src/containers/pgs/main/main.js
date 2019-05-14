@@ -11,7 +11,8 @@ const panels = {
   'Picture Puzzles': 'https://picture-puzzles.herokuapp.com/',
   'Lil Libs': 'https://req-libs.herokuapp.com/',
   'Avatar Cards': 'https://avatar-card-tribute-game-89458.herokuapp.com/',
-  'Github': 'https://github.com/iQuixotic'
+  'Internet': <DialUpPanel />
+  // 'Github': 'https://github.com/iQuixotic'
 }
 
 class Main extends React.Component {
@@ -97,9 +98,16 @@ class Main extends React.Component {
   openPanel = (e) => {
     this.panelHover();
     this.startButtonToggle();
-    this.panelShowingStatusUpdate(e.target.innerHTML);
+    if(typeof(e.target.innerHTML) === '' ) {
+      console.log('okay')
+    }
+    // this.panelShowingStatusUpdate(e.target.innerHTML);
     if (this.state.panelOpen === false) {
     }
+  }
+
+  openInternet = () => {
+
   }
 
   render() {
@@ -114,9 +122,10 @@ class Main extends React.Component {
         noHover={this.projArrowHover}>
         <Icon src={RecycleBin_I} />
         <Icon src={Computer_I} />
-        <Icon src={IE_I} />
+        <Icon onDoubleClick={this.openPanel} src={IE_I} />
         <Icon src={File_I} />
-        <DialUpPanel />
+        {/* <DialUpPanel /> */}
+        
         {
           this.state.projArrowHover || this.state.panelHover ? (
             <div
@@ -134,13 +143,15 @@ class Main extends React.Component {
             </div>
           ) : <div></div>
         }
+
+        
+
         {
           this.state.panelOpen ? (
             <Panel
               cn={this.state.isMinimized ? 'invisible' : ''}
               minimize={this.minUpdate}
               panelSizeFull={this.state.panelSizeFull}
-              // panelId='Portfolio-full-size'
               head={this.state.head}
               dragDropRes={false}
               clickClosed={this.togglePanel}
