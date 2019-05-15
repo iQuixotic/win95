@@ -25,19 +25,19 @@ class Main extends React.Component {
   // used to hide panel and change corresponding button aesthetics
   minUpdate = () => {
     this.setState({
-      isMinimized: HELP.boolFlip(this.state.isMinimized), 
-      minClass: HELP.minUpdate(this.state.minClass) 
+      isMinimized: !this.state.isMinimized, 
+      minClass: HELP.minUpdate(this.state.minClass)
     });
   }
     
   // panel is made visible/invisible with 'X' button
   togglePanel = () => {
-    this.setState({ panelOpen: HELP.boolFlip(this.state.panelOpen) });
+    this.setState({ panelOpen: !this.state.panelOpen });
   }
     
   // panel size adjust between partial and full-size when hit 'SQUARE' button
   panelSizeUpdate = () => {
-    this.setState({ panelSizeFull: HELP.boolFlip(this.state.panelSizeFull) });
+    this.setState({ panelSizeFull: !this.state.panelSizeFull });
   }
 
   // opens pannel with correct content (dispayed in title bar)
@@ -56,17 +56,17 @@ class Main extends React.Component {
   // show/hide start menu 
   startButtonToggle = () => {
     HELP.toggleStartVisibility(this.state.startButtonActive);
-    this.setState({ startButtonActive: HELP.boolFlip(this.state.startButtonActive) });
+    this.setState({ startButtonActive: !this.state.startButtonActive });
   }
 
   // lets state know to open sub-panel
   projArrowHover = () => {
-    this.setState({ projArrowHover: HELP.boolFlip(this.state.projArrowHover) });
+    this.setState({ projArrowHover: !this.state.projArrowHover });
   }
 
   // lets state know to keep sub-panel open
   panelHover = () => {
-    this.setState({ panelHover: HELP.boolFlip(this.state.panelHover) });
+    this.setState({ panelHover: !this.state.panelHover });
   }
 
   // opens a draggable, resizable panel or iframe

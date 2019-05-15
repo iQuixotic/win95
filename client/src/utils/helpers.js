@@ -1,9 +1,9 @@
 export default {
 
     // true => false
-    boolFlip: (arg) => {
-        return !arg;
-    },
+    // boolFlip: (arg) => {
+    //     return !arg;
+    // },
 
     // used to hide panel and change corresponding button aesthetics
     minUpdate:(cn) => {
