@@ -12,12 +12,12 @@ class Main extends React.Component {
       head: 'Portfolio',
       isMinimized: false,
       minClass: 'minimizer-btn-open',
+      panelHover: false,
       panelOpen: true,
-      panelSizeFull: false,
       panelShowing: 'http://www.iquixotic.com',
-      startButtonActive: false,
+      panelSizeFull: false,
       projArrowHover: false,
-      panelHover: false
+      startButtonActive: false
     };
     this.startButtonToggle = this.startButtonToggle.bind(this);
   }
@@ -47,7 +47,7 @@ class Main extends React.Component {
       head: arg,
       panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : OBJ.panels.comps[arg]
     });
-    HELP.wait(this.togglePanel(), 300);
+    HELP.wait(this.togglePanel, 300);
   }
 
   // show/hide start menu 
@@ -89,6 +89,7 @@ class Main extends React.Component {
       </div>
     )
     return (
+
       // Start button and taskbar plus 
       <Layout
         head={this.state.head}
@@ -118,6 +119,8 @@ class Main extends React.Component {
               minimize={this.minUpdate}
               panelSizeFull={this.state.panelSizeFull}
               head={this.state.head}
+              initialHeight={450}
+              initialWidth={340}
               dragDropRes={false}
               clickClosed={this.togglePanel}
               expShr={this.panelSizeUpdate}
@@ -127,7 +130,6 @@ class Main extends React.Component {
             </Panel>
           ) : <div></div>
         }
-
       </Layout>
     );
   }

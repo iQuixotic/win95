@@ -1,9 +1,10 @@
 export default {
-
-    // true => false
-    // boolFlip: (arg) => {
-    //     return !arg;
-    // },
+    
+    
+    checkIfIframeLoaded: () => {
+        document.getElementById('loadScreen').style.display='none';
+        console.log('you are an ugly man and i have never been happier')
+    },
 
     // used to hide panel and change corresponding button aesthetics
     minUpdate:(cn) => {
@@ -19,9 +20,11 @@ export default {
         arg ? sm.className += ' invisible' : sm.className -= ' invisible';
     },
 
+    // setTimeout
     wait: (cb, time) => {
         setTimeout(() => {
             cb();   
         }, time);
     }
+
 }

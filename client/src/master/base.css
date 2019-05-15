@@ -10,6 +10,12 @@ body {
     overflow: hidden;
 }
 
+.fullScreen {
+    /* position: fixed; */
+    width: 100%;
+    height: 100%;
+}
+
 .blue-top-box {
     border-top: 2px solid rgb(194, 194, 194);
     border-bottom: none;
