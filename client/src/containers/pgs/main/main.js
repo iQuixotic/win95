@@ -1,19 +1,9 @@
 import * as React from "react";
-import { Icon, Panel, DialUpPanel } from "../../../components";
+import { Icon, Panel } from "../../../components";
 import { Layout } from "../../../containers";
 import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
+import { HELP, OBJ } from "../../../utils";
 import './style.css';
-
-const panels = {
-  'Portfolio': 'http://www.iquixotic.com',
-  'Zenith': 'https://bank-manager-app-9485.herokuapp.com/',
-  'Cat Clicker': 'https://iquixotic.github.io/cat-clicker-game/',
-  'Picture Puzzles': 'https://picture-puzzles.herokuapp.com/',
-  'Lil Libs': 'https://req-libs.herokuapp.com/',
-  'Avatar Cards': 'https://avatar-card-tribute-game-89458.herokuapp.com/',
-  'Internet': <DialUpPanel />
-  // 'Github': 'https://github.com/iQuixotic'
-}
 
 class Main extends React.Component {
   constructor(props) {
@@ -32,29 +22,30 @@ class Main extends React.Component {
     this.startButtonToggle = this.startButtonToggle.bind(this);
   }
 
-
+  // used to hide panel and change corresponding button aesthetics
   minUpdate = () => {
-    // console.log(this.state.isMinimized, this.state.minClass)
-    let isMinimized = !this.state.isMinimized
-    if(this.state.minClass === 'minimizer-btn-open') {
-      this.setState({ isMinimized: isMinimized, minClass: 'minimizer-btn' })
-    } else {
-      this.setState({ isMinimized: isMinimized, minClass: 'minimizer-btn-open' })
-    }
-  }
-
-  togglePanel = () => {
-    let panelOpen = !this.state.panelOpen
     this.setState({
-      panelOpen: panelOpen
-    })
+      isMinimized: HELP.boolFlip(this.state.isMinimized), 
+      minClass: HELP.minUpdate(this.state.minClass) 
+    });
+  }
+    
+  // panel is made visible/invisible with 'X' button
+  togglePanel = () => {
+    this.setState({ panelOpen: HELP.boolFlip(this.state.panelOpen) });
+  }
+    
+  // panel size adjust between partial and full-size when hit 'SQUARE' button
+  panelSizeUpdate = () => {
+    this.setState({ panelSizeFull: HELP.boolFlip(this.state.panelSizeFull) });
   }
 
+  // opens pannel with correct content (dispayed in title bar)
   panelShowingStatusUpdate = (arg) => {
     this.setState({
       panelOpen: true,
       head: arg,
-      panelShowing: panels[arg]
+      panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : OBJ.panels.comps[arg]
     })
     // const iframe = document.getElementById('iframe')
     // console.log(iframe)
@@ -62,58 +53,55 @@ class Main extends React.Component {
     // iframe.contentWindow.location.reload();
   }
 
-  panelSizeUpdate = () => {
-    let panelSize = !this.state.panelSizeFull
-    this.setState({
-      panelSizeFull: panelSize
-    })
-  }
-
+  // show/hide start menu 
   startButtonToggle = () => {
-    const toggle = !this.state.startButtonActive;
-    const sm = document.getElementById('start-menu');
-    if (this.state.startButtonActive) {
-      sm.className += ' invisible';
-      this.setState({ startButtonActive: toggle });
-    } else {
-      this.setState({ startButtonActive: toggle });
-      sm.className -= ' invisible';
-    }
+    HELP.toggleStartVisibility(this.state.startButtonActive);
+    this.setState({ startButtonActive: HELP.boolFlip(this.state.startButtonActive) });
   }
 
+  // lets state know to open sub-panel
   projArrowHover = () => {
-    const x = !this.state.projArrowHover;
-    this.setState({
-      projArrowHover: x
-    })
+    this.setState({ projArrowHover: HELP.boolFlip(this.state.projArrowHover) });
   }
 
+  // lets state know to keep sub-panel open
   panelHover = () => {
-    const x = !this.state.panelHover;
-    this.setState({
-      panelHover: x
-    })
+    this.setState({ panelHover: HELP.boolFlip(this.state.panelHover) });
   }
 
+  // opens a draggable, resizable panel or iframe
   openPanel = (e) => {
-    this.panelHover();
-    this.startButtonToggle();
-    // console.log(panels[e.target.innerHTML].substring(0, 4))
-    if(e.target.innerHTML === '' ) {
-      console.log(e.target.id)
-      this.panelShowingStatusUpdate(e.target.id);
-    } else {
-      this.panelShowingStatusUpdate(e.target.innerHTML);
-    }      
-    // if (this.state.panelOpen === false) {
-    // }
+    if(e.target.innerHTML !== '') this.panelHover();
+    if (this.state.startButtonActive) this.startButtonToggle();
+    this.panelShowingStatusUpdate(e.target.innerHTML === '' ? e.target.id : e.target.innerHTML);
   }
 
-  openInternet = () => {
+  // openInternet = () => {
 
-  }
+  // }
 
   render() {
+    // const panelChoicesArr = OBJ.panels.srcs;
+    // ['Portfolio', 'Zenith', 'Cat Clicker', 'Picture Puzzles', 'Lil Libs', 'Avatar Cards'];
+    const menuMapper = Object.keys(OBJ.panels.srcs).map(each => (
+      <li onClick={this.openPanel}>{each}</li>
+    ))
+    const block = (
+      <div
+      onMouseEnter={this.panelHover}
+      onMouseLeave={this.panelHover}
+      className='gray-box'>
+        <ul>
+          {menuMapper}
+          {/* <li onClick={this.openPanel}>Portfolio</li>
+          <li onClick={this.openPanel}>Zenith</li>
+          <li onClick={this.openPanel}>Cat Clicker</li>
+          <li onClick={this.openPanel}>Picture Puzzles</li>
+          <li onClick={this.openPanel}>Lil Libs</li>
+          <li onClick={this.openPanel}>Avatar Cards</li> */}
+        </ul>
+      </div>
+    )
     return (
       <Layout
         head={this.state.head}
@@ -127,27 +115,12 @@ class Main extends React.Component {
         <Icon src={Computer_I} />
         <Icon id='Internet' onDoubleClick={this.openPanel} src={IE_I} />
         <Icon src={File_I} />
-        {/* <DialUpPanel /> */}
         
         {
           this.state.projArrowHover || this.state.panelHover ? (
-            <div
-              onMouseEnter={this.panelHover}
-              onMouseLeave={this.panelHover}
-              className='gray-box'>
-              <ul>
-                <li onClick={this.openPanel}>Portfolio</li>
-                <li onClick={this.openPanel}>Zenith</li>
-                <li onClick={this.openPanel}>Cat Clicker</li>
-                <li onClick={this.openPanel}>Picture Puzzles</li>
-                <li onClick={this.openPanel}>Lil Libs</li>
-                <li onClick={this.openPanel}>Avatar Cards</li>
-              </ul>
-            </div>
+           block
           ) : <div></div>
         }
-
-        
 
         {
           this.state.panelOpen ? (
