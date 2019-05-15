@@ -11,9 +11,9 @@ export default {
         'Picture Puzzles': 'https://picture-puzzles.herokuapp.com/',
         'Lil Libs': 'https://req-libs.herokuapp.com/',
         'Avatar Cards': 'https://avatar-card-tribute-game-89458.herokuapp.com/'
-        // 'Github': 'https://github.com/iQuixotic'
       },
       comps: {
+        // 'Github': 'https://github.com/iQuixotic'
         'Internet': <DialUpPanel />
       }
     }

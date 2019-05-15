@@ -76,16 +76,12 @@ class Main extends React.Component {
     this.panelShowingStatusUpdate(e.target.innerHTML === '' ? e.target.id : e.target.innerHTML);
   }
 
-  // openInternet = () => {
-
-  // }
-
   render() {
     // const panelChoicesArr = OBJ.panels.srcs;
     // ['Portfolio', 'Zenith', 'Cat Clicker', 'Picture Puzzles', 'Lil Libs', 'Avatar Cards'];
     const menuMapper = Object.keys(OBJ.panels.srcs).map(each => (
       <li onClick={this.openPanel}>{each}</li>
-    ))
+    ));
     const block = (
       <div
       onMouseEnter={this.panelHover}
@@ -103,6 +99,7 @@ class Main extends React.Component {
       </div>
     )
     return (
+      // Start button and taskbar plus 
       <Layout
         head={this.state.head}
         panelOpen={this.state.panelOpen}
@@ -111,17 +108,19 @@ class Main extends React.Component {
         sbClick={this.startButtonToggle}
         hover={this.projArrowHover}
         noHover={this.projArrowHover}>
+
+        {/* Icons */}
         <Icon src={RecycleBin_I} />
         <Icon src={Computer_I} />
         <Icon id='Internet' onDoubleClick={this.openPanel} src={IE_I} />
         <Icon src={File_I} />
         
+        {/* start menu items */}
         {
-          this.state.projArrowHover || this.state.panelHover ? (
-           block
-          ) : <div></div>
+          this.state.projArrowHover || this.state.panelHover ? block : <div></div>
         }
 
+        {/* Inner window/panel */}
         {
           this.state.panelOpen ? (
             <Panel
@@ -134,11 +133,11 @@ class Main extends React.Component {
               expShr={this.panelSizeUpdate}
               src={typeof this.state.panelShowing === 'string' && (this.state.panelShowing).substring(0,4) === 'http' ? this.state.panelShowing : ''}
             >
-            <h1>Something good will go here</h1>
-            {this.state.panelShowing}
+              {this.state.panelShowing}
             </Panel>
           ) : <div></div>
         }
+
       </Layout>
     );
   }
