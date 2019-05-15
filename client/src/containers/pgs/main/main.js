@@ -77,24 +77,17 @@ class Main extends React.Component {
   }
 
   render() {
-    // const panelChoicesArr = OBJ.panels.srcs;
-    // ['Portfolio', 'Zenith', 'Cat Clicker', 'Picture Puzzles', 'Lil Libs', 'Avatar Cards'];
-    const menuMapper = Object.keys(OBJ.panels.srcs).map(each => (
-      <li onClick={this.openPanel}>{each}</li>
+    const panelChoicesArr = Object.keys(OBJ.panels.srcs);
+    const menuMapper = panelChoicesArr.map(each => (
+      <li key={each} onClick={this.openPanel}>{each}</li>
     ));
-    const block = (
+    const projectList = (
       <div
       onMouseEnter={this.panelHover}
       onMouseLeave={this.panelHover}
       className='gray-box'>
         <ul>
           {menuMapper}
-          {/* <li onClick={this.openPanel}>Portfolio</li>
-          <li onClick={this.openPanel}>Zenith</li>
-          <li onClick={this.openPanel}>Cat Clicker</li>
-          <li onClick={this.openPanel}>Picture Puzzles</li>
-          <li onClick={this.openPanel}>Lil Libs</li>
-          <li onClick={this.openPanel}>Avatar Cards</li> */}
         </ul>
       </div>
     )
@@ -117,7 +110,7 @@ class Main extends React.Component {
         
         {/* start menu items */}
         {
-          this.state.projArrowHover || this.state.panelHover ? block : <div></div>
+          this.state.projArrowHover || this.state.panelHover ? projectList : <div></div>
         }
 
         {/* Inner window/panel */}
