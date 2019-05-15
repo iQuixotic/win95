@@ -17,5 +17,11 @@ export default {
     toggleStartVisibility: (arg) => {
         const sm = document.getElementById('start-menu');
         arg ? sm.className += ' invisible' : sm.className -= ' invisible';
+    },
+
+    wait: (cb, time) => {
+        setTimeout(() => {
+            cb();   
+        }, time);
     }
 }

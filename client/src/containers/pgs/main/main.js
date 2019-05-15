@@ -43,14 +43,11 @@ class Main extends React.Component {
   // opens pannel with correct content (dispayed in title bar)
   panelShowingStatusUpdate = (arg) => {
     this.setState({
-      panelOpen: true,
+      panelOpen: false,
       head: arg,
       panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : OBJ.panels.comps[arg]
-    })
-    // const iframe = document.getElementById('iframe')
-    // console.log(iframe)
-    // iframe.src = iframe.src;
-    // iframe.contentWindow.location.reload();
+    });
+    HELP.wait(this.togglePanel(), 300);
   }
 
   // show/hide start menu 
