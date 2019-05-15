@@ -45,8 +45,9 @@ class Main extends React.Component {
     this.setState({
       panelOpen: false,
       head: arg,
-      panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : OBJ.panels.comps[arg]
+      // panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : OBJ.panels.comps[arg]
     });
+    console.log(arg)
     HELP.wait(this.togglePanel, 300);
   }
 
@@ -73,6 +74,7 @@ class Main extends React.Component {
     this.panelShowingStatusUpdate(e.target.innerHTML === '' ? e.target.id : e.target.innerHTML);
   }
 
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   render() {
     const panelChoicesArr = Object.keys(OBJ.panels.srcs);
     const menuMapper = panelChoicesArr.map(each => (
@@ -107,9 +109,7 @@ class Main extends React.Component {
         <Icon src={File_I} />
         
         {/* start menu items */}
-        {
-          this.state.projArrowHover || this.state.panelHover ? projectList : <div></div>
-        }
+        { this.state.projArrowHover || this.state.panelHover ? projectList : <div></div> }
 
         {/* Inner window/panel */}
         {

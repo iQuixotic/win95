@@ -7,6 +7,9 @@ export { default as Burger } from './nav/sidedrawer/burger/burger';
 
 // export * from panel
 export { default as Panel } from './panel/panel';
+export { default as Frame } from './panel/frame';
+export { default as Xbox } from './panel/xbox';
+
 
 // export * from internet
 export { default as InternetPanel } from './internet/internetPanel';
