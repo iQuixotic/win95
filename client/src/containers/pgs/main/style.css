@@ -12,11 +12,11 @@ body {
 
 .gray-box {
     position: absolute;
-    left: 17rem;
+    left: 16rem;
     cursor: default;
     background: rgb(194, 194, 194);
-    border-top: ridge 3px white;
-    border-left: ridge 3px white;
+    border-top: ridge 2px white;
+    border-left: ridge 2px white;
     border-bottom: ridge 2px black;
     border-right: ridge 2px grey;
     z-index: 998;
