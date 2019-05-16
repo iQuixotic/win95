@@ -9,7 +9,7 @@ export default {
     // used to hide panel and change corresponding button aesthetics
     minUpdate:(cn) => {
         if(cn === 'minimizer-btn-open') {
-            return 'minimizer-btn';
+            return 'minimizer-btn windows-theme-border';
         } 
         return 'minimizer-btn-open';
     },
@@ -22,8 +22,13 @@ export default {
 
     // setTimeout
     wait: (cb, time) => {
+        // console.log(cb)
+            // cb()
+
         setTimeout(() => {
-            cb();   
+            // console.log(cb())
+
+            cb()
         }, time);
     }
 

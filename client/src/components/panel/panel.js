@@ -12,7 +12,7 @@ const panel = (props) => {
             !props.panelSizeFull ? (
                 <div id='Portfolio' className='panel-starting-position panel-size'>
 
-                    <Draggable >
+                    <Draggable className='windows-theme-border'>
                         <Resizable
                             enable={{ top: true, right: false, bottom: false, left: true,
                                 topRight: false, bottomRight: false, bottomLeft: false, topLeft: true }}
@@ -21,13 +21,13 @@ const panel = (props) => {
                                 height: props.initialHeight }}>
                             <Xbox
                                 head={props.head}
-                                clickClosed={props.clickedClosed}
+                                clickClosed={props.clickClosed}
                                 expShr={props.expShr}
                                 minimize={props.minimize}/>
                             <div id="loadScreen"></div>
 
                             {/* show page if it has src, else show the component's children */}
-                            { props.src !== '' ? <Frame src={props.src}/> : props.children }
+                            { props.src !== '' ? <Frame load={props.load} src={props.src}/> : props.children }
 
                         </Resizable>
                     </Draggable>
@@ -43,7 +43,7 @@ const panel = (props) => {
                     <div id="loadScreen"></div>
 
                     {/* show page if it has src, else show the component's children */}
-                    { props.src !== '' ? <Frame src={props.src}/> : props.children }
+                    { props.src !== '' ? <Frame load={props.load} src={props.src}/> : props.children }
                 </div>)
             }
         </div>

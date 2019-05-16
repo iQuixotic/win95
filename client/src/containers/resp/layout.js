@@ -27,9 +27,7 @@ class Layout extends Component {
       let today = new Date();
       let h = today.getHours();
       let m = today.getMinutes();
-      // let s = today.getSeconds();
       m = this.checkTime(m);
-      // s = this.checkTime(s);
       let hd = h;
             clock.innerHTML = ((hd = 0 ? "12" : hd > 12 ? hd - 12 : hd) + ":" + m + " " + (h < 12 ? "AM" : "PM"));
     }, 6000);

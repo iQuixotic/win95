@@ -33,6 +33,7 @@ class Main extends React.Component {
   // panel is made visible/invisible with 'X' button
   togglePanel = () => {
     this.setState({ panelOpen: !this.state.panelOpen });
+    console.log(this.state.panelOpen)
   }
     
   // panel size adjust between partial and full-size when hit 'SQUARE' button
@@ -45,9 +46,8 @@ class Main extends React.Component {
     this.setState({
       panelOpen: false,
       head: arg,
-      // panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : OBJ.panels.comps[arg]
+      panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : OBJ.panels.comps[arg]
     });
-    console.log(arg)
     HELP.wait(this.togglePanel, 300);
   }
 
@@ -124,6 +124,7 @@ class Main extends React.Component {
               dragDropRes={false}
               clickClosed={this.togglePanel}
               expShr={this.panelSizeUpdate}
+              load={HELP.checkIfIframeLoaded}
               src={typeof this.state.panelShowing === 'string' && (this.state.panelShowing).substring(0,4) === 'http' ? this.state.panelShowing : ''}
             >
               {this.state.panelShowing}
