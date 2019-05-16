@@ -13,7 +13,6 @@ export { default as Logo } from './img/startMenu/winLogo.png';
 
 
 // export * from subMenu
-
 export { default as Building } from './img/subMenu/building.png';
 export { default as Cards } from './img/subMenu/cards.png';
 export { default as Cat } from './img/subMenu/cat.png';
