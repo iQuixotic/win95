@@ -1,7 +1,5 @@
 import * as React from "react";
-import { Logo } from '../../../assets';
-// import { Li } from '../../../components';
-// import {Icon} from 'react-fa';
+import { Logo, AboutBook, Programs, AboutBookHover, ProgramsHover} from '../../../assets';
 import './style.css';
 
 const Taskbar = (props) => {
@@ -24,10 +22,28 @@ const Taskbar = (props) => {
                     </div>
                 </div>
                 <ul className='menu-items'>
-                    <li className='menu-item expander' onMouseEnter={props.hover} onMouseLeave={props.noHover}>Projects</li>
-                    <li className='menu-item'>About</li>
-                    <li className='menu-item'>Help</li>
+                    <li id='menu-item0' className='menu-item expander' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
+                        <img src={props.src1} alt='#'/>
+                        <span className='vertical-center'>Projects</span>
+                    </li>
+                    <li onClick={props.smiClick} id='menu-item1' className='menu-item' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
+                        <img src={props.src2} alt='#'/>
+                        <span className='vertical-center'>About</span>
+                    </li>
+                    <li onClick={props.smiClick} id='menu-item2' className='menu-item' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
+                        <img src={props.src3} alt='#'/>
+                        <span className='vertical-center'>Help</span>
+                    </li>
+                    <li onClick={props.smiClick} id='menu-item3' className='menu-item' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
+                        <img src={props.src4} alt='#'/>
+                        <span className='vertical-center'>Contact</span>
+                    </li>
                 </ul>
+                <div className='one-line'></div>
+                <div onClick={props.smiClick} id='menu-item-SD' className='menu-item' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
+                    <img src={props.src5} alt='#'/>
+                    <span className='vertical-center'>Shut Down</span>
+                </div>
             </div>
 
             <div id="notifications">

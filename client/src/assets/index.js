@@ -6,17 +6,28 @@ export { default as File_I } from './img/desktop/fileIcon.png';
 
 // export * from panelPics
 export { default as DialUpGif } from './img/panelPics/dialupGif.gif';
-// export { default as DialUpGifPic } from './img/dialupGifPic.gif';
 
 // export * from startMenu
-export { default as Logo } from './img/startMenu/winLogo.png';
+export { default as AboutBook } from './img/startMenu/aboutBook.png';
+export { default as AboutBookHover } from './img/startMenu/aboutBookHover.png';
+export { default as Programs } from './img/startMenu/programs.jpg';
+export { default as ProgramsHover } from './img/startMenu/programsHover.jpg';
+export { default as Contact } from './img/startMenu/contact.jpg';
+export { default as ContactHover } from './img/startMenu/contactHover.jpg';
+export { default as Shutdown } from './img/startMenu/shutdown.png';
+export { default as Info } from './img/startMenu/about.png';
+export { default as InfoHover } from './img/startMenu/aboutHover.png';
 
+
+
+
+export { default as Logo } from './img/startMenu/winLogo.png';
 
 // export * from subMenu
 export { default as Building } from './img/subMenu/building.png';
 export { default as Cards } from './img/subMenu/cards.png';
 export { default as Cat } from './img/subMenu/cat.png';
-export { default as Chat } from './img/subMenu/chat.png';
+export { default as LilLibs } from './img/subMenu/chat.png';
 export { default as Portfolio } from './img/subMenu/portfolio.png';
 export { default as Puzzle } from './img/subMenu/puzzle.png';
 

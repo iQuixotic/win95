@@ -37,7 +37,7 @@ const panel = (props) => {
 
                     <Xbox
                         head={props.head}
-                        clickClosed={props.clickedClosed}
+                        clickClosed={props.clickClosed}
                         expShr={props.expShr}
                         minimize={props.minimize}/>                            
                     <div id="loadScreen"></div>

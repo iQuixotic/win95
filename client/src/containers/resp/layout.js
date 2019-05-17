@@ -12,7 +12,6 @@ class Layout extends Component {
     this.state = {
       sideDrawerOpen: false,
       startButtonActive: false,
-      // date: new Date()
     };
     this.sideDrawerToggle = this.sideDrawerToggle.bind(this);
   }
@@ -66,6 +65,12 @@ checkTime = (i) => {
                   click={this.props.sbClick}
                   hover={this.props.hover}
                   noHover={this.props.noHover}
+                  src1={this.props.src1}
+                  src2={this.props.src2}
+                  src3={this.props.src3}
+                  src4={this.props.src4}
+                  src5={this.props.src5}
+                  smiClick={this.props.smiClick}
                 /> 
               </MQ>
               <MQ upperLimit={599}>

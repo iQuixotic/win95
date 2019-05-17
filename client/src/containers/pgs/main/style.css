@@ -10,6 +10,13 @@ body {
     height: 90%;
 }
 
+.menu-word-spacing {    
+    font-size: 1.5rem;
+    padding:0px 20px 0px 10px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
 .gray-box {
     position: absolute;
     left: 16rem;
@@ -20,6 +27,11 @@ body {
     border-bottom: ridge 2px black;
     border-right: ridge 2px grey;
     z-index: 998;
+}
+
+.panel-img {
+    width: 20px;
+    height :20px;
 }
 
 .gray-box ul {

@@ -2,6 +2,12 @@ import * as React from "react";
 import { Icon, Panel } from "../../../components";
 import { Layout } from "../../../containers";
 import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
+// import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../../../assets';
+import { 
+  Logo, AboutBook, Programs, AboutBookHover, 
+  ProgramsHover, Contact, ContactHover, Shutdown,
+  InfoHover, Info 
+} from '../../../assets';
 import { HELP, OBJ } from "../../../utils";
 import './style.css';
 
@@ -12,6 +18,7 @@ class Main extends React.Component {
       head: 'Portfolio',
       isMinimized: false,
       minClass: 'minimizer-btn-open',
+      menuItemHover: [false, false, false, false],
       panelHover: false,
       panelOpen: true,
       panelShowing: 'http://www.iquixotic.com',
@@ -20,6 +27,23 @@ class Main extends React.Component {
       startButtonActive: false
     };
     this.startButtonToggle = this.startButtonToggle.bind(this);
+    this.menuItemHover = this.menuItemHover.bind(this);
+  }
+
+  // basically, passing through an ID which will spit out which items are being hovered over to update pic...
+  menuItemHover = (e) => {
+    if(e.currentTarget.id === 'menu-item0') this.projArrowHover();
+    let arrNum = parseInt(e.currentTarget.id.substring(9));
+      let oldArr = this.state.menuItemHover;
+      oldArr[arrNum] = !oldArr[arrNum]
+      let newArr = oldArr
+      if(this.state.menuItemHover[0] !== newArr[0]) this.projArrowHover();
+      this.setState({ menuItemHover: newArr })
+  }
+
+  smiClickHandler = (e) => {
+    console.log(e.currentTarget.id)
+    this.setState({ panelShowing: OBJ.startMenu[e.currentTarget.id] })
   }
 
   // used to hide panel and change corresponding button aesthetics
@@ -69,16 +93,20 @@ class Main extends React.Component {
 
   // opens a draggable, resizable panel or iframe
   openPanel = (e) => {
-    if(e.target.innerHTML !== '') this.panelHover();
-    if (this.state.startButtonActive) this.startButtonToggle();
-    this.panelShowingStatusUpdate(e.target.innerHTML === '' ? e.target.id : e.target.innerHTML);
+    let str = e.target.innerHTML;
+    if(str !== '') this.panelHover();
+    if(this.state.startButtonActive) this.startButtonToggle();
+    // if it's a clicked icon, open by ID, ELSEIF it's from the start menu, only gets html after the image
+    this.panelShowingStatusUpdate(str === '' ? e.target.id : str.substring(str.indexOf(">") + 1));
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   render() {
     const panelChoicesArr = Object.keys(OBJ.panels.srcs);
     const menuMapper = panelChoicesArr.map(each => (
-      <li key={each} onClick={this.openPanel}>{each}</li>
+      <li id={each} key={each} onClick={this.openPanel}>
+        {OBJ.pictures[each]}<span className='menu-word-spacing'>{each}</span>
+      </li>
     ));
     const projectList = (
       <div
@@ -99,8 +127,14 @@ class Main extends React.Component {
         minClick={this.minUpdate}
         minCn={this.state.minClass}
         sbClick={this.startButtonToggle}
-        hover={this.projArrowHover}
-        noHover={this.projArrowHover}>
+        hover={this.menuItemHover}
+        noHover={this.menuItemHover}
+        src1={this.state.menuItemHover[0] ? ProgramsHover : Programs}
+        src2={this.state.menuItemHover[1] ? InfoHover : Info}
+        src3={this.state.menuItemHover[2] ? AboutBookHover : AboutBook}
+        src4={this.state.menuItemHover[3] ? ContactHover : Contact}
+        src5={Shutdown}
+        smiClick={this.smiClickHandler}>
 
         {/* Icons */}
         <Icon src={RecycleBin_I} />
