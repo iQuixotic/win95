@@ -142,10 +142,10 @@ class Main extends React.Component {
         smiClick={this.smiClickHandler}>
 
         {/* Icons */}
-        <Icon src={RecycleBin_I} />
-        <Icon src={Computer_I} />
-        <Icon id='Internet' onDoubleClick={this.openPanel} src={IE_I} />
-        <Icon src={File_I} />
+        <Icon iconName='Recycle Bin' src={RecycleBin_I} />
+        <Icon iconName='Computer' src={Computer_I} />
+        <Icon iconName='The Internet' id='Internet' onDoubleClick={this.openPanel} src={IE_I} />
+        <Icon iconName='Files' src={File_I} />
         
         {/* start menu items */}
         { this.state.projArrowHover || this.state.panelHover ? projectList : <div></div> }

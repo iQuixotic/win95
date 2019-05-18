@@ -1,5 +1,15 @@
 .icon {
-    height: 60px;
-    width: 60px;
+    height: 45px;
+    width: 45px;
+}
+
+.icon-txt {
+    width: 45px;
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+}
+
+.icon-plus-txt {
     padding: 10px;
 }

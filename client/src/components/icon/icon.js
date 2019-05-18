@@ -4,11 +4,13 @@ import './style.css';
 
 const Icon = (props) => {
     return(
-        <Draggable>
-            <div className='icon'>
-                <img id={props.id} onDoubleClick={props.onDoubleClick} className='icon' src={props.src} alt='#'></img>
+        // <Draggable>
+            <div className='icon-plus-txt' >
+                <img id={props.id} onDoubleClick={props.onDoubleClick} 
+                className='icon' src={props.src} alt='#'></img>
+                <p className='icon-txt'>{props.iconName}</p>
             </div>
-        </Draggable>
+        // </Draggable>
     );
 }
 
