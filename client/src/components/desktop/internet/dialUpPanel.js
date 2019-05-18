@@ -1,5 +1,5 @@
 import React from "react";
-import { DialUpGif } from '../../assets';
+import { DialUpGif } from '../../../assets';
 import Draggable from 'react-draggable';
 import './style.css';
 

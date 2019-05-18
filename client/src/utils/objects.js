@@ -1,5 +1,5 @@
 import React from 'react';
-import { DialUpPanel } from "../components";
+import { DialUpPanel, AboutPanel, ShutdownPanel, HelpPanel, ContactPanel } from "../components";
 import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../assets';
 
 export default {
@@ -31,20 +31,27 @@ export default {
     startMenu: {
       'menu-item1': { 
         head: 'About',
-        show: <DialUpPanel />,
+        show: <AboutPanel />,
         }, 
       'menu-item2': { 
         head: 'Help',
-        show: <DialUpPanel />,
+        show: <HelpPanel />,
         }, 
       'menu-item3': { 
         head: 'Contact',
-        show: <DialUpPanel />,
+        show: <ContactPanel />,
         }, 
       'menu-item-SD': { 
         head: 'Nope',
-        show: <DialUpPanel />,
+        show: <ShutdownPanel />,
         }
+    },
+
+    panelClassName: {
+      Help: 'help-panel-outer',
+      About: 'about-panel-outer',
+      Contact: 'contact-panel-outer',
+      Nope: ''
     }
 
 }

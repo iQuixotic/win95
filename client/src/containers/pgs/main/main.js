@@ -24,7 +24,8 @@ class Main extends React.Component {
       panelShowing: 'http://www.iquixotic.com',
       panelSizeFull: false,
       projArrowHover: false,
-      startButtonActive: false
+      startButtonActive: false,
+      panelClassName: OBJ.panelClassName
     };
     this.startButtonToggle = this.startButtonToggle.bind(this);
     this.menuItemHover = this.menuItemHover.bind(this);
@@ -165,6 +166,7 @@ class Main extends React.Component {
               expShr={this.panelSizeUpdate}
               load={HELP.checkIfIframeLoaded}
               src={typeof this.state.panelShowing === 'string' && (this.state.panelShowing).substring(0,4) === 'http' ? this.state.panelShowing : ''}
+              panelClassName={this.state.panelClassName[this.state.head]}
             >
               {this.state.panelShowing}
             </Panel>

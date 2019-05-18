@@ -1,0 +1,38 @@
+.contact-panel-outer {
+    background: blue;
+    width: 400px;
+    height: 400px;
+}
+
+.contact-panel {
+    background: white;
+    /* background: rgb(194, 194, 194); */
+    border: 2px solid rgb(194, 194, 194);
+    border-top: none;
+    /* margin: 1px; */
+    width: 100%;
+    height: 100%;
+}
+
+.contact-panel div {
+    margin-bottom: 55px;
+}
+
+.contact-panel-content {
+    padding: 10px;
+}
+
+.contact-panel-content p {
+    font-size: 1.5rem;
+}
+
+.contact-panel-content img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.contact-panel-info {
+    font-size: 1.6rem;
+    font-weight: bolder;
+}

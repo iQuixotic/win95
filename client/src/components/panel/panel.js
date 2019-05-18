@@ -13,6 +13,7 @@ const panel = (props) => {
                 <div id='Portfolio' className='panel-starting-position panel-size'>
 
                     <Draggable>
+                    {props.src !== '' ? (
                         <Resizable
                             enable={{ top: true, right: false, bottom: false, left: true,
                                 topRight: false, bottomRight: false, bottomLeft: false, topLeft: true }}
@@ -24,27 +25,54 @@ const panel = (props) => {
                                 clickClosed={props.clickClosed}
                                 expShr={props.expShr}
                                 minimize={props.minimize}/>
-                            <div id="loadScreen"></div>
-
-                            {/* show page if it has src, else show the component's children */}
-                            { props.src !== '' ? <Frame load={props.load} src={props.src}/> : props.children }
-
+                            <div id="loadScreen"></div> 
+                            <Frame load={props.load} src={props.src}/>
                         </Resizable>
+                            ) : (
+                                <div className={props.panelClassName}>
+                                    <Xbox
+                                        head={props.head}
+                                        clickClosed={props.clickClosed}
+                                        expShr={props.expShr}
+                                        minimize={props.minimize}/>
+                                    {props.children} 
+                                </div>
+                            )
+                    }
                     </Draggable>
                 </div>
             ) : (
-                <div id='Portfolio-full-size' className='panel-starting-position'>
+                props.src !== '' ? (
+                    <div id='Portfolio-full-size' className='panel-starting-position'>
+                        <Xbox
+                            head={props.head}
+                            clickClosed={props.clickClosed}
+                            expShr={props.expShr}
+                            minimize={props.minimize}/>  
+                        <div id="loadScreen"></div>
+                        <Frame load={props.load} src={props.src}/>  
+                    </div>
+                ) : (
+                    <div id='Portfolio-full-size' className='panel-starting-position'>
+                        <Xbox
+                            head={props.head}
+                            clickClosed={props.clickClosed}
+                            expShr={props.expShr}
+                            minimize={props.minimize}/>  
+                        {props.children}
+                    </div>
+                ))
+                // <div id='Portfolio-full-size' className='panel-starting-position'>
 
-                    <Xbox
-                        head={props.head}
-                        clickClosed={props.clickClosed}
-                        expShr={props.expShr}
-                        minimize={props.minimize}/>                            
-                    <div id="loadScreen"></div>
+                //     <Xbox
+                //         head={props.head}
+                //         clickClosed={props.clickClosed}
+                //         expShr={props.expShr}
+                //         minimize={props.minimize}/>                            
+                //     <div id="loadScreen"></div>
 
-                    {/* show page if it has src, else show the component's children */}
-                    { props.src !== '' ? <Frame load={props.load} src={props.src}/> : props.children }
-                </div>)
+                //     { props.src !== '' ? <Frame load={props.load} src={props.src}/> : props.children }
+                // </div>)
             }
         </div>
     );
