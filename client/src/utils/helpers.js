@@ -3,7 +3,6 @@ export default {
     
     checkIfIframeLoaded: () => {
         document.getElementById('loadScreen').style.display='none';
-        console.log('you are an ugly man and i have never been happier')
     },
 
     // used to hide panel and change corresponding button aesthetics
@@ -22,12 +21,7 @@ export default {
 
     // setTimeout
     wait: (cb, time) => {
-        // console.log(cb)
-            // cb()
-
         setTimeout(() => {
-            // console.log(cb())
-
             cb()
         }, time);
     }

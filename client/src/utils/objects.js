@@ -29,11 +29,22 @@ export default {
     },
 
     startMenu: {
-      'menu-item1': <DialUpPanel />,
-      'menu-item2': <DialUpPanel />,
-      'menu-item3': <DialUpPanel />,
-      'menu-item-SD': <DialUpPanel />    
-
+      'menu-item1': { 
+        head: 'About',
+        show: <DialUpPanel />,
+        }, 
+      'menu-item2': { 
+        head: 'Help',
+        show: <DialUpPanel />,
+        }, 
+      'menu-item3': { 
+        head: 'Contact',
+        show: <DialUpPanel />,
+        }, 
+      'menu-item-SD': { 
+        head: 'Nope',
+        show: <DialUpPanel />,
+        }
     }
 
 }

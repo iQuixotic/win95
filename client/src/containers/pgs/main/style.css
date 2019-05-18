@@ -19,6 +19,7 @@ body {
 
 .gray-box {
     position: absolute;
+    bottom: 7rem;
     left: 16rem;
     cursor: default;
     background: rgb(194, 194, 194);

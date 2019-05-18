@@ -4,8 +4,8 @@ import { Layout } from "../../../containers";
 import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
 // import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../../../assets';
 import { 
-  Logo, AboutBook, Programs, AboutBookHover, 
-  ProgramsHover, Contact, ContactHover, Shutdown,
+  AboutBook, Programs,  Contact, Shutdown,
+  ProgramsHover,  AboutBookHover, ContactHover, 
   InfoHover, Info 
 } from '../../../assets';
 import { HELP, OBJ } from "../../../utils";
@@ -32,18 +32,25 @@ class Main extends React.Component {
 
   // basically, passing through an ID which will spit out which items are being hovered over to update pic...
   menuItemHover = (e) => {
-    if(e.currentTarget.id === 'menu-item0') this.projArrowHover();
-    let arrNum = parseInt(e.currentTarget.id.substring(9));
-      let oldArr = this.state.menuItemHover;
-      oldArr[arrNum] = !oldArr[arrNum]
-      let newArr = oldArr
-      if(this.state.menuItemHover[0] !== newArr[0]) this.projArrowHover();
-      this.setState({ menuItemHover: newArr })
+    let id = e.currentTarget.id;
+    if(id === 'menu-item0') this.projArrowHover();
+    let arrNum = parseInt(id.substring(9));
+    let oldArr = this.state.menuItemHover;
+    oldArr[arrNum] = !oldArr[arrNum]
+    let newArr = oldArr
+    if(this.state.menuItemHover[0] !== newArr[0]) this.projArrowHover();
+    this.setState({ menuItemHover: newArr })
   }
 
+  // start-menu-item handler
   smiClickHandler = (e) => {
-    console.log(e.currentTarget.id)
-    this.setState({ panelShowing: OBJ.startMenu[e.currentTarget.id] })
+    // console.log(e.currentTarget.id)
+    // this.panelShowingStatusUpdate(e.currentTarget.id)
+    this.setState({ panelShowing: 
+      OBJ.startMenu[e.currentTarget.id].show, 
+      head: OBJ.startMenu[e.currentTarget.id].head,
+      panelOpen: true 
+    });
   }
 
   // used to hide panel and change corresponding button aesthetics
@@ -57,7 +64,6 @@ class Main extends React.Component {
   // panel is made visible/invisible with 'X' button
   togglePanel = () => {
     this.setState({ panelOpen: !this.state.panelOpen });
-    console.log(this.state.panelOpen)
   }
     
   // panel size adjust between partial and full-size when hit 'SQUARE' button
@@ -72,7 +78,7 @@ class Main extends React.Component {
       head: arg,
       panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : OBJ.panels.comps[arg]
     });
-    HELP.wait(this.togglePanel, 300);
+    HELP.wait(this.togglePanel, 100);
   }
 
   // show/hide start menu 
@@ -93,11 +99,10 @@ class Main extends React.Component {
 
   // opens a draggable, resizable panel or iframe
   openPanel = (e) => {
-    let str = e.target.innerHTML;
-    if(str !== '') this.panelHover();
+    if(e.currentTarget.innerHTML !== '') this.panelHover();
     if(this.state.startButtonActive) this.startButtonToggle();
     // if it's a clicked icon, open by ID, ELSEIF it's from the start menu, only gets html after the image
-    this.panelShowingStatusUpdate(str === '' ? e.target.id : str.substring(str.indexOf(">") + 1));
+    this.panelShowingStatusUpdate(e.currentTarget.id)
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -171,3 +176,8 @@ class Main extends React.Component {
 }
 
 export default Main;
+
+
+
+    // let str = e.currentTarget.children[1].innerHTML;
+    // .substring(str.indexOf('>') + 1));

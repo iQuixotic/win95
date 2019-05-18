@@ -12,7 +12,7 @@ const panel = (props) => {
             !props.panelSizeFull ? (
                 <div id='Portfolio' className='panel-starting-position panel-size'>
 
-                    <Draggable className='windows-theme-border'>
+                    <Draggable>
                         <Resizable
                             enable={{ top: true, right: false, bottom: false, left: true,
                                 topRight: false, bottomRight: false, bottomLeft: false, topLeft: true }}

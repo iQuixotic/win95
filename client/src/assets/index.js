@@ -18,6 +18,10 @@ export { default as Shutdown } from './img/startMenu/shutdown.png';
 export { default as Info } from './img/startMenu/about.png';
 export { default as InfoHover } from './img/startMenu/aboutHover.png';
 
+// export * from panelControl
+export { default as Square } from './img/panelControl/squareExpansion.png';
+
+
 
 
 

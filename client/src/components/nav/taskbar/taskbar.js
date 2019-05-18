@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Logo, AboutBook, Programs, AboutBookHover, ProgramsHover} from '../../../assets';
+import { Logo } from '../../../assets';
 import './style.css';
 
 const Taskbar = (props) => {

@@ -23,3 +23,12 @@
     z-index: 11;
     margin-left: 2px;
 }
+
+.panel_btn {
+    text-align: center;
+}
+
+.panel_btn img {
+    width: 12px;
+    height: 12px;
+}
