@@ -1,18 +1,19 @@
 import React from "react";
-// import Draggable from 'react-draggable';
 import {Icon} from 'react-fa';
 import './style.css';
 
-{/* <i class="far fa-caret-square-down"></i> */}
 const AboutPanel = (props) => {
     return(
         <div className='about-panel'>
             <h4 className='about-panel-header'>iQuixotic95 (This Site)</h4>
             <div className='about-panel-info'>
                 <div className='gray-line'></div>
-                <input type='checkbox'/>
-                <p>Something, something, something....iQuixotic95</p>
-                <Icon className="fas fa-chevron-down caret-color" />
+                <label className='fancy-checkbox'>
+                    <input  type='checkbox'/>                
+                    <i className="fas fa-eye unchecked"></i>
+                    <i className="fas fa-eye-slash checked"></i>
+                    <p>Something, something, something....iQuixotic95</p>
+                </label>
             </div>
 
             <h4 className='about-panel-header'>Old Portfolio</h4>
