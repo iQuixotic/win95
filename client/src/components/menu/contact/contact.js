@@ -17,7 +17,6 @@ const ContactPanel = (props) => {
                     <button className='windows-btn' onClick={props.clickClosed} ><span>Got it!!!</span></button>
                 </div>
             </div>
-
     );
 }
 

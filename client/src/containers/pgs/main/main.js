@@ -47,11 +47,12 @@ class Main extends React.Component {
   smiClickHandler = (e) => {
     // console.log(e.currentTarget.id)
     // this.panelShowingStatusUpdate(e.currentTarget.id)
-    this.setState({ panelShowing: 
-      OBJ.startMenu[e.currentTarget.id].show, 
+    this.setState({ 
+      panelShowing: OBJ.startMenu[e.currentTarget.id].show, 
       head: OBJ.startMenu[e.currentTarget.id].head,
       panelOpen: true 
     });
+    this.startButtonToggle();
   }
 
   // used to hide panel and change corresponding button aesthetics

@@ -1,22 +1,17 @@
 import React from "react";
-import Draggable from 'react-draggable';
 import './style.css';
 
 const ShutdownPanel = (props) => {
     return(
-        <Draggable>
-            <div className='dial-up-panel'>
-                <div id='internet-blue-top-box' className='blue-top-box'>
-                    <h4 className='panel_header'>Dialing Progress</h4>
-                    <button onClick={props.clickClosed} className='panel_btn'>X</button>
-                </div>
-                <div className='dial-up-txt'>
-                    <div className='cancel-btn'>                    
-                        <button className='windows-btn' onClick={props.clickClosed} ><span>Cancel</span></button>
-                    </div>
-                </div>
+        <div className='shutdown-panel'>
+            <div className='shutdown-panel-content'>
+                <p className='red-txt'>FEATURE COMING SOON! </p>
+                <p>Feature development is currently in progress...</p>
             </div>
-        </Draggable>
+            <div className='cancel-btn'>                    
+                <button className='windows-btn' onClick={props.clickClosed} ><span>OK</span></button>
+            </div>
+        </div>
 
     );
 }

@@ -29,8 +29,6 @@ export default {
       'Avatar Cards': <img className='panel-img' src={Cards} alt='#'/>
     },
 
-    
-    // colapseArr: [false, false, false, false];
     startMenu: {
       'menu-item1': { 
         head: 'About',
@@ -54,7 +52,7 @@ export default {
       Help: 'help-panel-outer',
       About: 'about-panel-outer',
       Contact: 'contact-panel-outer',
-      Nope: ''
+      Nope: 'shutdown-panel-outer'
     }
 
 }

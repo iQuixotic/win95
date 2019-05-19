@@ -1,0 +1,26 @@
+.shutdown-panel-outer {
+    width: 300px;
+    height: 95px;
+}
+
+.shutdown-panel {
+    background: rgb(163, 163, 163);
+    border: 2px solid rgb(194, 194, 194);
+    border-top: none;
+    width: 100%;
+    height: 100%;
+}
+
+.shutdown-panel-content {
+    padding: 10px;
+}
+
+.shutdown-panel-content {
+    text-align: center;
+}
+
+.red-txt {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: red;
+}

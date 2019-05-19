@@ -1,10 +1,5 @@
 export default {
 
-    
-    collapse: () => {
-        console.log('huh')
-    },
-    
     checkIfIframeLoaded: () => {
         document.getElementById('loadScreen').style.display='none';
     },
