@@ -10,6 +10,9 @@ import {
 } from '../../../assets';
 import { HELP, OBJ } from "../../../utils";
 import './style.css';
+import { default as Draggable } from "react-draggable";
+import Resizable from "re-resizable";
+
 
 class Main extends React.Component {
   constructor(props) {
@@ -25,10 +28,22 @@ class Main extends React.Component {
       panelSizeFull: false,
       projArrowHover: false,
       startButtonActive: false,
-      panelClassName: OBJ.panelClassName
+      panelClassName: OBJ.panelClassName,
+      internetInputVal: '',
+      internetInputFocus: false
     };
     this.startButtonToggle = this.startButtonToggle.bind(this);
     this.menuItemHover = this.menuItemHover.bind(this);
+  }
+
+  componentDidMount = () => {
+  document.addEventListener('click', (e)=> {
+    if(e.target.id === 'internet-iq-input') {
+      console.log(e.target)
+      this.setState({ internetInputFocus: true })
+    } else { this.setState({ internetInputFocus: false }); console.log(e.target)}
+    console.log(this.state.internetInputFocus)
+  })
   }
 
   // basically, passing through an ID which will spit out which items are being hovered over to update pic...
@@ -142,7 +157,8 @@ class Main extends React.Component {
         src3={this.state.menuItemHover[2] ? AboutBookHover : AboutBook}
         src4={this.state.menuItemHover[3] ? ContactHover : Contact}
         src5={Shutdown}
-        smiClick={this.smiClickHandler}>
+        smiClick={this.smiClickHandler}
+        >
 
         {/* Icons */}
         <Icon iconName='Recycle Bin' id='Recycle Bin' src={RecycleBin_I} onDoubleClick={this.openPanel} />
@@ -169,6 +185,9 @@ class Main extends React.Component {
               load={HELP.checkIfIframeLoaded}
               src={typeof this.state.panelShowing === 'string' && (this.state.panelShowing).substring(0,4) === 'http' ? this.state.panelShowing : ''}
               panelClassName={this.state.panelClassName[this.state.head]}
+               divIsDraggable={!this.state.internetInputFocus ? Draggable : 'div'}
+              internetInputVal={this.state.internetInputVal}
+              internetInputFocus={this.state.internetInputFocus}
             >
               {this.state.panelShowing}
             </Panel>

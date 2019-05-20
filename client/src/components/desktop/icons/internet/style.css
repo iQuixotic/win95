@@ -136,4 +136,6 @@ h5, p {
 .googlish-txt-box {
     font-size: 2rem;
     margin: 5px;
+    position: relative;
+    z-index: 99999;
 }

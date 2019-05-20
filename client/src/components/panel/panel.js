@@ -1,5 +1,5 @@
 import * as React from "react";
-import Draggable from 'react-draggable';
+// import { default as Draggable } from 'react-draggable';
 import Resizable from 're-resizable';
 import { Frame, Xbox } from "../../components";
 import './style.css';
@@ -12,7 +12,7 @@ const panel = (props) => {
             !props.panelSizeFull ? (
                 <div id='Portfolio' className='panel-starting-position panel-size'>
 
-                    <Draggable>
+                    <props.divIsDraggable>
                     {props.src !== '' ? (
                         <Resizable
                             enable={{ top: true, right: false, bottom: false, left: true,
@@ -47,7 +47,7 @@ const panel = (props) => {
                                 </div>
                             )
                     }
-                    </Draggable>
+                    </props.divIsDraggable>
                 </div>
             ) : (
                 props.src !== '' ? (

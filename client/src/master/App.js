@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './backgrounds.css';
 import './base.css';
 
 import { Main } from '../containers';

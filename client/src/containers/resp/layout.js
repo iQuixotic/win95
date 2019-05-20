@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Backdrop, Burger,  Sidedrawer, Taskbar } from "../../components";
+// import { default as Draggable } from 'react-draggable';
 import { Loader, MQ } from "../../containers";
 import './style.css';
 
@@ -71,6 +72,8 @@ checkTime = (i) => {
                   src4={this.props.src4}
                   src5={this.props.src5}
                   smiClick={this.props.smiClick}
+                  internetInputVal={this.props.internetInputVal}
+                  internetInputFocus={this.props.internetInputFocus}
                 /> 
               </MQ>
               <MQ upperLimit={599}>

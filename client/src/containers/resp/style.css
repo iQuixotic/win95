@@ -1,10 +1,10 @@
-.corner {
+/* .corner {
     width: 5px;
     height: 5px;
     background: purple;
     position: absolute;
     z-index: 1;
-}
+} */
 
 .top-right:hover,
 .bottom-left:hover {
