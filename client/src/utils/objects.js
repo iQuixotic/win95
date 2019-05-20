@@ -1,7 +1,10 @@
 import React from 'react';
-import { DialUpPanel, AboutPanel, ShutdownPanel, HelpPanel, ContactPanel } from "../components";
+import { 
+  DialUpPanel, AboutPanel, ShutdownPanel, HelpPanel,
+  ContactPanel, FilesPanel, ComputerPanel, RecycleBinPanel
+} from "../components";
 import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../assets';
-import { HELP } from '.';
+// import { HELP } from '.';
 
 export default {
 
@@ -16,7 +19,10 @@ export default {
       },
       comps: {
         // 'Github': 'https://github.com/iQuixotic'
-        'Internet': <DialUpPanel />
+        'Computer': <ShutdownPanel />,
+        'Files': <FilesPanel />,
+        'Internet': <DialUpPanel />,
+        'Recycle Bin': <ShutdownPanel />
       }
     },
     
@@ -52,7 +58,9 @@ export default {
       Help: 'help-panel-outer',
       About: 'about-panel-outer',
       Contact: 'contact-panel-outer',
-      Nope: 'shutdown-panel-outer'
+      Nope: 'shutdown-panel-outer',
+      Files: 'files-panel-outer'
+      // 'Recycle Bin': 'recycle-panel-outer'
     }
 
 }

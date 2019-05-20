@@ -25,7 +25,14 @@ const panel = (props) => {
                                 clickClosed={props.clickClosed}
                                 expShr={props.expShr}
                                 minimize={props.minimize}/>
-                            <div id="loadScreen"></div> 
+                            <div id="loadScreen">
+                                <div className="cssload-thecube">
+                                    <div className="cssload-cube cssload-c1"></div>
+                                    <div className="cssload-cube cssload-c2"></div>
+                                    <div className="cssload-cube cssload-c4"></div>
+                                    <div className="cssload-cube cssload-c3"></div>
+                                </div>
+                            </div> 
                             <Frame load={props.load} src={props.src}/>
                         </Resizable>
                             ) : (

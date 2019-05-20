@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css';
+import { DialUpPanel } from '../../../../components';
 
 const InternetPanel = (props) => {
     return(
