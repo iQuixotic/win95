@@ -5,7 +5,6 @@ import {
   InternetPanel
 } from "../components";
 import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../assets';
-// import { HELP } from '.';
 
 export default {
 

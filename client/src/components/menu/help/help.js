@@ -28,7 +28,7 @@ const HelpPanel = (props) => {
                     <li>
                         <p className='help-question'>How can I resize a panel?</p>
                         <p className='help-answer'>Either use the SQUARE expansion button OR 
-                        click and drag panels at the edge (only portfolio items).</p>
+                        click and drag panels along the left and top sides (only portfolio items).</p>
                     </li>
                     <li>
                         <p className='help-question'>Is this website mobile responsive?</p>
