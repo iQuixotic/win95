@@ -1,7 +1,8 @@
 import React from 'react';
 import { 
   DialUpPanel, AboutPanel, ShutdownPanel, HelpPanel,
-  ContactPanel, FilesPanel, ComputerPanel, RecycleBinPanel
+  ContactPanel, FilesPanel, ComputerPanel, RecycleBinPanel,
+  InternetPanel
 } from "../components";
 import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../assets';
 // import { HELP } from '.';
@@ -21,7 +22,8 @@ export default {
         // 'Github': 'https://github.com/iQuixotic'
         'Computer': <ShutdownPanel />,
         'Files': <FilesPanel />,
-        'Internet': <DialUpPanel />,
+        'Dialing': <DialUpPanel />,
+        'Internet': <InternetPanel />,
         'Recycle Bin': <ShutdownPanel />
       }
     },
@@ -59,7 +61,8 @@ export default {
       About: 'about-panel-outer',
       Contact: 'contact-panel-outer',
       Nope: 'shutdown-panel-outer',
-      Files: 'files-panel-outer'
+      Files: 'files-panel-outer',
+      Internet: 'internet-panel-outer'
       // 'Recycle Bin': 'recycle-panel-outer'
     }
 

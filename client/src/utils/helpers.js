@@ -1,5 +1,12 @@
 export default {
 
+    giveMeInternet: (update) => {
+        update('Dialing')
+        setTimeout(() => {
+            update('Internet')
+        }, 5000);
+    },
+
     checkIfIframeLoaded: () => {
         document.getElementById('loadScreen').style.display='none';
     },

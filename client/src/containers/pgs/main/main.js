@@ -103,8 +103,9 @@ class Main extends React.Component {
   openPanel = (e) => {
     if(e.currentTarget.innerHTML !== '') this.panelHover();
     if(this.state.startButtonActive) this.startButtonToggle();
+    if(e.currentTarget.id === 'Internet') HELP.giveMeInternet(this.panelShowingStatusUpdate);
     // if it's a clicked icon, open by ID, ELSEIF it's from the start menu, only gets html after the image
-    this.panelShowingStatusUpdate(e.currentTarget.id)
+    else this.panelShowingStatusUpdate(e.currentTarget.id)
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

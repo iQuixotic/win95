@@ -5,7 +5,6 @@ import './style.css';
 
 const DialUpPanel = (props) => {
     return(
-        <Draggable>
         <div className='dial-up-panel'>
             <div id='internet-blue-top-box' className='blue-top-box'>
                 <h4 className='panel_header'>Dialing Progress</h4>
@@ -23,7 +22,6 @@ const DialUpPanel = (props) => {
                 </div>
             </div>
         </div>
-            </Draggable>
 
     );
 }

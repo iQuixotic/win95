@@ -6,8 +6,8 @@ h5, p {
 .dial-up-panel {
     position: absolute;
     z-index: 100;
-    top: 10%;
-    left: 20%;
+    top: 0;
+    /* left: 20%; */
     background: rgb(194, 194, 194);
     border: 2px solid rgb(194, 194, 194);
     width: 40rem;
