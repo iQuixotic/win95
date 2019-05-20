@@ -80,6 +80,12 @@ h5, p {
     border-top: none;
     width: 100%;
     height: 100%;
+    text-align: center;
+}
+
+.center-page {
+    position: relative;
+    top: 40%;
 }
 /* 
 .internet-panel-line {
@@ -87,3 +93,47 @@ h5, p {
     padding: 2px;
     height: 15px;
 } */
+
+.internet-panel .lb,
+.internet-panel .green,
+.internet-panel .yellow,
+.internet-panel .red {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.internet-panel .lb {
+    color: aqua;
+}
+
+.internet-panel .green {
+    color: green;
+}
+
+.internet-panel .yellow {
+    color: yellow;
+}
+
+.internet-panel .red {
+    color: red;
+}
+
+.googlish-btn {
+    font-size: 1.6rem;
+    margin: 5px;
+    padding: 5px 8px;
+    background: white;
+    border: 1px solid rgb(195, 0, 255);
+    color: rgb(195, 0, 255);
+    border-radius: 6px;
+}
+
+.googlish-btn:active,
+.googlish-btn:focus {
+    border: 2px solid orange;
+}
+
+.googlish-txt-box {
+    font-size: 2rem;
+    margin: 5px;
+}

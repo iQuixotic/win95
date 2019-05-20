@@ -1,6 +1,6 @@
 import React from "react";
 import { DialUpGif } from '../../../../assets';
-import Draggable from 'react-draggable';
+// import Draggable from 'react-draggable';
 import './style.css';
 
 const DialUpPanel = (props) => {
@@ -22,7 +22,6 @@ const DialUpPanel = (props) => {
                 </div>
             </div>
         </div>
-
     );
 }
 
