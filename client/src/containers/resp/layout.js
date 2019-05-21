@@ -66,11 +66,6 @@ checkTime = (i) => {
                   click={this.props.sbClick}
                   hover={this.props.hover}
                   noHover={this.props.noHover}
-                  src1={this.props.src1}
-                  src2={this.props.src2}
-                  src3={this.props.src3}
-                  src4={this.props.src4}
-                  src5={this.props.src5}
                   smiClick={this.props.smiClick}
                   internetInputVal={this.props.internetInputVal}
                   internetInputFocus={this.props.internetInputFocus}

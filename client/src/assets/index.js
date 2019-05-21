@@ -8,15 +8,15 @@ export { default as File_I } from './img/desktopTrans/fileIcon.png';
 export { default as DialUpGif } from './img/panelPics/dialupGif.gif';
 
 // export * from startMenu
-export { default as AboutBook } from './img/startMenu/aboutBook.png';
-export { default as AboutBookHover } from './img/startMenu/aboutBookHover.png';
-export { default as Programs } from './img/startMenu/programs.jpg';
-export { default as ProgramsHover } from './img/startMenu/programsHover.jpg';
-export { default as Contact } from './img/startMenu/contact.jpg';
-export { default as ContactHover } from './img/startMenu/contactHover.jpg';
-export { default as Shutdown } from './img/startMenu/shutdown.png';
-export { default as Info } from './img/startMenu/about.png';
-export { default as InfoHover } from './img/startMenu/aboutHover.png';
+export { default as HelpBook } from './img/startMenuTrans/helpBook.png';
+// export { default as AboutBookHover } from './img/startMenu/aboutBookHover.png';
+export { default as Programs } from './img/startMenuTrans/programs.png';
+// export { default as ProgramsHover } from './img/startMenu/programsHover.jpg';
+export { default as Contact } from './img/startMenuTrans/contact.png';
+// export { default as ContactHover } from './img/startMenu/contactHover.jpg';
+export { default as Shutdown } from './img/startMenuTrans/shutdown.png';
+export { default as Info } from './img/startMenuTrans/about.png';
+// export { default as InfoHover } from './img/startMenu/aboutHover.png';
 export { default as Logo } from './img/startMenu/winLogo.png';
 
 // export * from subMenu

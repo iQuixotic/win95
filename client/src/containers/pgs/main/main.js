@@ -3,15 +3,9 @@ import { Icon, Panel } from "../../../components";
 import { Layout } from "../../../containers";
 import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
 // import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../../../assets';
-import { 
-  AboutBook, Programs,  Contact, Shutdown,
-  ProgramsHover,  AboutBookHover, ContactHover, 
-  InfoHover, Info 
-} from '../../../assets';
 import { HELP, OBJ } from "../../../utils";
 import './style.css';
 import { default as Draggable } from "react-draggable";
-// import Resizable from "re-resizable";
 
 
 class Main extends React.Component {
@@ -21,8 +15,6 @@ class Main extends React.Component {
       head: 'Portfolio',
       isMinimized: false,
       minClass: 'minimizer-btn-open',
-      menuItemHover: [false, false, false, false],
-      panelHover: false,
       panelOpen: true,
       panelShowing: 'http://www.iquixotic.com',
       panelSizeFull: false,
@@ -33,7 +25,7 @@ class Main extends React.Component {
       internetInputFocus: false
     };
     this.startButtonToggle = this.startButtonToggle.bind(this);
-    this.menuItemHover = this.menuItemHover.bind(this);
+    // this.menuItemHover = this.menuItemHover.bind(this);
   }
 
   componentDidMount = () => {
@@ -48,17 +40,17 @@ class Main extends React.Component {
   })
   }
 
-  // basically, passing through an ID which will spit out which items are being hovered over to update pic...
-  menuItemHover = (e) => {
-    let id = e.currentTarget.id;
-    if(id === 'menu-item0') this.projArrowHover();
-    let arrNum = parseInt(id.substring(9));
-    let oldArr = this.state.menuItemHover;
-    oldArr[arrNum] = !oldArr[arrNum]
-    let newArr = oldArr
-    if(this.state.menuItemHover[0] !== newArr[0]) this.projArrowHover();
-    this.setState({ menuItemHover: newArr })
-  }
+   // basically, passing through an ID which will spit out which items are being hovered over to update pic...
+  //  menuItemHover = (e) => {
+  //   let id = e.currentTarget.id;
+  //   if(id === 'menu-item0') this.projArrowHover();
+  //   let arrNum = parseInt(id.substring(9));
+  //   let oldArr = this.state.menuItemHover;
+  //   oldArr[arrNum] = !oldArr[arrNum]
+  //   let newArr = oldArr
+  //   if(this.state.menuItemHover[0] !== newArr[0]) this.projArrowHover();
+  //   this.setState({ menuItemHover: newArr })
+  // }
 
   // start-menu-item handler
   smiClickHandler = (e) => {
@@ -152,15 +144,9 @@ class Main extends React.Component {
         minClick={this.minUpdate}
         minCn={this.state.minClass}
         sbClick={this.startButtonToggle}
-        hover={this.menuItemHover}
-        noHover={this.menuItemHover}
-        src1={this.state.menuItemHover[0] ? ProgramsHover : Programs}
-        src2={this.state.menuItemHover[1] ? InfoHover : Info}
-        src3={this.state.menuItemHover[2] ? AboutBookHover : AboutBook}
-        src4={this.state.menuItemHover[3] ? ContactHover : Contact}
-        src5={Shutdown}
         smiClick={this.smiClickHandler}
-        >
+        hover={this.projArrowHover}
+        noHover={this.projArrowHover}>
 
         {/* Icons */}
         <Icon iconName='Recycle Bin' id='Recycle Bin' src={RecycleBin_I} onDoubleClick={this.openPanel} />

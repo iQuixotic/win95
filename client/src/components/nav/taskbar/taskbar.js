@@ -1,5 +1,7 @@
 import * as React from "react";
-import { Logo } from '../../../assets';
+import { 
+    HelpBook, Programs,  Contact, Shutdown, Info, Logo
+  } from '../../../assets';
 import './style.css';
 
 const Taskbar = (props) => {
@@ -23,25 +25,25 @@ const Taskbar = (props) => {
                 </div>
                 <ul className='menu-items'>
                     <li id='menu-item0' className='menu-item expander' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
-                        <img src={props.src1} alt='#'/>
+                        <img src={Programs} alt='#'/>
                         <span className='vertical-center'>Projects</span>
                     </li>
-                    <li onClick={props.smiClick} id='menu-item1' className='menu-item' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
-                        <img src={props.src2} alt='#'/>
+                    <li onClick={props.smiClick} id='menu-item1' className='menu-item' >
+                        <img src={Info} alt='#'/>
                         <span className='vertical-center'>About</span>
                     </li>
-                    <li onClick={props.smiClick} id='menu-item2' className='menu-item' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
-                        <img src={props.src3} alt='#'/>
+                    <li onClick={props.smiClick} id='menu-item2' className='menu-item'>
+                        <img src={HelpBook} alt='#'/>
                         <span className='vertical-center'>Help</span>
                     </li>
-                    <li onClick={props.smiClick} id='menu-item3' className='menu-item' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
-                        <img src={props.src4} alt='#'/>
+                    <li onClick={props.smiClick} id='menu-item3' className='menu-item' >
+                        <img src={Contact} alt='#'/>
                         <span className='vertical-center'>Contact</span>
                     </li>
                 </ul>
                 <div className='one-line'></div>
-                <div onClick={props.smiClick} id='menu-item-SD' className='menu-item' onMouseEnter={props.hover} onMouseLeave={props.noHover}>
-                    <img src={props.src5} alt='#'/>
+                <div onClick={props.smiClick} id='menu-item-SD' className='menu-item' >
+                    <img src={Shutdown} alt='#'/>
                     <span className='vertical-center'>Shut Down</span>
                 </div>
             </div>
