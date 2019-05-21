@@ -56,16 +56,15 @@ class Main extends React.Component {
   }
 
   backgroundEditHandler = () => {
-    document.body.removeAttribute('class')
-      this.setState({ backgroundUsing: this.state.backgroundSelected });
-      this.backgroundUpdateHandler();
-      
+    document.body.removeAttribute('class')    
+    this.setState({ backgroundUsing: this.state.backgroundSelected });  
+    this.backgroundUpdateHandler()    
   }
- 
+  
   backgroundUpdateHandler = () => {
+    document.body.classList += this.state.backgroundSelected;
     console.log(document.body)
     console.log(document.body.classList)
-    document.body.classList += this.state.backgroundUsing;
     console.log(this.state.backgroundUsing)
   }
 
