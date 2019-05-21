@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Icon, Panel } from "../../../components";
-import { Layout } from "../../../containers";
+import { Icon } from "../../../components";
+import { Layout, Panels } from "../../../containers";
 import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
 // import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../../../assets';
 import { HELP, OBJ } from "../../../utils";
 import './style.css';
-import { default as Draggable } from "react-draggable";
+// import { default as Draggable } from "react-draggable";
 
 
 class Main extends React.Component {
@@ -21,24 +21,16 @@ class Main extends React.Component {
       projArrowHover: false,
       startButtonActive: false,
       panelClassName: OBJ.panelClassName,
-      internetInputVal: '',
-      internetInputFocus: false
+      backgroundSelected: '',
+      backgroundUsing:'carved-blocks-bg'
+      // internetInputVal: '',
+      // internetInputFocus: false
     };
     this.startButtonToggle = this.startButtonToggle.bind(this);
-    // this.menuItemHover = this.menuItemHover.bind(this);
+    this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
   }
 
-  componentDidMount = () => {
-
-    // document.body.classList += 'chains-bg';
-  document.addEventListener('click', (e)=> {
-    if(e.target.id === 'internet-iq-input') {
-      console.log(e.target)
-      this.setState({ internetInputFocus: true })
-    } else { this.setState({ internetInputFocus: false }); console.log(e.target)}
-    console.log(this.state.internetInputFocus)
-  })
-  }
+  
 
    // basically, passing through an ID which will spit out which items are being hovered over to update pic...
   //  menuItemHover = (e) => {
@@ -51,6 +43,31 @@ class Main extends React.Component {
   //   if(this.state.menuItemHover[0] !== newArr[0]) this.projArrowHover();
   //   this.setState({ menuItemHover: newArr })
   // }
+
+  // componentDidMount = () => {
+  //   document.body.remove();
+  //   document.body.classList += this.state.backgroundUsing;
+  // }
+
+  backgroundSelectHandler = (e) => {
+    this.setState({ backgroundSelected: e.currentTarget.id });
+    console.log(e.currentTarget.id )
+    console.log(this.state.backgroundSelected)
+  }
+
+  backgroundEditHandler = () => {
+    document.body.removeAttribute('class')
+      this.setState({ backgroundUsing: this.state.backgroundSelected });
+      this.backgroundUpdateHandler();
+      
+  }
+ 
+  backgroundUpdateHandler = () => {
+    console.log(document.body)
+    console.log(document.body.classList)
+    document.body.classList += this.state.backgroundUsing;
+    console.log(this.state.backgroundUsing)
+  }
 
   // start-menu-item handler
   smiClickHandler = (e) => {
@@ -160,25 +177,28 @@ class Main extends React.Component {
         {/* Inner window/panel */}
         {
           this.state.panelOpen ? (
-            <Panel
+            <Panels
               cn={this.state.isMinimized ? 'invisible' : ''}
               minimize={this.minUpdate}
               panelSizeFull={this.state.panelSizeFull}
               head={this.state.head}
-              initialHeight={450}
-              initialWidth={340}
-              dragDropRes={false}
+              
+              // initialHeight={450}
+              // initialWidth={340}
+              // dragDropRes={false}
               clickClosed={this.togglePanel}
               expShr={this.panelSizeUpdate}
-              load={HELP.checkIfIframeLoaded}
+              // load={HELP.checkIfIframeLoaded}
               src={typeof this.state.panelShowing === 'string' && (this.state.panelShowing).substring(0,4) === 'http' ? this.state.panelShowing : ''}
               panelClassName={this.state.panelClassName[this.state.head]}
-               divIsDraggable={!this.state.internetInputFocus ? Draggable : 'div'}
-              internetInputVal={this.state.internetInputVal}
-              internetInputFocus={this.state.internetInputFocus}
+              //  divIsDraggable={!this.state.internetInputFocus ? Draggable : 'div'}
+              // internetInputVal={this.state.internetInputVal}
+              // internetInputFocus={this.state.internetInputFocus}
+              selectBG={this.backgroundSelectHandler}
+              applyBG={this.backgroundEditHandler}
             >
               {this.state.panelShowing}
-            </Panel>
+            </Panels>
           ) : <div></div>
         }
       </Layout>

@@ -43,7 +43,8 @@ const panel = (props) => {
                                         expShr={props.expShr}
                                         minimize={props.minimize}/>
                                     {/* passes the clickClosed prop to an unknown child element */}
-                                    {React.cloneElement(props.children, {clickClosed: props.clickClosed})}
+                                    {React.cloneElement(props.children, {...props})}
+                                       {/* {clickClosed: props.clickClosed})} */}
                                 </div>
                             )
                     }
