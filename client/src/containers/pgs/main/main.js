@@ -37,6 +37,8 @@ class Main extends React.Component {
   }
 
   componentDidMount = () => {
+
+    document.body.classList += 'chains-bg';
   document.addEventListener('click', (e)=> {
     if(e.target.id === 'internet-iq-input') {
       console.log(e.target)

@@ -1,8 +1,8 @@
 // export * from desktop
-export { default as RecycleBin_I } from './img/desktop/win95Recycle.png';
-export { default as Computer_I } from './img/desktop/computerIcon.png';
-export { default as IE_I } from './img/desktop/internetExplorer.png';
-export { default as File_I } from './img/desktop/fileIcon.png';
+export { default as RecycleBin_I } from './img/desktopTrans/win95Recycle.png';
+export { default as Computer_I } from './img/desktopTrans/computerIcon.png';
+export { default as IE_I } from './img/desktopTrans/internetExplorer.png';
+export { default as File_I } from './img/desktopTrans/fileIcon.png';
 
 // export * from panelPics
 export { default as DialUpGif } from './img/panelPics/dialupGif.gif';
