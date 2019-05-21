@@ -29,3 +29,16 @@ export { default as Puzzle } from './img/subMenu/puzzle.png';
 
 
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// export * from backgrounds
+export { default as NinetiesBG } from './backgrounds/90s.png';
+export { default as BlackBubblesBG } from './backgrounds/blackBubbles.png';
+export { default as BlackWhiteSpecsBG } from './backgrounds/blackWhiteSpecs.png';
+export { default as BluePrismsBG } from './backgrounds/bluePrisms.jpg';
+export { default as CarvedBG } from './backgrounds/carved.png';
+export { default as ChainsBG } from './backgrounds/chains.jpg';
+export { default as DiamondsBG } from './backgrounds/diamonds.jpg';
+export { default as GreenTilesBG } from './backgrounds/greenTiles.png';
+export { default as RedBlocksBG } from './backgrounds/redBlocks.jpg';
+

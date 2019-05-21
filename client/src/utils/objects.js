@@ -19,7 +19,9 @@ export default {
       },
       comps: {
         // 'Github': 'https://github.com/iQuixotic'
-        'Computer': <ShutdownPanel />,
+        // 'Computer': <ComputerPanel applyBG={props.applyBG} />,
+        'Computer': <ComputerPanel  />,
+
         'Files': <FilesPanel />,
         'Dialing': <DialUpPanel />,
         'Internet': <InternetPanel />,
@@ -58,6 +60,7 @@ export default {
     panelClassName: {
       Help: 'help-panel-outer',
       About: 'about-panel-outer',
+      Computer: 'computer-panel-outer',
       Contact: 'contact-panel-outer',
       Nope: 'shutdown-panel-outer',
       Files: 'files-panel-outer',

@@ -11,7 +11,7 @@ import {
 import { HELP, OBJ } from "../../../utils";
 import './style.css';
 import { default as Draggable } from "react-draggable";
-import Resizable from "re-resizable";
+// import Resizable from "re-resizable";
 
 
 class Main extends React.Component {
