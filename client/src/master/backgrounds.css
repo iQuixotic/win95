@@ -2,14 +2,48 @@ body {
     background: rgb(0, 146, 127);
 }
 
+.classic-bg {
+    background: rgb(0, 146, 127);
+}
+
 .chains-bg {
-    background: rgb(122, 0, 146);
+    background-image: url('../assets/backgrounds/chains.jpg');
+    background-size: 100% 160%;
 }
 
-.red-tiles-bg {
-    background: rgb(0, 146, 32);
+.diamond-wallpaper-bg {
+    background-image: url('../assets/backgrounds/diamonds.jpg');
+    background-size: 100% 170%;
 }
 
-.blue-skittles-bg {
-    background: rgb(2, 0, 146);
+.carved-blocks-bg {
+    background-image: url('../assets/backgrounds/carved.png');
+}
+
+.black-white-specs-bg {
+    background-image: url('../assets/backgrounds/blackWhiteSpecs.png');
+    background-size: 100% 170%; 
+}
+
+.black-bubbles-bg {
+    background-image: url('../assets/backgrounds/blackBubbles.png');
+}
+
+.blue-prisms-bg {
+    background-image: url('../assets/backgrounds/bluePrisms.jpg');
+}
+
+.saved-by-the-90s-bg {
+    background-image: url('../assets/backgrounds/90s.png');
+    background-size: 100% 170%; 
+}
+
+.green-tiles-bg {
+    background-image: url('../assets/backgrounds/greenTiles.png');
+    background-size: 50% 100%; 
+}
+
+.red-blocks-bg {
+    background-image: url('../assets/backgrounds/redBlocks.jpg');
+    background-size: 100% 175%; 
 }
