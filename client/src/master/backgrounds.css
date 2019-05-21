@@ -6,6 +6,14 @@ body {
     background: rgb(0, 146, 127);
 }
 
+.purple-bg {
+    background: purple;
+}
+
+.green-bg {
+    background: green;
+}
+
 .chains-bg {
     background-image: url('../assets/backgrounds/chains.jpg');
     background-size: 100% 160%;
