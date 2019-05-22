@@ -9,7 +9,7 @@
 }
 
 .more-less {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: black;
 }
 
@@ -18,16 +18,15 @@
 }
 
 .checkbox-div-for-fa {
-    font-size: 2rem;
     position: relative;
-    bottom: 14px;
-    left: 35%;
+    bottom: 11px;
+    left: 38%;
 }
 
 
 .gray-line {
-    border-bottom: 1px solid gray;
-    padding: 5px;
+    border-bottom: 1px solid rgb(220, 123, 245);
+    padding: 1px;
 }
 
 .about-panel {
@@ -45,11 +44,10 @@
     padding: 0 30px;
 }
 
-
 .about-panel-header {
     font-size: 2.2rem;
     background: rgb(224, 224, 224);
-    margin: 5% 5% 0 5%;
+    margin: 0 5% 0 5%;
     padding: 30px;
 }
 
@@ -89,17 +87,58 @@
 
 .fancy-checkbox .unchecked,
 .fancy-checkbox .checked {
-    font-size: 1.6rem; 
+    font-size: 1.7rem; 
 }
 
-input ~ p {
+/* inside the project info */
+input ~ .about-project-info {
     display: none;
 }
-input:checked ~ p {
+
+input:checked ~ .about-project-info {
     display: block;
-    border-bottom: 1px solid gray;
-    padding: 7px;
+    border-bottom: 1px solid rgb(220, 123, 245);
+    padding: 7px 4px;
     position: relative;
-    right: 35%;
+    right: 38%;
     top: 0;
+    /* font-size: 3.4rem; */
+
+}
+
+.about-project-info {
+    /* font-size: 3.4rem; */
+}
+
+.about-project-info em {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.about-project-info p {
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-project-info td {
+    font-size: 1.4rem;
+    padding: 5px 15px;
+}
+
+.about-project-info th {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.about-project-info table {
+    margin: 5px;
+}
+
+.about-project-info table tr:nth-child(even) {
+    background: rgb(235, 235, 235);
+}
+
+.about-project-info table tr:nth-child(odd) {
+    background: rgb(241, 255, 242);
 }
