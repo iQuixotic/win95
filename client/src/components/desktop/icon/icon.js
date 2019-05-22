@@ -4,9 +4,10 @@ import './style.css';
 
 const Icon = (props) => {
     return(
-        <div className='icon-plus-txt' >
-            <img id={props.id} onDoubleClick={props.onDoubleClick} 
-            className='icon' src={props.src} alt='#'></img>
+        <div className='icon-plus-txt' 
+            id={props.id} onClick={props.onClick}
+            onDoubleClick={props.onDoubleClick}>
+            <img  className='icon' src={props.src} alt='#' />
             <p className='icon-txt'>{props.iconName}</p>
         </div>
     );

@@ -39,14 +39,17 @@ class Main extends React.Component {
   
   backgroundSelectHandler = (e) => {
     let x = e.currentTarget;
+    console.log(x)
     this.setState({ backgroundSelected: x.id, isHighlighted: true });
     if (x.id !== this.state.backgroundSelected) this.highlightHandler(x);
   }
   
   highlightHandler = (arg) => {
     let y = document.getElementsByClassName(' highlighted-blue')
+    console.log('y')
     if(y.length > 0) [].forEach.call(y, (el) => el.classList.remove('highlighted-blue'));
     arg.classList += ' highlighted-blue';
+    console.log(this.state.projArrowHover, this.state.panelHover)
   }
 
   backgroundEditHandler = () => {
@@ -122,7 +125,7 @@ class Main extends React.Component {
 
   // opens a draggable, resizable panel or iframe
   openPanel = (e) => {
-    if(e.currentTarget.innerHTML !== '') this.panelHover();
+    if(e.currentTarget.innerHTML !== '' && !e.currentTarget.classList.contains('icon-plus-txt')) this.panelHover(); 
     if(this.state.startButtonActive) this.startButtonToggle();
     if(e.currentTarget.id === 'Internet') HELP.giveMeInternet(this.panelShowingStatusUpdate);
     // if it's a clicked icon, open by ID, ELSEIF it's from the start menu, only gets html after the image
@@ -161,10 +164,18 @@ class Main extends React.Component {
         noHover={this.projArrowHover}>
 
         {/* Icons */}
-        <Icon iconName='Recycle Bin' id='Recycle Bin' src={RecycleBin_I} onDoubleClick={this.openPanel} />
-        <Icon iconName='Computer' id='Computer' src={Computer_I} onDoubleClick={this.openPanel} />
-        <Icon iconName='The Internet' id='Internet' onDoubleClick={this.openPanel} src={IE_I} />
-        <Icon iconName='Files' id='Files' src={File_I} onDoubleClick={this.openPanel} />
+        <Icon onClick={this.backgroundSelectHandler}
+          iconName='Recycle Bin' id='Recycle Bin' 
+          src={RecycleBin_I} onDoubleClick={this.openPanel} />
+        <Icon onClick={this.backgroundSelectHandler}
+          iconName='Computer' id='Computer' 
+          src={Computer_I} onDoubleClick={this.openPanel} />
+        <Icon onClick={this.backgroundSelectHandler}
+          iconName='The Internet' id='Internet' 
+          src={IE_I} onDoubleClick={this.openPanel} />
+        <Icon onClick={this.backgroundSelectHandler}
+          iconName='Files' id='Files' 
+          src={File_I} onDoubleClick={this.openPanel} />
         
         {/* start menu items */}
         { this.state.projArrowHover || this.state.panelHover ? projectList : <div></div> }
