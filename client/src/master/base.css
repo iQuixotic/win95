@@ -73,5 +73,10 @@ body {
 
 .highlighted-blue {
     background-image: linear-gradient(to right, rgba(38, 0, 255, 0.5), rgba(147, 147, 255, 0.35));
-    border-radius: 10px;
+}
+
+div .highlighted-blue-dotted {
+    background-image: linear-gradient(to right, rgba(38, 0, 255, 0.5), rgba(147, 147, 255, 0.35));
+    border: 1px dotted;
+    border-color: black;
 }

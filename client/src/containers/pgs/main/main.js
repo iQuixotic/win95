@@ -29,27 +29,18 @@ class Main extends React.Component {
     this.startButtonToggle = this.startButtonToggle.bind(this);
     this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
   }
-
-  componentDidMount = () => {
-    // document.addEventListener('click', (e) => {
-      // if(this.state.isHighlighted && e.currentTarget.id ) 
-      // this.setState({ backgroundSelected: e.currentTarget.id });
-    // });
-  }
   
   backgroundSelectHandler = (e) => {
-    let x = e.currentTarget;
-    console.log(x)
+    let z, x = e.currentTarget;
+    z = x.id.includes('-bg') ? 'highlighted-blue' : 'highlighted-blue-dotted';
     this.setState({ backgroundSelected: x.id, isHighlighted: true });
-    if (x.id !== this.state.backgroundSelected) this.highlightHandler(x);
+    if (x.id !== this.state.backgroundSelected) this.highlightHandler(x, z);
   }
   
-  highlightHandler = (arg) => {
-    let y = document.getElementsByClassName(' highlighted-blue')
-    console.log('y')
-    if(y.length > 0) [].forEach.call(y, (el) => el.classList.remove('highlighted-blue'));
-    arg.classList += ' highlighted-blue';
-    console.log(this.state.projArrowHover, this.state.panelHover)
+  highlightHandler = (arg, z) => {
+    let y = document.getElementsByClassName(' ' + z)
+    if(y.length > 0) [].forEach.call(y, (el) => el.classList.remove(z));
+    arg.classList += ' ' + z;
   }
 
   backgroundEditHandler = () => {
@@ -60,9 +51,6 @@ class Main extends React.Component {
   
   backgroundUpdateHandler = () => {
     document.body.classList += this.state.backgroundSelected;
-    console.log(document.body)
-    console.log(document.body.classList)
-    console.log(this.state.backgroundUsing)
   }
 
   // start-menu-item handler
