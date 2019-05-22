@@ -125,11 +125,13 @@ class Main extends React.Component {
 
   // opens a draggable, resizable panel or iframe
   openPanel = (e) => {
-    if(e.currentTarget.innerHTML !== '' && !e.currentTarget.classList.contains('icon-plus-txt')) this.panelHover(); 
+    let x = e.currentTarget;
+    // if you're not hovering over an icon
+    if(x.innerHTML !== '' && !x.classList.contains('icon-plus-txt')) this.panelHover(); 
     if(this.state.startButtonActive) this.startButtonToggle();
-    if(e.currentTarget.id === 'Internet') HELP.giveMeInternet(this.panelShowingStatusUpdate);
+    if(x.id === 'Internet') HELP.giveMeInternet(this.panelShowingStatusUpdate);
     // if it's a clicked icon, open by ID, ELSEIF it's from the start menu, only gets html after the image
-    else this.panelShowingStatusUpdate(e.currentTarget.id)
+    else this.panelShowingStatusUpdate(e.currentTarget.id);
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
