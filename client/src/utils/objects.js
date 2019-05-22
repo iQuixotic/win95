@@ -1,9 +1,5 @@
 import React from 'react';
-import { 
-  DialUpPanel, AboutPanel, ShutdownPanel, HelpPanel,
-  ContactPanel, FilesPanel, ComputerPanel, RecycleBinPanel,
-  InternetPanel
-} from "../components";
+import {  AboutPanel, ShutdownPanel, HelpPanel,  ContactPanel } from "../components";
 import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../assets';
 
 export default {
@@ -17,16 +13,6 @@ export default {
         'Picture Puzzles': 'https://picture-puzzles.herokuapp.com/',
         'Avatar Cards': 'https://avatar-card-tribute-game-89458.herokuapp.com/'
       },
-      comps: {
-        // 'Github': 'https://github.com/iQuixotic'
-        // 'Computer': <ComputerPanel applyBG={props.applyBG} />,
-        'Computer': <ComputerPanel  />,
-
-        'Files': <FilesPanel />,
-        'Dialing': <DialUpPanel />,
-        'Internet': <InternetPanel />,
-        'Recycle Bin': <ShutdownPanel />
-      }
     },
     
     pictures: {
@@ -56,6 +42,7 @@ export default {
         show: <ShutdownPanel />,
         }
     },
+    
 
     panelClassName: {
       Help: 'help-panel-outer',

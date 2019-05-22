@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Icon } from "../../../components";
-import { Layout, Panels } from "../../../containers";
+import { Layout, Panels, Switch } from "../../../containers";
 import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
 // import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../../../assets';
 import { HELP, OBJ } from "../../../utils";
@@ -23,53 +23,38 @@ class Main extends React.Component {
       panelClassName: OBJ.panelClassName,
       backgroundSelected: '',
       backgroundUsing:'carved-blocks-bg',
-      isHighlightedBool: false,
-      highligted: ''
+      isHighlighted: false,
+      currentHighligted: ''
     };
     this.startButtonToggle = this.startButtonToggle.bind(this);
     this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
   }
 
-//   isHighlighted: false,
-//   currentHighlighted: ''
-// };
-// this.startButtonToggle = this.startButtonToggle.bind(this);
-// this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
-// }
-
-// backgroundSelectHandler = (e) => {
-// let x = e.currentTarget;
-// if(!this.state.isHighlighted) {
-//   this.setState({ isHighlighted: true, currentHighlighted: x.id });
-//   x.classList += ' highlighted-blue ';
-// }  else {
-//   this.setState({ isHighlighted: false })
-//   // x.classList -= ' highlighted-blue ';
-// }
-// console.log(e.currentTarget.id )
-// console.log(this.state.currentHighlighted)
-// }
-
-// backgroundEditHandler = () => {
-// document.body.removeAttribute('class')    
-// this.setState({ backgroundUsing: this.state.currentHighlighted });  
-// this.backgroundUpdateHandler()    
-// }
-
-// backgroundUpdateHandler = () => {
-// document.body.classList += this.state.currentHighlighted;
-// console.log(document.body)
-// console.log(document.body.classList)
-// console.log(this.state.backgroundUsing)
-// }
-
-
-
-
+  componentDidMount = () => {
+    // document.addEventListener('click', (e) => {
+      // if(this.state.isHighlighted && e.currentTarget.id ) 
+      // this.setState({ backgroundSelected: e.currentTarget.id });
+    // });
+  }
+  
   backgroundSelectHandler = (e) => {
-    this.setState({ backgroundSelected: e.currentTarget.id });
-    console.log(e.currentTarget.id )
-    console.log(this.state.backgroundSelected)
+    let x = e.currentTarget;
+    // console.log(x.id.substring(x.id.length-2) === 'bg')
+    this.setState({ backgroundSelected: x.id, isHighlighted: true });
+    if (x.id !== this.state.backgroundSelected) this.highlightHandler(x);
+  }
+  
+  highlightHandler = (arg) => {
+    let y = document.getElementsByClassName(' highlighted-blue')
+    console.log(y)
+    console.log(y.length > 0)
+    if(y.length > 0) [].forEach.call(y, (el) => el.classList.remove('highlighted-blue'));
+    console.log()
+    arg.classList += ' highlighted-blue';
+    // let arr = [].slice.call(y);
+    // arr.forEach((el) =>  el.classList -= ' highlighted-blue');
+    //  arg.classList += ' highlighted-blue';
+    // else console.log('it already has a blue class');
   }
 
   backgroundEditHandler = () => {
@@ -118,8 +103,12 @@ class Main extends React.Component {
     this.setState({
       panelOpen: false,
       head: arg,
-      panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : OBJ.panels.comps[arg]
+      panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : (
+      <Switch panelUse={arg.trim()} />
+      )
+      // OBJ.panels.comps[arg]      
     });
+    console.log(this.state.panelShowing)
     HELP.wait(this.togglePanel, 100);
   }
 

@@ -70,3 +70,8 @@ body {
     border-bottom: ridge 2px black;
     border-right: ridge 2px grey;
 }
+
+.highlighted-blue {
+    background: rgba(0, 0, 255, 0.3);
+    padding: 5px;
+}
