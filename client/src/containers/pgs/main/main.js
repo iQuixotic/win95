@@ -30,6 +30,42 @@ class Main extends React.Component {
     this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
   }
 
+//   isHighlighted: false,
+//   currentHighlighted: ''
+// };
+// this.startButtonToggle = this.startButtonToggle.bind(this);
+// this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
+// }
+
+// backgroundSelectHandler = (e) => {
+// let x = e.currentTarget;
+// if(!this.state.isHighlighted) {
+//   this.setState({ isHighlighted: true, currentHighlighted: x.id });
+//   x.classList += ' highlighted-blue ';
+// }  else {
+//   this.setState({ isHighlighted: false })
+//   // x.classList -= ' highlighted-blue ';
+// }
+// console.log(e.currentTarget.id )
+// console.log(this.state.currentHighlighted)
+// }
+
+// backgroundEditHandler = () => {
+// document.body.removeAttribute('class')    
+// this.setState({ backgroundUsing: this.state.currentHighlighted });  
+// this.backgroundUpdateHandler()    
+// }
+
+// backgroundUpdateHandler = () => {
+// document.body.classList += this.state.currentHighlighted;
+// console.log(document.body)
+// console.log(document.body.classList)
+// console.log(this.state.backgroundUsing)
+// }
+
+
+
+
   backgroundSelectHandler = (e) => {
     this.setState({ backgroundSelected: e.currentTarget.id });
     console.log(e.currentTarget.id )
