@@ -22,32 +22,13 @@ class Main extends React.Component {
       startButtonActive: false,
       panelClassName: OBJ.panelClassName,
       backgroundSelected: '',
-      backgroundUsing:'carved-blocks-bg'
-      // internetInputVal: '',
-      // internetInputFocus: false
+      backgroundUsing:'carved-blocks-bg',
+      isHighlightedBool: false,
+      highligted: ''
     };
     this.startButtonToggle = this.startButtonToggle.bind(this);
     this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
   }
-
-  
-
-   // basically, passing through an ID which will spit out which items are being hovered over to update pic...
-  //  menuItemHover = (e) => {
-  //   let id = e.currentTarget.id;
-  //   if(id === 'menu-item0') this.projArrowHover();
-  //   let arrNum = parseInt(id.substring(9));
-  //   let oldArr = this.state.menuItemHover;
-  //   oldArr[arrNum] = !oldArr[arrNum]
-  //   let newArr = oldArr
-  //   if(this.state.menuItemHover[0] !== newArr[0]) this.projArrowHover();
-  //   this.setState({ menuItemHover: newArr })
-  // }
-
-  // componentDidMount = () => {
-  //   document.body.remove();
-  //   document.body.classList += this.state.backgroundUsing;
-  // }
 
   backgroundSelectHandler = (e) => {
     this.setState({ backgroundSelected: e.currentTarget.id });
@@ -70,8 +51,6 @@ class Main extends React.Component {
 
   // start-menu-item handler
   smiClickHandler = (e) => {
-    // console.log(e.currentTarget.id)
-    // this.panelShowingStatusUpdate(e.currentTarget.id)
     this.setState({ 
       panelShowing: OBJ.startMenu[e.currentTarget.id].show, 
       head: OBJ.startMenu[e.currentTarget.id].head,
@@ -181,18 +160,10 @@ class Main extends React.Component {
               minimize={this.minUpdate}
               panelSizeFull={this.state.panelSizeFull}
               head={this.state.head}
-              
-              // initialHeight={450}
-              // initialWidth={340}
-              // dragDropRes={false}
               clickClosed={this.togglePanel}
               expShr={this.panelSizeUpdate}
-              // load={HELP.checkIfIframeLoaded}
               src={typeof this.state.panelShowing === 'string' && (this.state.panelShowing).substring(0,4) === 'http' ? this.state.panelShowing : ''}
               panelClassName={this.state.panelClassName[this.state.head]}
-              //  divIsDraggable={!this.state.internetInputFocus ? Draggable : 'div'}
-              // internetInputVal={this.state.internetInputVal}
-              // internetInputFocus={this.state.internetInputFocus}
               selectBG={this.backgroundSelectHandler}
               applyBG={this.backgroundEditHandler}
             >
