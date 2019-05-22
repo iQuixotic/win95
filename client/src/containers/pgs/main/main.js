@@ -39,22 +39,14 @@ class Main extends React.Component {
   
   backgroundSelectHandler = (e) => {
     let x = e.currentTarget;
-    // console.log(x.id.substring(x.id.length-2) === 'bg')
     this.setState({ backgroundSelected: x.id, isHighlighted: true });
     if (x.id !== this.state.backgroundSelected) this.highlightHandler(x);
   }
   
   highlightHandler = (arg) => {
     let y = document.getElementsByClassName(' highlighted-blue')
-    console.log(y)
-    console.log(y.length > 0)
     if(y.length > 0) [].forEach.call(y, (el) => el.classList.remove('highlighted-blue'));
-    console.log()
     arg.classList += ' highlighted-blue';
-    // let arr = [].slice.call(y);
-    // arr.forEach((el) =>  el.classList -= ' highlighted-blue');
-    //  arg.classList += ' highlighted-blue';
-    // else console.log('it already has a blue class');
   }
 
   backgroundEditHandler = () => {
