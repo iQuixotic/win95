@@ -22,58 +22,35 @@
     width: 100%;
     height: 100%;
     z-index: 11;
-    /* margin-left: 2px; */
 }
 
 .panel_btn {
     text-align: center;
 }
+/* - - - - - - - - - - - - - Font Awesome XBOX Icons - - - - - - - - - - -  */
+
+.panel_btn .lg {
+	font-size: 1.4rem;
+}
+
+.panel_btn .maxi {
+	font-size: 1.3rem;
+}
+
+.panel_btn .min {
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
 
 .panel_btn img {
     width: 12px;
     height: 12px;
 }
 
-/* #loadScreen .windows-logo {
-    
-    text-align: center;
-    margin-top: 40%;
-}
 
-.windows-logo .row {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-
-.windows-logo .row .red,
-.windows-logo .row .blue,
-.windows-logo .row .green,
-.windows-logo .row .yellow {
-    width: 20px;
-    height: 20px;
-    padding: 5px 5px 0;
-    margin: 4px 2px 0;
-}
-
-
-.windows-logo .row .red {
-    background: red;
-}
-
-.windows-logo .row .green {
-    background: green;
-}
-
-.windows-logo .row .blue {
-    background: blue;
-}
-
-.windows-logo .row .yellow {
-    background: yellow;
-}
- */
-
+/* - - - - - - - The loader starts here - - - - - - -  */
 
 .cssload-thecube {
 	width: 80px;
@@ -168,6 +145,8 @@
 		-moz-animation-delay: 0.765s;
 }
 
+
+/* - - - - - - - The animation stuff for the loader starts here - - - - - - -  */
 
 
 @keyframes cssload-fold-thecube {

@@ -2,10 +2,8 @@ import * as React from "react";
 import { Icon } from "../../../components";
 import { Layout, Panels, Switch } from "../../../containers";
 import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
-// import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../../../assets';
 import { HELP, OBJ } from "../../../utils";
 import './style.css';
-// import { default as Draggable } from "react-draggable";
 
 
 class Main extends React.Component {
@@ -90,10 +88,8 @@ class Main extends React.Component {
       head: arg,
       panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : (
       <Switch panelUse={arg.trim()} />
-      )
-      // OBJ.panels.comps[arg]      
+      ) 
     });
-    console.log(this.state.panelShowing)
     HELP.wait(this.togglePanel, 100);
   }
 

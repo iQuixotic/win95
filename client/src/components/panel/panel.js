@@ -1,7 +1,6 @@
 import * as React from "react";
-// import { default as Draggable } from 'react-draggable';
-import Resizable from 're-resizable';
 import { Frame, Xbox } from "../../components";
+import Resizable from 're-resizable';
 import './style.css';
 
 const panel = (props) => {
@@ -44,7 +43,6 @@ const panel = (props) => {
                                         minimize={props.minimize}/>
                                     {/* passes the clickClosed prop to an unknown child element */}
                                     {React.cloneElement(props.children, {...props})}
-                                       {/* {clickClosed: props.clickClosed})} */}
                                 </div>
                             )
                     }

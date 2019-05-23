@@ -16,7 +16,6 @@ const AboutPanel = (props) => {
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>
                         <div className='about-project-info'> 
                             <em>Thank you so much for viewing my page !! </em>
-
                             
                             <em>Why is this project important? </em>
                             <p>This is the first project I built using Typescript! Don't be fooled by the 

@@ -5,6 +5,7 @@
 }
 
 .computer-panel {
+    font-family: 'Encode Sans Condensed', sans-serif;
     background: white;
     border: 2px solid rgb(194, 194, 194);
     border-top: none;
@@ -20,28 +21,26 @@
     padding: 1rem;
 }
 
-.bg-apply {
-    text-align: center;
+.computer-panel .row {
+    display: flex;
 }
 
-.row {
-    display: flex;
+.bg-apply {
+    margin: 20px;
+    text-align: center;
+    font-family: 'Encode Sans Condensed', sans-serif;
 }
 
 .bg-apply button {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 1.8rem;
-    margin: 25px 20px;
+    margin: 0 20px;
     padding: 5px 8px;
     background: white;
     border: 1px solid rgb(103, 0, 129);
     color: rgb(103, 0, 129);
     border-radius: 6px;
-}
-
-.bg-apply {
-    margin :25px;
 }
 
 .bg-apply .bg-cancel-btn:hover {

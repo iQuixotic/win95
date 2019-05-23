@@ -1,6 +1,6 @@
 import React from "react";
-import './style.css';
 import { Linkedin, Octocat, ReactLogo, Resume } from '../../../../assets';
+import './style.css';
 
 const FilesPanel = (props) => {
     return(
