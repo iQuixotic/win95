@@ -29,17 +29,19 @@ class Main extends React.Component {
     this.startButtonToggle = this.startButtonToggle.bind(this);
     this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
   }
-  
+
   backgroundSelectHandler = (e) => {
     let z, x = e.currentTarget;
     z = x.id.includes('-bg') ? 'highlighted-blue' : 'highlighted-blue-dotted';
-    this.setState({ backgroundSelected: x.id, isHighlighted: true });
+    this.setState({ backgroundSelected: x.id });
+      // isHighlighted: true });
     if (x.id !== this.state.backgroundSelected) this.highlightHandler(x, z);
   }
   
   highlightHandler = (arg, z) => {
     let y = document.getElementsByClassName(' ' + z)
     if(y.length > 0) [].forEach.call(y, (el) => el.classList.remove(z));
+    // if(this.state.isHighlighted) 
     arg.classList += ' ' + z;
   }
 
@@ -144,6 +146,7 @@ class Main extends React.Component {
 
       // Start button and taskbar plus 
       <Layout
+        // onClick={this.backgroundNotHighlightedHandler}
         head={this.state.head}
         panelOpen={this.state.panelOpen}
         minClick={this.minUpdate}
@@ -155,15 +158,23 @@ class Main extends React.Component {
 
         {/* Icons */}
         <Icon onClick={this.backgroundSelectHandler}
-          iconName='Recycle Bin' id='Recycle Bin' 
+          // cn={this.state.isHighlighted[] }
+          cn='icon-plus-txt'
+          iconName='Recycle' id='Recycle' 
           src={RecycleBin_I} onDoubleClick={this.openPanel} />
         <Icon onClick={this.backgroundSelectHandler}
+          // cn={this.state.isHighlighted[] }
+          cn='icon-plus-txt'
           iconName='Computer' id='Computer' 
           src={Computer_I} onDoubleClick={this.openPanel} />
         <Icon onClick={this.backgroundSelectHandler}
+          // cn={this.state.isHighlighted[] }
+          cn='icon-plus-txt'
           iconName='The Internet' id='Internet' 
           src={IE_I} onDoubleClick={this.openPanel} />
         <Icon onClick={this.backgroundSelectHandler}
+          // cn={this.state.isHighlighted[] }
+          cn='icon-plus-txt'
           iconName='Files' id='Files' 
           src={File_I} onDoubleClick={this.openPanel} />
         

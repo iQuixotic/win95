@@ -4,7 +4,6 @@ import './base.css';
 
 import { Main } from '../containers';
 
-
 class App extends Component {
   render() {
     return (

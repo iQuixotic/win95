@@ -1,15 +1,47 @@
-.recyle-panel-outer {
+.recycle-panel-outer {
     background: white;
     width: 500px;
     height: 400px;
 }
 
 .recycle-panel {
-    overflow-y: scroll;
-    overflow-x: hidden;
     background: white;
     border: 2px solid rgb(194, 194, 194);
     border-top: none;
     width: 100%;
     height: 100%;
+    /* overflow-x: scroll; */
+    overflow: hidden;
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.what-goes-here,
+.oh, .no, .what-prease {
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.what-goes-here {
+    color: rebeccapurple;
+}
+
+.oh {
+    color: yellowgreen;
+    background: purple;
+}
+
+.no {
+    font-size: 8rem;
+    background: red;
+    color: preu;
+}
+
+.what-prease {
+    padding: 20px;
+    margin: 15px;
+    background: rgb(89, 128, 255);
+    border-radius: 130px 145px 150px 20px;
+    color: rgb(85, 0, 59);
 }

@@ -4,7 +4,7 @@ import './style.css';
 
 const Icon = (props) => {
     return(
-        <div className='icon-plus-txt' 
+        <div className={props.cn}
             id={props.id} onClick={props.onClick}
             onDoubleClick={props.onDoubleClick}>
             <img  className='icon' src={props.src} alt='#' />

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { 
-    DialUpPanel, ShutdownPanel,  FilesPanel, ComputerPanel, InternetPanel
+    DialUpPanel, ShutdownPanel,  FilesPanel, ComputerPanel, InternetPanel, RecycleBinPanel
 } from "../../components";
 
 class Switch extends React.Component { 
@@ -19,8 +19,8 @@ class Switch extends React.Component {
           case 'Internet':
               return <InternetPanel {...this.props} />
               break;
-          case 'RecycleBin':
-              return <ShutdownPanel {...this.props} />
+          case 'Recycle':
+              return <RecycleBinPanel {...this.props} />
               break;
             default: return <ShutdownPanel {...this.props} />
               break;

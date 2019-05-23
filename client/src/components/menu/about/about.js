@@ -11,7 +11,7 @@ const AboutPanel = (props) => {
                 <div className='gray-line'></div>
                 <label className='fancy-checkbox'>
                     <div className='checkbox-div-for-fa'>
-                        <input checked='checked'  type='checkbox'/>   
+                        <input type='checkbox'/>   
                         <span className='more-less bg-white'> View </span>             
                         <i className="fas  bg-white fa-eye unchecked"> <span className='more-less bg-white'> More</span></i>
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>

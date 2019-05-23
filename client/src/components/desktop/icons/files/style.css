@@ -5,7 +5,7 @@
 }
 
 .files-panel {
-    background: white;
+    background: rgb(202, 202, 202);
     border: 2px solid rgb(194, 194, 194);
     border-top: none;
     width: 100%;
@@ -13,22 +13,29 @@
 }
 
 .files-panel-line {
-    width: 100%;
-    padding: 2px;
-    height: 15px;
+    padding: 10px;
+    border-bottom: 1px dashed salmon;
 }
 
+.files-panel .space {
+    padding-bottom: 10px;
+}
+
+
 .files-panel-line:hover {
+    cursor: pointer;
     background: rgb(110, 28, 187);
     color: white;
 }   
 
 .files-panel-line img {
-    height: 15px;
-    width: 15px;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
 }
 
 .files-panel-line .line-txt {
+    cursor: pointer;
     font-size: 1.5rem;
-    margin-left: 80%;
+    margin-left: 75%;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import {  AboutPanel, ShutdownPanel, HelpPanel,  ContactPanel } from "../components";
 import { Building, Cards, Cat, LilLibs, Portfolio, Puzzle } from '../assets';
 
+
 export default {
 
     panels: {
@@ -51,8 +52,8 @@ export default {
       Contact: 'contact-panel-outer',
       Nope: 'shutdown-panel-outer',
       Files: 'files-panel-outer',
-      Internet: 'internet-panel-outer'
-      // 'Recycle Bin': 'recycle-panel-outer'
+      Internet: 'internet-panel-outer',
+      Recycle: 'recycle-panel-outer'
     }
 
 }
