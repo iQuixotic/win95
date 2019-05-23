@@ -16,8 +16,8 @@ const panel = (props) => {
                         <Resizable
                             enable={{ top: true, right: false, bottom: false, left: true,
                                 topRight: false, bottomRight: false, bottomLeft: false, topLeft: true }}
-                            className='panel'
-                            defaultSize={{ width: props.initialWidth,
+                                className='panel'
+                                defaultSize={{ width: props.initialWidth,
                                 height: props.initialHeight }}>
                             <Xbox
                                 head={props.head}
@@ -73,7 +73,8 @@ const panel = (props) => {
                             clickClosed={props.clickClosed}
                             expShr={props.expShr}
                             minimize={props.minimize}/>  
-                        {props.children}
+                         {/* passes the clickClosed prop to an unknown child element */}
+                         {React.cloneElement(props.children, {...props})}
                     </div>
                 ))
                 // <div id='Portfolio-full-size' className='panel-starting-position'>

@@ -30,7 +30,6 @@
 .background-choice {    
     width: 25%;
     border-radius: 10px;
-    /* text-align: center; */
     font-size: 1.4rem;
 }
 
@@ -43,16 +42,16 @@
 
 .background-choice div   {
     margin: 15px 20%;
-    /* padding: 5%; */
     width: 60%;
     height: 60px;
 }
 .background-choice p {
+    cursor: default;
     text-align: center;
     padding:  0;
 }
 
-/* - - - - - - - - - - - - - - - - - - - bg-colors-for=divs - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - - - - - - - - - - - - - bg-colors-for-divs - - - - - - - - - - - - - - - - - - -  */
 
 .classic-div {
     background: rgb(68, 173, 128);
