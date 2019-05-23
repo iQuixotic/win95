@@ -27,21 +27,13 @@ const AboutPanel = (props) => {
                                 or create your own account. Data is persistent. Feel free to give it a shot! </p>
                             <em>Quick and dirty</em>
                             <table>
-                                <tr>
-                                    <th>Subject</th> <th>Tech</th>
-                                </tr>
-                                <tr>
-                                    <td>Frontend</td><td>Reactjs with Typescript</td>
-                                </tr>
-                                <tr>
-                                    <td>Backend</td><td>Nodejs</td>
-                                </tr>
-                                <tr>
-                                    <td>Database</td><td>MongoDB</td>
-                                </tr>
-                                <tr>
-                                    <td>Mobile Responsive</td><td>Yes</td>
-                                </tr>
+                                <tbody>
+                                    <tr><th>Subject</th><th>Tech</th></tr>
+                                    <tr><td>Frontend</td><td>Reactjs with Typescript</td></tr>
+                                    <tr><td>Backend</td><td>Nodejs</td></tr>
+                                    <tr><td>Database</td><td>MongoDB</td></tr>
+                                    <tr><td>Mobile Responsive</td><td>Yes</td></tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -69,21 +61,13 @@ const AboutPanel = (props) => {
                                 or create your own account. Data is persistent. Feel free to give it a shot! </p>
                             <em>Quick and dirty</em>
                             <table>
-                                <tr>
-                                    <th>Subject</th> <th>Tech</th>
-                                </tr>
-                                <tr>
-                                    <td>Frontend</td><td>Reactjs with Typescript</td>
-                                </tr>
-                                <tr>
-                                    <td>Backend</td><td>Nodejs</td>
-                                </tr>
-                                <tr>
-                                    <td>Database</td><td>MongoDB</td>
-                                </tr>
-                                <tr>
-                                    <td>Mobile Responsive</td><td>Yes</td>
-                                </tr>
+                                <tbody>
+                                    <tr><th>Subject</th><th>Tech</th></tr>
+                                    <tr><td>Frontend</td><td>Reactjs with Typescript</td></tr>
+                                    <tr><td>Backend</td><td>Nodejs</td></tr>
+                                    <tr><td>Database</td><td>MongoDB</td></tr>
+                                    <tr><td>Mobile Responsive</td><td>Yes</td></tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -110,18 +94,13 @@ const AboutPanel = (props) => {
                                 or create your own account. Data is persistent. Feel free to give it a shot! </p>
                             <em>Quick and dirty</em>
                             <table>
-                                <tr>
-                                    <td>Frontend</td><td>Reactjs with Typescript</td>
-                                </tr>
-                                <tr>
-                                    <td>Backend</td><td>Nodejs</td>
-                                </tr>
-                                <tr>
-                                    <td>Database</td><td>MongoDB</td>
-                                </tr>
-                                <tr>
-                                    <td>Mobile Responsive</td><td>Yes</td>
-                                </tr>
+                                <tbody>
+                                    <tr><th>Subject</th><th>Tech</th></tr>
+                                    <tr><td>Frontend</td><td>Reactjs with Typescript</td></tr>
+                                    <tr><td>Backend</td><td>Nodejs</td></tr>
+                                    <tr><td>Database</td><td>MongoDB</td></tr>
+                                    <tr><td>Mobile Responsive</td><td>Yes</td></tr>
+                                </tbody>
                             </table>
 
                         </div>
