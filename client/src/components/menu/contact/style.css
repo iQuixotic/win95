@@ -1,15 +1,13 @@
 .contact-panel-outer {
-    background: blue;
+    /* background: rgb(255, 0, 106); */
     width: 400px;
     height: 400px;
 }
 
 .contact-panel {
-    background: white;
-    /* background: rgb(194, 194, 194); */
+    background: rgb(243, 243, 243);
     border: 2px solid rgb(194, 194, 194);
     border-top: none;
-    /* margin: 1px; */
     width: 100%;
     height: 100%;
 }
@@ -22,8 +20,27 @@
     padding: 10px;
 }
 
-.contact-panel-content p {
-    font-size: 1.5rem;
+.contact-panel-content p { 
+    color: black;
+    background: white;
+    padding: 4px 0;
+}
+
+.contact-panel-content .subj { 
+    color: red;
+    font-size: 1.4rem;
+}
+.contact-panel-content .contact-panel-info {
+    padding: 4px;
+    text-decoration: none;
+    color: rgb(77, 77, 77);
+    font-size: 1.4rem;
+}
+
+.contact-panel-content a:hover {
+    background: rgb(255, 166, 0);
+    color: rgb(204, 204, 255);
+    border-radius: 4px;
 }
 
 .contact-panel-content img {
