@@ -42,3 +42,10 @@ export { default as DiamondsBG } from './backgrounds/diamonds.jpg';
 export { default as GreenTilesBG } from './backgrounds/greenTiles.png';
 export { default as RedBlocksBG } from './backgrounds/redBlocks.jpg';
 
+// export * from links
+export { default as Linkedin } from './img/links/linkedin.png';
+export { default as Octocat } from './img/links/octocat.png';
+export { default as ReactLogo } from './img/links/reactLogo.png';
+export { default as Resume } from './img/links/resumeLogo.png';
+
+
