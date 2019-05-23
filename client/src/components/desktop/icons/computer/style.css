@@ -25,6 +25,49 @@
     display: flex;
 }
 
+/* - - - - - - - - - - - - - - - - background-choice is containing div - - - - - - - - - - - - - - - */
+
+.background-choice {    
+    width: 25%;
+    border-radius: 10px;
+    /* text-align: center; */
+    font-size: 1.4rem;
+}
+
+.background-choice img   {
+    margin: 15px 15%;
+    padding: 0 5%;
+    width: 60%;
+    height: 60px;
+}
+
+.background-choice div   {
+    margin: 15px 20%;
+    /* padding: 5%; */
+    width: 60%;
+    height: 60px;
+}
+.background-choice p {
+    text-align: center;
+    padding:  0;
+}
+
+/* - - - - - - - - - - - - - - - - - - - bg-colors-for=divs - - - - - - - - - - - - - - - - - - -  */
+
+.classic-div {
+    background: rgb(68, 173, 128);
+}
+
+.green-div {
+    background: rgb(0, 128, 6);
+}
+
+.purple-div {
+    background: rgb(103, 0, 129);
+}
+
+/* - - - - - - - - - - - - - - - - - - Buttons - - - - - - - - - - - - - - - - - - -  */
+
 .bg-apply {
     margin: 20px;
     text-align: center;
@@ -65,41 +108,4 @@
 .bg-apply button:active {
     border: 1px solid rgb(0, 153, 255) !important;
 }
-
-.background-choice {    
-    width: 16rem;
-    text-align: center;
-    padding: 5px 0;
-    margin: 0 15px 0 15px;
-    border-radius: 10px;
-}
-
-.background-choice img   {
-    padding: 1rem 1.5rem;
-    width: 9rem;
-    height: 6rem;
-}
-
-.background-choice div    {
-    margin: 1rem 2.7rem;
-    width: 9rem;
-    height: 6rem;
-}
-
-.background-choice p {
-    font-size: 1.4rem;
-    padding: 0 1rem ;
-}
-
-.classic-div {
-    background: rgb(68, 173, 128);
-}
-
-.green-div {
-    background: rgb(0, 128, 6);
-}
-
-.purple-div {
-    background: rgb(103, 0, 129);
-}
-
+/* - - - - - - - - - - - - - - - - - - - - END - - - - - - - - - - - - - - - - - - - - - -  */

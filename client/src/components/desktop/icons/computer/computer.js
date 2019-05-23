@@ -11,7 +11,7 @@ const ComputerPanel = (props) => {
             <h3>Choose a Background</h3>
             <div className='row'>
                 <div onClick={props.selectBG} id='classic-bg' className='background-choice'>
-                <div className='classic-div'></div>
+                    <div className='classic-div'></div>
                     <p>Windows 95 Classic</p>
                 </div>
 
@@ -48,7 +48,7 @@ const ComputerPanel = (props) => {
                 </div>
 
                 <div onClick={props.selectBG} id='purple-bg' className='background-choice'>
-                <div className='purple-div'></div>
+                    <div className='purple-div'></div>
                     <p>Plain Purple</p>
                 </div>
                 
@@ -68,9 +68,6 @@ const ComputerPanel = (props) => {
                     <img src={NinetiesBG} alt='#' />
                     <p>Nineties Theme</p>
                 </div>
-
-
-
                 
                 <div onClick={props.selectBG} id='black-white-specs-bg' className='background-choice'>
                     <img src={BlackWhiteSpecsBG} alt='#' />
