@@ -1,6 +1,5 @@
 import React from "react";
 import { DialUpGif } from '../../../../assets';
-// import Draggable from 'react-draggable';
 import './style.css';
 
 const DialUpPanel = (props) => {
@@ -13,9 +12,9 @@ const DialUpPanel = (props) => {
             <img className='dial-up-gif' src={DialUpGif} alt='#'></img>
             <div className='dial-up-txt'>
                 <h5>Connect to My Connection</h5>
-                <h5 className='on-border'>Action</h5>
+                <span className='on-border'>Action</span>
                 <p>Dialing attempt 1 of 5</p>
-                <h5 className='on-border'>Status</h5>
+                <span className='on-border'>Status</span>
                 <p>Dialing...</p>
                 <div className='cancel-btn'>                    
                     <button className='windows-btn' onClick={props.clickClosed} ><span>Cancel</span></button>

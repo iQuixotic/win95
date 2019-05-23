@@ -55,14 +55,20 @@ h5, p {
 .dial-up-txt p {
     border: 1px solid gray;
     padding: 3rem;
-    margin-top: 3.1rem;
+    /* margin-top: 3.1rem; */
     margin-bottom: 2.2rem;
+}
+
+.dial-up-txt h5 {
+    font-size: 1.7rem;
 }
 
 .dial-up-txt .on-border {
     background: rgb(194, 194, 194);
-    position: absolute;
+    position: relative;
     margin: 0;
+    font-size: 1.6rem;
+    top: 1rem;
     left: 3rem;
 }
 
