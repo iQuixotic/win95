@@ -9,21 +9,15 @@ class Switch extends React.Component {
     switch (this.props.panelUse) {
         case 'Computer':
             return <ComputerPanel {...this.props} />
-            break;
           case 'Files':
               return <FilesPanel {...this.props} />
-              break;
           case 'Dialing':
               return <DialUpPanel {...this.props} />
-              break;
           case 'Internet':
               return <InternetPanel {...this.props} />
-              break;
           case 'Recycle':
               return <RecycleBinPanel {...this.props} />
-              break;
             default: return <ShutdownPanel {...this.props} />
-              break;
           }
   }
 

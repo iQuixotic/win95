@@ -80,8 +80,8 @@ const ComputerPanel = (props) => {
             </div>
 
             <div className='bg-apply'> 
-                <a onClick={props.applyBG} className='bg-apply-btn'>Apply</a> 
-                <a onClick={props.clickClosed} className='bg-cancel-btn'>Cancel</a>
+                <button onClick={props.applyBG} className='bg-apply-btn'>Apply</button> 
+                <button onClick={props.clickClosed} className='bg-cancel-btn'>Cancel</button>
             </div>
         </div>
     );

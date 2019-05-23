@@ -1,8 +1,6 @@
 import * as React from "react";
 import { Panel } from "../../components";
-import { Layout } from "../../containers";
-import { RecycleBin_I, Computer_I, File_I, IE_I, AboutBook } from '../../assets';
-import { HELP, OBJ } from "../../utils";
+import { HELP } from "../../utils";
 import './style.css';
 import { default as Draggable } from "react-draggable";
 
@@ -14,7 +12,6 @@ class Panels extends React.Component {
         internetInputVal: '',
         internetInputFocus: false,
     };
-    // this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
   }
 
   componentDidMount = () => {
@@ -22,7 +19,6 @@ class Panels extends React.Component {
     if(e.target.id === 'internet-iq-input') {
       this.setState({ internetInputFocus: true })
     } else { this.setState({ internetInputFocus: false }); }
-    // console.log(this.state.internetInputFocus)
   })
   }
 
