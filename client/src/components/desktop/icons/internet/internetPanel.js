@@ -11,8 +11,8 @@ const InternetPanel = (props) => {
                 <span className='yellow'>o</span><span className='green'>g</span>
                 <span className='lb'>l</span><span className='red'>e</span>
 
-                <div><input id='internet-iq-input' className='googlish-txt-box' type='text' /></div>
-                <div><input className='googlish-btn' type='button' value='Search'/></div>
+                <div><input name='internetInput' onChange={props.keydown} id='internet-iq-input' className='googlish-txt-box' type='text' /></div>
+                <div><input onClick={props.click} className='googlish-btn' type='button' value='Search'/></div>
             </div>
         </div>
     );
