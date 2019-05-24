@@ -88,6 +88,8 @@ h5, p {
     width: 100%;
     height: 100%;
     text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .center-page {
@@ -166,4 +168,23 @@ h5, p {
 .center-page input[type='text']:focus {
     border: 1px solid rgba(255, 255, 255, 0);
     box-shadow: 1px 0px 5px  rgba(0, 255, 255, 0.493);
+}
+
+
+
+.gifs-div {
+    width: 80%;
+    margin: 10%;
+    display: flex;
+    flex-basis: row;
+}
+
+.gif-div-single {
+    width: 25%;
+    margin: 10px;
+}
+
+.gif-div-single img {
+    width: 50%;
+    height: 50%;
 }

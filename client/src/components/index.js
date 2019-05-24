@@ -19,6 +19,7 @@ export { default as ShutdownPanel } from './menu/shutdown/shutdown';
 // export * from desktop
 export { default as Icon } from './desktop/icon/icon';
 export { default as InternetPanel } from './desktop/icons/internet/internetPanel';
+export { default as Gifs } from './desktop/icons/internet/gifs';
 export { default as DialUpPanel } from './desktop/icons/internet/dialUpPanel';
 export { default as ComputerPanel } from './desktop/icons/computer/computer';
 export { default as FilesPanel } from './desktop/icons/files/files';

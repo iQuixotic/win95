@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css';
-import { DialUpPanel } from '../../../../components';
+import { DialUpPanel, Gifs } from '../../../../components';
 
 const InternetPanel = (props) => {
     return(
@@ -15,6 +15,8 @@ const InternetPanel = (props) => {
                     <span className='lb'>l</span><span className='red'>e</span>
 
                     <div><input name='internetInput' onChange={props.keydown} id='internet-iq-input' className='googlish-txt-box' type='text' /></div>
+      
+                    {props.resGifs.length > 0 ? <Gifs resGifs={props.resGifs} />: <div></div>}
                     <div><input onClick={props.click} className='googlish-btn' type='submit' value='SEARCH'/></div>
                 </div>
             </div>

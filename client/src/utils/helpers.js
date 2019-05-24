@@ -4,7 +4,7 @@ export default {
         setTimeout(() => {
             update(false);
             up('Internet');
-        }, 6900);
+        }, 900);
     },
 
     checkIfIframeLoaded: () => {

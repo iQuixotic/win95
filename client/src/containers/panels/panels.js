@@ -49,7 +49,8 @@ class Panels extends React.Component {
               load={HELP.checkIfIframeLoaded}
               src={this.props.src}
               panelClassName={this.props.panelClassName}
-               divIsDraggable={!this.state.internetInputFocus ? Draggable : 'div'}
+              //  divIsDraggable={!this.state.internetInputFocus ? Draggable : 'div'}
+               divIsDraggable={'div'}
               internetInputVal={this.state.internetInputVal}
               internetInputFocus={this.state.internetInputFocus}
               selectBG={this.props.selectBG}
