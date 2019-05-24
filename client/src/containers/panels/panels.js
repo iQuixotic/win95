@@ -6,13 +6,13 @@ import './style.css';
 
 
 class Panels extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        internetInputVal: '',
-        internetInputFocus: false,
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //       internetInputVal: '',
+  //       internetInputFocus: false,
+  //   };
+  // }
 
   // componentDidMount = () => {
   // document.addEventListener('click', (e)=> {
@@ -27,9 +27,9 @@ class Panels extends React.Component {
   // used to hide panel and change corresponding button aesthetics
  
 
-  getPanel = () => {
+  // getPanel = () => {
 
-  }
+  // }
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -37,22 +37,24 @@ class Panels extends React.Component {
     return (
       <div>
             <Panel
-              cn={this.props.cn}
-              minimize={this.props.minimize}
-              panelSizeFull={this.props.panelSizeFull}
-              head={this.props.head}
+              {...this.props}
+              // cn={this.props.cn}
+              // minimize={this.props.minimize}
+              // head={this.props.head}
+              // clickClosed={this.props.clickClosed}
+              // expShr={this.props.expShr}
+              // panelSizeFull={this.props.panelSizeFull}
+              // panelClassName={this.props.panelClassName}
+              // src={this.props.src}
+              // selectBG={this.props.selectBG}
+              // applyBG={this.props.applyBG}
               initialHeight={450}
               initialWidth={340}
               dragDropRes={false}
-              clickClosed={this.props.clickClosed}
-              expShr={this.props.expShr}
               load={HELP.checkIfIframeLoaded}
-              src={this.props.src}
-              panelClassName={this.props.panelClassName}
-              internetInputVal={this.state.internetInputVal}
-              internetInputFocus={this.state.internetInputFocus}
-              selectBG={this.props.selectBG}
-              applyBG={this.props.applyBG}>
+              // internetInputVal={this.state.internetInputVal}
+              // internetInputFocus={this.state.internetInputFocus}
+              >
 
                 {this.props.children}
 

@@ -91,7 +91,7 @@ class Main extends React.Component {
       panelOpen: false,
       head: arg,
       panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : (
-      <Switch isDialing={this.state.isDialing} panelUse={arg.trim()} />
+      <Switch isDialing={this.state.isDialing} panelUse={arg.trim()} {...this.props} />
       ) 
     });
     HELP.wait(this.togglePanel, 100);

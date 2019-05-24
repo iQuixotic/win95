@@ -23,12 +23,12 @@ const internetPanel = (props) => {
                         id='internet-iq-input' className='googlish-txt-box' type='text' />
                     </div>
       
-                    {props.resGifs.length > 0 ? <Gifs resGifs={props.resGifs} />: <div></div>}
                     <div>
                         <input onClick={props.click} 
                         className='googlish-btn' type='submit' 
                         value='SEARCH'/>
                     </div>
+                    {props.resGifs.length > 0 ? <Gifs resGifs={props.resGifs} />: <div></div>}
                 </div>
             </div>
         </div>)
