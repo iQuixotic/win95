@@ -2,7 +2,7 @@ import React from "react";
 import { Cat } from "../../../assets";
 import './style.css';
 
-const ContactPanel = (props) => {
+const contactPanel = (props) => {
     return(
             <div className='contact-panel'>
                 <div className='contact-panel-content'>
@@ -20,4 +20,4 @@ const ContactPanel = (props) => {
     );
 }
 
-export default ContactPanel;
+export default contactPanel;

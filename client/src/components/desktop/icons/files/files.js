@@ -2,7 +2,7 @@ import React from "react";
 import { Linkedin, Octocat, ReactLogo, Resume } from '../../../../assets';
 import './style.css';
 
-const FilesPanel = (props) => {
+const filesPanel = (props) => {
     return(
         <div className='files-panel'>
             <div className='space'></div>
@@ -30,4 +30,4 @@ const FilesPanel = (props) => {
     );
 }
 
-export default FilesPanel;
+export default filesPanel;

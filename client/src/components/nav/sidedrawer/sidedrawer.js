@@ -3,7 +3,7 @@ import * as React from "react";
 import './style.css';
 
 // will be used for mobile devices
-const Sidedrawer = () => {
+const sidedrawer = () => {
     return ( 
         <div id='SD' className='Sidedrawer' >
             <nav>
@@ -17,4 +17,4 @@ const Sidedrawer = () => {
     );
 }
 
-export default Sidedrawer;
+export default sidedrawer;

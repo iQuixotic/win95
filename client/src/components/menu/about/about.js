@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css';
 
-const AboutPanel = (props) => {
+const aboutPanel = (props) => {
     return(
         <div className='about-panel'>
 
@@ -153,4 +153,4 @@ const AboutPanel = (props) => {
     );
 }
 
-export default AboutPanel;
+export default aboutPanel;

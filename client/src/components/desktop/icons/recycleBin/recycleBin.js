@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css';
 
-const RecycleBinPanel = (props) => {
+const recycleBinPanel = (props) => {
     return(
         <div className='recycle-panel-outer'>
             <div className='recycle-panel'>
@@ -15,4 +15,4 @@ const RecycleBinPanel = (props) => {
     );
 }
 
-export default RecycleBinPanel;
+export default recycleBinPanel;

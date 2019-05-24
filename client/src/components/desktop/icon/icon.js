@@ -1,7 +1,8 @@
 import React from "react";
 import './style.css';
 
-const Icon = (props) => {
+// these are desktop icons
+const icon = (props) => {
     return(
         <div className={props.cn}
             id={props.id} onClick={props.onClick}
@@ -12,4 +13,4 @@ const Icon = (props) => {
     );
 }
 
-export default Icon;
+export default icon;

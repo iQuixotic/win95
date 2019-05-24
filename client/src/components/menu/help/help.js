@@ -1,8 +1,7 @@
 import React from "react";
-// import { Panel } from '../../../components';
 import './style.css';
 
-const HelpPanel = (props) => {
+const helpPanel = (props) => {
     return(
         <div className='help-panel'>
             <div className='help-panel-content'>
@@ -45,4 +44,4 @@ const HelpPanel = (props) => {
     );
 }
 
-export default HelpPanel;
+export default helpPanel;

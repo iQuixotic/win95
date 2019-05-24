@@ -1,10 +1,9 @@
 import * as React from "react";
-import { 
-    HelpBook, Programs,  Contact, Shutdown, Info, Logo
-  } from '../../../assets';
+import { HelpBook, Programs,  Contact, Shutdown, Info, Logo } from '../../../assets';
 import './style.css';
 
-const Taskbar = (props) => {
+// start bar with clock at bottom of screen
+const taskbar = (props) => {
     return (
         <nav className='toolbar'>            
             <button className='start-btn windows-btn' onClick={props.click}>
@@ -55,4 +54,4 @@ const Taskbar = (props) => {
     );
 }
 
-export default Taskbar;
+export default taskbar;

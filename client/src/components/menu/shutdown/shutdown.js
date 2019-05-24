@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css';
 
-const ShutdownPanel = (props) => {
+const shutdownPanel = (props) => {
     return(
         <div className='shutdown-panel'>
             <div className='shutdown-panel-content'>
@@ -16,4 +16,4 @@ const ShutdownPanel = (props) => {
     );
 }
 
-export default ShutdownPanel;
+export default shutdownPanel;

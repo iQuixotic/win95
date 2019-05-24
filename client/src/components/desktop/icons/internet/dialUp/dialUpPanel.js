@@ -1,8 +1,9 @@
 import React from "react";
-import { DialUpGif } from '../../../../assets';
+import { DialUpGif } from '../../../../../assets';
 import './style.css';
 
-const DialUpPanel = (props) => {
+// dial up box for while internet is loading
+const dialUpPanel = (props) => {
     return(
         <div className='dial-up-panel'>
             <div id='internet-blue-top-box' className='blue-top-box'>
@@ -24,4 +25,4 @@ const DialUpPanel = (props) => {
     );
 }
 
-export default DialUpPanel;
+export default dialUpPanel;

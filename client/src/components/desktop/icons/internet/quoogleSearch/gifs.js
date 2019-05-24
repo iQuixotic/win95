@@ -1,7 +1,8 @@
 import React from "react";
 import './style.css';
 
-const Gifs = (props) => {
+// just the area for loading gifs into
+const gifs = (props) => {
     return(
         <div className='gif-div'>
             <div className='gif-div'>
@@ -13,7 +14,7 @@ const Gifs = (props) => {
     );
 }
 
-export default Gifs;
+export default gifs;
 
 
 

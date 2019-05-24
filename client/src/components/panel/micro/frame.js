@@ -1,7 +1,7 @@
 import * as React from "react";
-// import { HELP } from "../../utils";
-import './style.css';
+import '../style.css';
 
+// styled iframe component
 const frame = (props) => {
     return (
         <iframe 

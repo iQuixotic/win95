@@ -1,7 +1,8 @@
 import React from "react";
 import './style.css';
 
-const BackDrop = (props) => {
+// for mobile and modals
+const backDrop = (props) => {
     return(
         <div className='backdrop'>
             {props.children}
@@ -9,4 +10,4 @@ const BackDrop = (props) => {
     );
 }
 
-export default BackDrop;
+export default backDrop;

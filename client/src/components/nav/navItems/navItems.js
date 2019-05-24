@@ -1,8 +1,7 @@
 import * as React from "react";
-// import {Icon} from 'react-fa';
 import './style.css';
 
-const NavItems = (props) => {
+const navItems = (props) => {
     return (
         <nav className='nav-items'>
         
@@ -10,4 +9,4 @@ const NavItems = (props) => {
     );
 }
 
-export default NavItems;
+export default navItems;

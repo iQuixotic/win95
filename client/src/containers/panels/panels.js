@@ -2,7 +2,7 @@ import * as React from "react";
 import { Panel } from "../../components";
 import { HELP } from "../../utils";
 import './style.css';
-import { default as Draggable } from "react-draggable";
+// import { default as Draggable } from "react-draggable";
 
 
 class Panels extends React.Component {
@@ -14,13 +14,13 @@ class Panels extends React.Component {
     };
   }
 
-  componentDidMount = () => {
-  document.addEventListener('click', (e)=> {
-    if(e.target.id === 'internet-iq-input') {
-      this.setState({ internetInputFocus: true })
-    } else { this.setState({ internetInputFocus: false }); }
-  })
-  }
+  // componentDidMount = () => {
+  // document.addEventListener('click', (e)=> {
+  //   if(e.target.id === 'internet-iq-input') {
+  //     this.setState({ internetInputFocus: true })
+  //   } else { this.setState({ internetInputFocus: false }); }
+  // })
+  // }
 
  
   
@@ -49,8 +49,6 @@ class Panels extends React.Component {
               load={HELP.checkIfIframeLoaded}
               src={this.props.src}
               panelClassName={this.props.panelClassName}
-              //  divIsDraggable={!this.state.internetInputFocus ? Draggable : 'div'}
-               divIsDraggable={'div'}
               internetInputVal={this.state.internetInputVal}
               internetInputFocus={this.state.internetInputFocus}
               selectBG={this.props.selectBG}

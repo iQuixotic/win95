@@ -3,7 +3,7 @@ import React from "react";
 import './style.css';
 
 // hamburger (industry term) icon for opening sidedrawer
-const Burger = (props) => {
+const burger = (props) => {
     return(
     <div>
          {/* <Icon name=" fa-bars" 
@@ -14,4 +14,4 @@ const Burger = (props) => {
     );
 }
 
-export default Burger;
+export default burger;

@@ -5,7 +5,7 @@ import {
     BlackBubblesBG } from '../../../../assets';
 import './style.css';
 
-const ComputerPanel = (props) => {
+const computerPanel = (props) => {
     return(
         <div className='computer-panel'>
             <h3>Choose a Background</h3>
@@ -84,4 +84,4 @@ const ComputerPanel = (props) => {
     );
 }
 
-export default ComputerPanel;
+export default computerPanel;

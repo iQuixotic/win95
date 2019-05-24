@@ -1,6 +1,7 @@
 import * as React from "react";
-import './style.css';
+import '../style.css';
 
+// top area with X, SQUARE, and _ 
 const xbox = (props) => {
     return (
         <div className='blue-top-box'>
