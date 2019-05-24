@@ -32,9 +32,10 @@ class Switch extends React.Component {
           case 'Dialing':
               return <DialUpPanel {...this.props} />
           case 'Internet':
-              return <InternetPanel 
+              return <InternetPanel {...this.props}
                         keydown={this.internetInputKeydown} 
-                        click={this.getIntenetInput} {...this.props} />
+                        click={this.getIntenetInput} 
+                        isDialing={this.props.isDialing} />
           case 'Recycle':
               return <RecycleBinPanel {...this.props} />
             default: return <ShutdownPanel {...this.props} />

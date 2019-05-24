@@ -22,24 +22,28 @@ class Main extends React.Component {
       backgroundSelected: '',
       backgroundUsing:'carved-blocks-bg',
       isHighlighted: false,
-      currentHighligted: ''
+      currentHighligted: '',
+      isDialing: true
     };
     this.startButtonToggle = this.startButtonToggle.bind(this);
     this.backgroundEditHandler = this.backgroundEditHandler.bind(this);
+  }
+
+  updateDialingHandler = (x) => {
+    this.setState({ isDialing: x})
+    console.log(this.state.isDialing, 'is the state of the internet')
   }
 
   backgroundSelectHandler = (e) => {
     let z, x = e.currentTarget;
     z = x.id.includes('-bg') ? 'highlighted-blue' : 'highlighted-blue-dotted';
     this.setState({ backgroundSelected: x.id });
-      // isHighlighted: true });
     if (x.id !== this.state.backgroundSelected) this.highlightHandler(x, z);
   }
   
   highlightHandler = (arg, z) => {
     let y = document.getElementsByClassName(' ' + z)
     if(y.length > 0) [].forEach.call(y, (el) => el.classList.remove(z));
-    // if(this.state.isHighlighted) 
     arg.classList += ' ' + z;
   }
 
@@ -71,7 +75,7 @@ class Main extends React.Component {
     });
   }
     
-  // panel is made visible/invisible with 'X' button
+  // panel is made visible/invisible with 'X' or CANCEL button
   togglePanel = () => {
     this.setState({ panelOpen: !this.state.panelOpen });
   }
@@ -87,7 +91,7 @@ class Main extends React.Component {
       panelOpen: false,
       head: arg,
       panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : (
-      <Switch panelUse={arg.trim()} />
+      <Switch isDialing={this.state.isDialing} panelUse={arg.trim()} />
       ) 
     });
     HELP.wait(this.togglePanel, 100);
@@ -111,13 +115,20 @@ class Main extends React.Component {
 
   // opens a draggable, resizable panel or iframe
   openPanel = (e) => {
+    this.updateDialingHandler(true)
     let x = e.currentTarget;
     // if you're not hovering over an icon
     if(x.innerHTML !== '' && !x.classList.contains('icon-plus-txt')) this.panelHover(); 
     if(this.state.startButtonActive) this.startButtonToggle();
-    if(x.id === 'Internet') HELP.giveMeInternet(this.panelShowingStatusUpdate);
+    if(x.id === 'Internet') this.openInternetHandler();
+    // HELP.giveMeInternet(this.panelShowingStatusUpdate);
     // if it's a clicked icon, open by ID, ELSEIF it's from the start menu, only gets html after the image
     else this.panelShowingStatusUpdate(e.currentTarget.id);
+  }
+
+  openInternetHandler = () => {
+    HELP.giveMeInternet(this.updateDialingHandler, this.panelShowingStatusUpdate); 
+    this.panelShowingStatusUpdate('Internet');
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -142,7 +153,6 @@ class Main extends React.Component {
 
       // Start button and taskbar plus 
       <Layout
-        // onClick={this.backgroundNotHighlightedHandler}
         head={this.state.head}
         panelOpen={this.state.panelOpen}
         minClick={this.minUpdate}
@@ -154,22 +164,18 @@ class Main extends React.Component {
 
         {/* Icons */}
         <Icon onClick={this.backgroundSelectHandler}
-          // cn={this.state.isHighlighted[] }
           cn='icon-plus-txt'
-          iconName='Recycle' id='Recycle' 
+          iconName='Recycle Bin' id='Recycle' 
           src={RecycleBin_I} onDoubleClick={this.openPanel} />
         <Icon onClick={this.backgroundSelectHandler}
-          // cn={this.state.isHighlighted[] }
           cn='icon-plus-txt'
           iconName='Computer' id='Computer' 
           src={Computer_I} onDoubleClick={this.openPanel} />
         <Icon onClick={this.backgroundSelectHandler}
-          // cn={this.state.isHighlighted[] }
           cn='icon-plus-txt'
           iconName='The Internet' id='Internet' 
           src={IE_I} onDoubleClick={this.openPanel} />
         <Icon onClick={this.backgroundSelectHandler}
-          // cn={this.state.isHighlighted[] }
           cn='icon-plus-txt'
           iconName='Files' id='Files' 
           src={File_I} onDoubleClick={this.openPanel} />
@@ -191,6 +197,7 @@ class Main extends React.Component {
               panelClassName={this.state.panelClassName[this.state.head]}
               selectBG={this.backgroundSelectHandler}
               applyBG={this.backgroundEditHandler}
+
             >
               {this.state.panelShowing}
             </Panels>

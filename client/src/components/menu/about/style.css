@@ -1,5 +1,4 @@
 .about-panel-outer {
-    /* background: rgb(148, 0, 37); */
     width: 500px;
     height: 400px;
 }
@@ -16,6 +15,18 @@
 
 #about-panel-main-project {
     margin-top: 30px;
+    text-align: center;
+    font-size: 4.5rem;
+    color: rgb(255, 255, 255);
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Kaushan Script', cursive;
+    /* border: 1px solid rgba(238, 255, 0, 0.438); */
+    /* border: 2px solid rgb(151, 151, 151); */
+    box-shadow: 1px 2px 5px 0 gray;
+    border-left: none;
+    background: linear-gradient(-40deg, rgb(67, 0, 99), rgb(123, 6, 151), rgb(255, 156, 64));
+    /* background: linear-gradient(to left, rgb(67, 0, 99), rgb(114, 167, 112)); */
+
 }
 
 .more-less {
@@ -30,7 +41,9 @@
 .checkbox-div-for-fa {
     position: relative;
     bottom: 11px;
-    left: 38%;
+    /* left: 40%; */
+    text-align: center;
+
 }
 
 
@@ -39,29 +52,25 @@
     padding: 1px;
 }
 
-.about-panel-info, 
 .about-panel-header {
-    padding: 0 30px;
-}
-
-.about-panel-header {
-    font-family: 'Kaushan Script', cursive;
-    text-align: center;
-    font-size: 2.2rem;
+    /* font-family: 'Kaushan Script', cursive; */
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 3rem;
     background: white;
-    /* background: rgb(224, 224, 224); */
     border: 1px solid rgb(209, 209, 209);
     border-left: none;
-    margin: 0 5% 0 0;
-    padding: 30px 30px 20px;
-    /* border-bottom-left-radius: 70px; */
+    margin: 0 7% 0 0;
+    text-align: left;
+    padding: 25px 10% 15px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
 .about-panel-info {
-    margin: 10px;
+    margin: 15px;
 }
+
+/* - - - - - - - - - - - - - - Fancy Eyeball Checkbox - - - - - - - - - - - - - - - - - - - - - - - */
 
 .fancy-checkbox input[type="checkbox"],
 .fancy-checkbox .checked {
@@ -85,12 +94,12 @@
 
 .fancy-checkbox .checked {
     color: rgb(255, 102, 0);
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 .fancy-checkbox .unchecked {
     color: lime;   
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 .fancy-checkbox .unchecked,
@@ -107,10 +116,13 @@ input:checked ~ .about-project-info {
     display: block;
     border-bottom: 1px solid rgb(220, 123, 245);
     padding: 7px 4px;
-    position: relative;
-    right: 38%;
-    top: 0;
+    /* position: relative; */
+    /* top: 0; */
+    /* right: 40%; */
+    text-align: left;
 }
+
+/* - - - - - - - - - - - - - - - - - - - - - - Invisible Content - - - - - - - - - - - - - - - - - - - - */
 
 .about-project-info em {
     font-size: 1.4rem;

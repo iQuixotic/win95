@@ -52,7 +52,7 @@ export default {
       Contact: 'contact-panel-outer',
       Nope: 'shutdown-panel-outer',
       Files: 'files-panel-outer',
-      Internet: 'internet-panel-outer',
+      Internet: '',
       Recycle: 'recycle-panel-outer'
     }
 

@@ -1,10 +1,10 @@
 export default {
 
-    giveMeInternet: (update) => {
-        update('Dialing')
+    giveMeInternet: (update, up) => {        
         setTimeout(() => {
-            update('Internet')
-        }, 5000);
+            update(false);
+            up('Internet');
+        }, 6900);
     },
 
     checkIfIframeLoaded: () => {
