@@ -92,22 +92,18 @@ h5, p {
 
 .center-page {
     position: relative;
-    top: 40%;
+    top: 35%;
 }
-/* 
-.internet-panel-line {
-    width: 100%;
-    padding: 2px;
-    height: 15px;
-} */
 
 .internet-panel .lb,
 .internet-panel .green,
 .internet-panel .yellow,
 .internet-panel .red {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 700;
 }
+
+ /* - - - - - - - - - - - - - - - Colors - - - - - - - - - - - - - - - - - - */
 
 .internet-panel .lb {
     color: aqua;
@@ -125,24 +121,49 @@ h5, p {
     color: red;
 }
 
-.googlish-btn {
-    font-size: 1.6rem;
+/* - - - - - - - - - - - - - - - - - - - - - - - Btn - - - - - - - - - - - - - - - - - - - - */
+
+.center-page .googlish-btn {
+    font-size: 1.4rem;
+    font-weight: bold;
     margin: 5px;
-    padding: 5px 8px;
+    padding: 3px 6px;
     background: white;
     border: 1px solid rgb(195, 0, 255);
     color: rgb(195, 0, 255);
     border-radius: 6px;
+    font-family: 'Encode Sans Condensed', sans-serif;
 }
 
-.googlish-btn:active,
-.googlish-btn:focus {
-    border: 2px solid orange;
+.center-page .googlish-btn:hover {
+    cursor: pointer;
+    font-weight: bolder;
 }
 
+.center-page .googlish-btn:active {
+    border: 1px solid orange;
+    color: white;
+    font-weight: bolder;
+    background: orange;
+
+}
 .googlish-txt-box {
     font-size: 2rem;
-    margin: 5px;
+    width: 250px;
+    margin: 15px 0 5px;
     position: relative;
     z-index: 99999;
+}
+
+.center-page input[type='text'] {
+    font-size: 1.5rem;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
+.center-page input[type='text']:focus {
+    border: 1px solid rgba(255, 255, 255, 0);
+    box-shadow: 1px 0px 5px  rgba(0, 255, 255, 0.493);
 }

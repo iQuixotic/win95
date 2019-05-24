@@ -19,7 +19,7 @@ const Taskbar = (props) => {
             <div id='start-menu' className='invisible'>
                 <div id="left">
                     <div className="b">
-                        iQuixotic
+                         iQuixotic
                         <span className="num95">95</span>
                     </div>
                 </div>

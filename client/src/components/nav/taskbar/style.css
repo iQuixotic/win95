@@ -44,7 +44,7 @@
 .txt-btn {    
     font-size: 1.6rem;
     padding: 2px 7px 40px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .logo-btn {
@@ -161,13 +161,12 @@
     display: inline-block;
     float: right;
     font-size: 1.2rem;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .windows-menu-btn {
     width: 30%;
-    padding: 0;
-    
+    padding: 0;    
     height: 100%;
 }
 
