@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css';
-import { AwsSaCert, Github } from "../../../assets";
+import { AwsSaCert, Linkedin, Github } from "../../../assets";
 
 const aboutPanel = (props) => {
     return(
@@ -88,11 +88,17 @@ const aboutPanel = (props) => {
                             <em>Why is this project important?</em>
                             <p>This is the first project I built using Typescript! Don't be fooled by the 
                                 simplistic look! When I made this, I wanted to focus heavily on the logic and 
-                                it shows. the speed of this app is incredible considering you're working with 
-                                persistent data.</p>
+                                it shows. The speed of this app is incredible considering you're working with 
+                                persistent data. Numbers are converted to strings complete with commas and dollar strings 
+                                via a custom function.</p>
                             <em>What can you do with it?</em>
                             <p>You can add or subtract money from an account, check out previous transactions,
                                 or create your own account. Data is persistent. Feel free to give it a shot! </p>
+                            <div className='github-spacing'>
+                                <img className='github-token' src={Github} alt='#' /> 
+                                <span className='github-txt'>  Github Project Page: </span>
+                                <a className='github-link' href='https://github.com/iQuixotic/bank-app'>Picture Puzzles</a>
+                            </div>
                             <em>Quick and dirty</em>
                             <table>
                                 <tbody>
@@ -118,7 +124,38 @@ const aboutPanel = (props) => {
                         <span className='more-less bg-white'> View </span>             
                         <i className="fas  bg-white fa-eye unchecked"> <span className='more-less bg-white'> More</span></i>
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>
-                        <div className='about-project-info'> </div>
+                        <div className='about-project-info'>
+                            <em>Why is this project important?</em>
+                            <p>This was really special to me because of the idea. I wanted to be able to 
+                                take a picture, break it apart, and move the pieces around to put 
+                                it back together. It was one of the first ideas I had when I started 
+                                teaching myself to code, but at the time, I was unsure how I would even 
+                                begin something like this. The idea of being able to drag and drop something to 
+                                another part of the screen, was initially incomprehensible, yet here I am.
+                            </p>
+                            <em>What can you do with it?</em>
+                            <p>Select a puzzle to complete. Move each of the 16 pieces independantly by dragging
+                                 and dropping. If you want to see a reference picture, click the button at the 
+                                 bottom. Once you are done, click the 'How did I do?' button to find out your 
+                                 score.
+                            </p>
+                            <div className='github-spacing'>
+                                <img className='github-token' src={Github} alt='#' /> 
+                                <span className='github-txt'>  Github Project Page: </span>
+                                <a className='github-link' href='https://github.com/iQuixotic/bank-app'>Picture Puzzles</a>
+                            </div>
+                            <em>Quick and dirty</em>
+                            <table>
+                                <tbody>
+                                    <tr><th>Subject</th><th>Tech</th></tr>
+                                    <tr><td>Frontend</td><td>Vanilla Javascript</td></tr>
+                                    <tr><td>Backend</td><td>Express Server</td></tr>
+                                    <tr><td>Database</td><td>None</td></tr>
+                                    <tr><td>Mobile Responsive</td><td>Yes</td></tr>
+                                </tbody>
+                            </table>
+
+                        </div>
                     </div>
                 </label>
             </div>
@@ -151,6 +188,9 @@ const aboutPanel = (props) => {
                 </label>
             </div>
             <div className='nav-about-aws'>
+                <div className='aws-about'>
+                    <img className='aws-sa-cert' src={Linkedin} alt='#' />
+                </div>
                 <div className='aws-about'>
                     <img className='aws-sa-cert' src={Github} alt='#' />
                 </div>

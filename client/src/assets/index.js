@@ -53,3 +53,7 @@ export { default as Resume } from './img/links/resumeLogo.png';
 // export * from backgrounds
 export { default as AwsSaCert } from './other/awsSaCert.png';
 export { default as Github } from './other/github.png';
+export { default as Seagulls } from './other/seagulls.png';
+export { default as Palm } from './other/whitePalm.png';
+
+

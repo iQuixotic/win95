@@ -38,7 +38,6 @@
 .checkbox-div-for-fa {
     position: relative;
     bottom: 11px;
-    /* left: 40%; */
     text-align: center;
 
 }
@@ -152,4 +151,30 @@ input:checked ~ .about-project-info {
 
 .about-project-info table tr:nth-child(odd) {
     background: rgb(241, 255, 242);
+}
+
+
+.github-token {
+    width: 20px;
+    height: 20px;
+}
+.github-spacing {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}
+.github-txt {
+    padding-right: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.github-link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.github-link:hover {
+    cursor: pointer
 }
