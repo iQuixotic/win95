@@ -37,6 +37,27 @@ const helpPanel = (props) => {
                         <p className='help-question'>How do I view your previous projects?</p>
                         <p className='help-answer'>Navigate from Start > Projects > (Pick One) </p>
                     </li>
+{/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */}
+                    <li>
+                        <p className='help-question'>What are the colors of iQuixotic Brand?</p>
+                        <p className='help-answer'>Orange, Lime Green, and my favorite Deep Purple.</p>
+                    </li>
+
+                    <li>
+                        <p className='help-question'>Why can't I...?</p>
+                        <p className='help-answer'>Although inspired by Windows 95, this is not an operating system.
+                        Although I could add several other features to make it more authentic, I don't want
+                        to dwell on this project forever. These projects are meant to be beautiful... and ephemeral...
+                        I could deffinately have added feature xyz, should I have wanted, but I like it this way.</p>
+                    </li>
+                    <li>
+                        <p className='help-question'>Why can't I resize the non-website windows?</p>
+                        <p className='help-answer'>I didn't want to stress on the mobile responsivity of each
+                        tiny component and was much more concerned with capturing the essence of my style. ;)</p>
+                    </li>
+
+{/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */}
+
                 </ul>
             </div>
         </div>
