@@ -106,12 +106,13 @@
     flex-basis: row;
 }
 
-.gif-div-single {
-    width: 25%;
+.gif-single-div {
+    width: 100%;
     margin: 10px;
 }
 
-.gif-div-single img {
-    width: 50%;
-    height: 50%;
+.gif-single-div img {
+    padding: 10px;
+    width: 40%;
+    height: 130px;
 }

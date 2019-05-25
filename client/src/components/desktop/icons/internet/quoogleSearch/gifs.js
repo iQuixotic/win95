@@ -4,10 +4,10 @@ import './style.css';
 // just the area for loading gifs into
 const gifs = (props) => {
     return(
-        <div className='gif-div'>
-            <div className='gif-div'>
+        <div className='gifs-div'>
+            <div className='gif-single-div'>
                 {props.resGifs.map(el => {
-                return <img src={el.images.fixed_height.url} alt='#'/>
+                return <img src={el.images.downsized_medium.url} alt='#'/>
             })}
             </div>
         </div>
