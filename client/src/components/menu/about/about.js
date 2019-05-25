@@ -15,27 +15,29 @@ const aboutPanel = (props) => {
                         <span className='more-less bg-white'> View </span>             
                         <i className="fas  bg-white fa-eye unchecked"> <span className='more-less bg-white'> More</span></i>
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>
-                        <div className='about-project-info'> 
-                            <em>Thank you so much for viewing my page !! </em>
-                            
-                            <em>Why is this project important? </em>
-                            <p>This is the first project I built using Typescript! Don't be fooled by the 
-                                simplistic look! When I made this, I wanted to focus heavily on the logic and 
-                                it shows. the speed of this app is incredible considering you're working with 
-                                persistent data.</p>
+                        <div className='about-project-info'>
+                            <em>Why is this project important?</em>
+                            <p>
+                            </p>
                             <em>What can you do with it?</em>
-                            <p>You can add or subtract money from an account, check out previous transactions,
-                                or create your own account. Data is persistent. Feel free to give it a shot! </p>
+                            <p>
+                            </p>
+                            <div className='github-spacing'>
+                                <img className='github-token' src={Github} alt='#' /> 
+                                <span className='github-txt'>  Github Project Page: </span>
+                                <a className='github-link' href=''></a>
+                            </div>
                             <em>Quick and dirty</em>
                             <table>
                                 <tbody>
                                     <tr><th>Subject</th><th>Tech</th></tr>
-                                    <tr><td>Frontend</td><td>Reactjs with Typescript</td></tr>
-                                    <tr><td>Backend</td><td>Nodejs</td></tr>
-                                    <tr><td>Database</td><td>MongoDB</td></tr>
+                                    <tr><td>Frontend</td><td></td></tr>
+                                    <tr><td>Backend</td><td></td></tr>
+                                    <tr><td>Database</td><td>None</td></tr>
                                     <tr><td>Mobile Responsive</td><td>Yes</td></tr>
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
                 </label>
@@ -50,26 +52,33 @@ const aboutPanel = (props) => {
                         <span className='more-less bg-white'> View </span>             
                         <i className="fas  bg-white fa-eye unchecked"> <span className='more-less bg-white'> More</span></i>
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>
-                        <div className='about-project-info'> 
-                            <em>Thank you so much for viewing my page !!</em>
+                        <div className='about-project-info'>
                             <em>Why is this project important?</em>
-                            <p> This is the first project I built using Typescript! Don't be fooled by the 
-                                simplistic look! When I made this, I wanted to focus heavily on the logic and 
-                                it shows. the speed of this app is incredible considering you're working with 
-                                persistent data.</p>
+                            <p>This was my first Portfolio and I was super excited about it! It was the first time I bought 
+                                a custom domain, and I hosted it on an Amazon EC2 instance. I also used jQuery, and Materialize. 
+                                I was really happy with how clean and readable the code turned out. It was also quite colorful (and 
+                                I do love my oversaturated bright colors).
+                            </p>
                             <em>What can you do with it?</em>
-                            <p>You can add or subtract money from an account, check out previous transactions,
-                                or create your own account. Data is persistent. Feel free to give it a shot! </p>
+                            <p>You can navigate to other projects I have posted. The carousel spins and changes the bottom 
+                                paragraph text and header text with Javascript. There are links everywhere!! 
+                            </p>
+                            <div className='github-spacing'>
+                                <img className='github-token' src={Github} alt='#' /> 
+                                <span className='github-txt'>  Github Project Page: </span>
+                                <a className='github-link' href='https://github.com/iQuixotic/portfolio-website'>Personal Portfolio</a>
+                            </div>
                             <em>Quick and dirty</em>
                             <table>
                                 <tbody>
                                     <tr><th>Subject</th><th>Tech</th></tr>
-                                    <tr><td>Frontend</td><td>Reactjs with Typescript</td></tr>
-                                    <tr><td>Backend</td><td>Nodejs</td></tr>
-                                    <tr><td>Database</td><td>MongoDB</td></tr>
-                                    <tr><td>Mobile Responsive</td><td>Yes</td></tr>
+                                    <tr><td>Frontend</td><td>jQuery</td></tr>
+                                    <tr><td>Backend</td><td>Express</td></tr>
+                                    <tr><td>Database</td><td>None</td></tr>
+                                    <tr><td>Mobile Responsive</td><td>Looks great on a phone!!</td></tr>
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
                 </label>
@@ -97,7 +106,7 @@ const aboutPanel = (props) => {
                             <div className='github-spacing'>
                                 <img className='github-token' src={Github} alt='#' /> 
                                 <span className='github-txt'>  Github Project Page: </span>
-                                <a className='github-link' href='https://github.com/iQuixotic/bank-app'>Picture Puzzles</a>
+                                <a className='github-link' href='https://github.com/iQuixotic/bank-app'>Zenith Holdings</a>
                             </div>
                             <em>Quick and dirty</em>
                             <table>
@@ -142,7 +151,7 @@ const aboutPanel = (props) => {
                             <div className='github-spacing'>
                                 <img className='github-token' src={Github} alt='#' /> 
                                 <span className='github-txt'>  Github Project Page: </span>
-                                <a className='github-link' href='https://github.com/iQuixotic/bank-app'>Picture Puzzles</a>
+                                <a className='github-link' href='https://github.com/iQuixotic/picture-puzzles'>Picture Puzzles</a>
                             </div>
                             <em>Quick and dirty</em>
                             <table>
@@ -169,7 +178,30 @@ const aboutPanel = (props) => {
                         <span className='more-less bg-white'> View </span>             
                         <i className="fas  bg-white fa-eye unchecked"> <span className='more-less bg-white'> More</span></i>
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>
-                        <div className='about-project-info'> </div>
+                        <div className='about-project-info'>
+                            <em>Why is this project important?</em>
+                            <p>
+                            </p>
+                            <em>What can you do with it?</em>
+                            <p>
+                            </p>
+                            <div className='github-spacing'>
+                                <img className='github-token' src={Github} alt='#' /> 
+                                <span className='github-txt'>  Github Project Page: </span>
+                                <a className='github-link' href=''></a>
+                            </div>
+                            <em>Quick and dirty</em>
+                            <table>
+                                <tbody>
+                                    <tr><th>Subject</th><th>Tech</th></tr>
+                                    <tr><td>Frontend</td><td></td></tr>
+                                    <tr><td>Backend</td><td></td></tr>
+                                    <tr><td>Database</td><td>None</td></tr>
+                                    <tr><td>Mobile Responsive</td><td>Yes</td></tr>
+                                </tbody>
+                            </table>
+
+                        </div>
                     </div>
                 </label>
             </div>
@@ -183,7 +215,30 @@ const aboutPanel = (props) => {
                         <span className='more-less bg-white'> View </span>             
                         <i className="fas  bg-white fa-eye unchecked"> <span className='more-less bg-white'> More</span></i>
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>
-                        <div className='about-project-info'> </div>
+                        <div className='about-project-info'>
+                            <em>Why is this project important?</em>
+                            <p>
+                            </p>
+                            <em>What can you do with it?</em>
+                            <p>
+                            </p>
+                            <div className='github-spacing'>
+                                <img className='github-token' src={Github} alt='#' /> 
+                                <span className='github-txt'>  Github Project Page: </span>
+                                <a className='github-link' href=''></a>
+                            </div>
+                            <em>Quick and dirty</em>
+                            <table>
+                                <tbody>
+                                    <tr><th>Subject</th><th>Tech</th></tr>
+                                    <tr><td>Frontend</td><td></td></tr>
+                                    <tr><td>Backend</td><td></td></tr>
+                                    <tr><td>Database</td><td>None</td></tr>
+                                    <tr><td>Mobile Responsive</td><td>Yes</td></tr>
+                                </tbody>
+                            </table>
+
+                        </div>
                     </div>
                 </label>
             </div>
