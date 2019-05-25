@@ -5,7 +5,16 @@ const helpPanel = (props) => {
     return(
         <div className='help-panel'>
             <div className='help-panel-content'>
-                <h4>FAQ's</h4>
+
+                {/* Navigation area for help page */}
+                <nav className='help-nav-area'>
+                    <a href="help.js#help-pg-faqs">FAQ's</a>
+                    <a href="help.js#help-pg-how-to">How to</a>
+                    <a href="help.js#help-pg-acknowledgements">Acknowledgements</a>
+                </nav>
+
+                {/* FAQs */}
+                <h4 id='help-pg-faqs'>FAQ's</h4>
                 <ul>
                     <li>
                         <p className='help-question'>Why?</p>
@@ -24,6 +33,11 @@ const helpPanel = (props) => {
                         <p className='help-answer'>Yes. All panels are draggable and can be grabbed
                         at the blue area and dropped anywhere on screen.</p>
                     </li>
+                    </ul>
+{/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */}
+                    
+                <h4 id='help-pg-how-to'>How do I?</h4>
+                    <ul>
                     <li>
                         <p className='help-question'>How can I resize a panel?</p>
                         <p className='help-answer'>Either use the SQUARE expansion button OR 
@@ -37,28 +51,31 @@ const helpPanel = (props) => {
                         <p className='help-question'>How do I view your previous projects?</p>
                         <p className='help-answer'>Navigate from Start > Projects > (Pick One) </p>
                     </li>
+                    </ul>
 {/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */}
-                    <li>
-                        <p className='help-question'>What are the colors of iQuixotic Brand?</p>
-                        <p className='help-answer'>Orange, Lime Green, and my favorite Deep Purple.</p>
-                    </li>
+                <h4 id='help-pg-acknowledgements'>Acknowledgements</h4>
+                    
+                    <ul>
+                        <li>
+                            <p className='help-question'>What are the colors of iQuixotic Brand?</p>
+                            <p className='help-answer'>Orange, Lime Green, and my favorite Deep Purple.</p>
+                        </li>
 
-                    <li>
-                        <p className='help-question'>Why can't I...?</p>
-                        <p className='help-answer'>Although inspired by Windows 95, this is not an operating system.
-                        Although I could add several other features to make it more authentic, I don't want
-                        to dwell on this project forever. These projects are meant to be beautiful... and ephemeral...
-                        I could deffinately have added feature xyz, should I have wanted, but I like it this way.</p>
-                    </li>
-                    <li>
-                        <p className='help-question'>Why can't I resize the non-website windows?</p>
-                        <p className='help-answer'>I didn't want to stress on the mobile responsivity of each
-                        tiny component and was much more concerned with capturing the essence of my style. ;)</p>
-                    </li>
-
+                        <li>
+                            <p className='help-question'>Why can't I...?</p>
+                            <p className='help-answer'>Although inspired by Windows 95, this is not an operating system.
+                            Although I could add several other features to make it more authentic, I don't want
+                            to dwell on this project forever. These projects are meant to be beautiful... and ephemeral...
+                            I could deffinately have added feature xyz, should I have wanted, but I like it this way.</p>
+                        </li>
+                        <li>
+                            <p className='help-question'>Why can't I resize the non-website windows?</p>
+                            <p className='help-answer'>I didn't want to stress on the mobile responsivity of each
+                            tiny component and was much more concerned with capturing the essence of my style. ;)</p>
+                        </li>
+                    </ul>
 {/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */}
 
-                </ul>
             </div>
         </div>
 

@@ -1,6 +1,7 @@
 .help-panel-outer {
     width: 300px;
     height: 400px;
+    /* overflow: hidden; */
 }
 
 .help-panel {
@@ -46,4 +47,26 @@
 
 .help-answer {
     color: rgb(46, 46, 46);
+}
+
+.help-nav-area {
+    position: relative;
+    /* left: 0; */
+    width: 100%;
+    /* -right: 15px; */
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(23, 255, 2);
+    background: rgb(238, 241, 238);
+    border-radius: 7px;
+    padding: 7px;
+    /* bottom: -30px; */
+    right: 5px;
+}
+
+.help-nav-area a {
+    color: blueviolet;
+    font-size: 1.5rem;
+    text-decoration: none;
+
 }
