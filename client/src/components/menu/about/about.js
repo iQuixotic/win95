@@ -54,28 +54,28 @@ const aboutPanel = (props) => {
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>
                         <div className='about-project-info'>
                             <em>Why is this project important?</em>
-                            <p>This was my first Portfolio and I was super excited about it! It was the first time I bought 
-                                a custom domain, and I hosted it on an Amazon EC2 instance. I also used jQuery, and Materialize. 
-                                I was really happy with how clean and readable the code turned out. It was also quite colorful (and 
-                                I do love my oversaturated bright colors).
+                            <p>This project turned out bigger, better, and more beautiful that I could have ever expected. I 
+                                was obviously heavily inspired by Windows 95 if that wasn't obvious. I wanted to use a mix 
+                                of fonts and colors to put my spin on a 'classic' look. I feel that my style really shines
+                                through on this project. I hope you enjoy using it as much as I enjoyed making it !!!
                             </p>
                             <em>What can you do with it?</em>
-                            <p>You can navigate to other projects I have posted. The carousel spins and changes the bottom 
-                                paragraph text and header text with Javascript. There are links everywhere!! 
+                            <p>There are links everywhere!! If you are absolutely lost, or unsure why I did something, check out the 
+                                'help' page from the start menu to gain a little clarity. Enjoy!
                             </p>
                             <div className='github-spacing'>
                                 <img className='github-token' src={Github} alt='#' /> 
                                 <span className='github-txt'>  Github Project Page: </span>
-                                <a className='github-link' href='https://github.com/iQuixotic/portfolio-website'>Personal Portfolio</a>
+                                <a className='github-link' href='https://github.com/iQuixotic/win95'>iQuixotic Portfolio</a>
                             </div>
                             <em>Quick and dirty</em>
                             <table>
                                 <tbody>
                                     <tr><th>Subject</th><th>Tech</th></tr>
-                                    <tr><td>Frontend</td><td>jQuery</td></tr>
+                                    <tr><td>Frontend</td><td>Reactjs</td></tr>
                                     <tr><td>Backend</td><td>Express</td></tr>
                                     <tr><td>Database</td><td>None</td></tr>
-                                    <tr><td>Mobile Responsive</td><td>Looks great on a phone!!</td></tr>
+                                    <tr><td>Mobile Responsive</td><td>Not Yet...</td></tr>
                                 </tbody>
                             </table>
 
