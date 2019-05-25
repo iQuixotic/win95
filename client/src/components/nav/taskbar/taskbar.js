@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HelpBook, Programs,  Contact, Shutdown, Info, Logo } from '../../../assets';
+import { AwsSaCert, HelpBook, Programs,  Contact, Shutdown, Info, Logo } from '../../../assets';
 import './style.css';
 
 // start bar with clock at bottom of screen
@@ -45,6 +45,10 @@ const taskbar = (props) => {
                     <img src={Shutdown} alt='#'/>
                     <span className='vertical-center'>Shut Down</span>
                 </div>
+            </div>
+
+            <div className='aws-toolbar'>
+                <img className='aws-sa-cert' src={AwsSaCert} alt='#' />
             </div>
 
             <div id="notifications">

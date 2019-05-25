@@ -1,12 +1,12 @@
-import * as React from "react";
-import './style.css';
+// import * as React from "react";
+// import './style.css';
 
-const navItems = (props) => {
-    return (
-        <nav className='nav-items'>
+// const navItems = (props) => {
+//     return (
+//         <nav className='nav-items'>
         
-        </nav>
-    );
-}
+//         </nav>
+//     );
+// }
 
-export default navItems;
+// export default navItems;

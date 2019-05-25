@@ -49,3 +49,7 @@ export { default as ReactLogo } from './img/links/reactLogo.png';
 export { default as Resume } from './img/links/resumeLogo.png';
 
 
+
+// export * from backgrounds
+export { default as AwsSaCert } from './other/awsSaCert.png';
+export { default as Github } from './other/github.png';

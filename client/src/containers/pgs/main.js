@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Icon } from "../../../components";
-import { Layout, Panels, Switch } from "../../../containers";
-import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../../assets';
-import { HELP, OBJ } from "../../../utils";
+import { Icon } from "../../components";
+import { Layout, Panels, Switch } from "../../containers";
+import { RecycleBin_I, Computer_I, File_I, IE_I } from '../../assets';
+import { HELP, OBJ } from "../../utils";
 import './style.css';
 
 

@@ -91,7 +91,39 @@ div .highlighted-blue-dotted {
     border-color: rgb(148, 148, 148);
 }
 
-.keep-it-one-hundred {
+/* .keep-it-one-hundred {
     width: 100%;
     height: 100%;
+} */
+
+/* - - - - - - - - - - - - - - - - - - - AWS Cert areas - - - - - - - - - - - - - - - - -  */
+
+.aws-sa-cert {
+    position: relative;
+    /* bottom: 10px; */
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.aws-about {
+    height: 50px;
+    width: 50px;
+    padding: 20px 30px 10px;
+}
+
+.aws-toolbar {
+    position: fixed;
+    right: 80px;
+    height: 28px;
+    width: 28px;
+}
+
+.nav-about-aws {
+    padding: 0 20px;
+    background: rgb(131, 131, 131);
+    border-top: 1px solid rgb(220, 123, 245);
+    display: flex;
+    flex-basis: row;
+    justify-content: space-between;
 }

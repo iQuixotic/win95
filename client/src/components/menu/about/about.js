@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css';
+import { AwsSaCert, Github } from "../../../assets";
 
 const aboutPanel = (props) => {
     return(
@@ -148,6 +149,14 @@ const aboutPanel = (props) => {
                         <div className='about-project-info'> </div>
                     </div>
                 </label>
+            </div>
+            <div className='nav-about-aws'>
+                <div className='aws-about'>
+                    <img className='aws-sa-cert' src={Github} alt='#' />
+                </div>
+                <div className='aws-about'>
+                    <img className='aws-sa-cert' src={AwsSaCert} alt='#' />
+                </div>
             </div>
         </div>
     );
