@@ -180,23 +180,25 @@ const aboutPanel = (props) => {
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>
                         <div className='about-project-info'>
                             <em>Why is this project important?</em>
-                            <p>
+                            <p>I worked on this project with a team and I really learned a lot because of it. This was a really 
+                                involved application and it took 4 people 6 days to make it. I feel accomplished to have been 
+                                one of those four. :)
                             </p>
                             <em>What can you do with it?</em>
-                            <p>
+                            <p>You can make your own stories by filling in the blanks. You can also save and view saved stories.
                             </p>
                             <div className='github-spacing'>
                                 <img className='github-token' src={Github} alt='#' /> 
                                 <span className='github-txt'>  Github Project Page: </span>
-                                <a className='github-link' href=''></a>
+                                <a className='github-link' href='https://github.com/vleague2/req.libs'>Lil Libs</a>
                             </div>
                             <em>Quick and dirty</em>
                             <table>
                                 <tbody>
                                     <tr><th>Subject</th><th>Tech</th></tr>
-                                    <tr><td>Frontend</td><td></td></tr>
-                                    <tr><td>Backend</td><td></td></tr>
-                                    <tr><td>Database</td><td>None</td></tr>
+                                    <tr><td>Frontend</td><td>Handlebars (Javascript)</td></tr>
+                                    <tr><td>Backend</td>Nodejs<td></td></tr>
+                                    <tr><td>Database</td><td>SQL</td></tr>
                                     <tr><td>Mobile Responsive</td><td>Yes</td></tr>
                                 </tbody>
                             </table>
@@ -217,22 +219,26 @@ const aboutPanel = (props) => {
                         <i className="fas  bg-white fa-eye-slash checked"><span className='more-less bg-white'> Less</span></i>
                         <div className='about-project-info'>
                             <em>Why is this project important?</em>
-                            <p>
+                            <p>This was the very first project I built using React. Its beauty is in its simplicity. This was also 
+                                one of the first projects that I remember really the 'feel' of. It just turned out really 
+                                great, and in the end, I was all around happy with it. Also, I made it fully mobile responsive and 
+                                it looks great on a phone.
                             </p>
                             <em>What can you do with it?</em>
-                            <p>
+                            <p>Click the cards one at the time. Try to click each one once. If you perform 12 clicks without ever clicking 
+                                the same card twice, you will be rewarded with a fancy Gif.
                             </p>
                             <div className='github-spacing'>
                                 <img className='github-token' src={Github} alt='#' /> 
                                 <span className='github-txt'>  Github Project Page: </span>
-                                <a className='github-link' href=''></a>
+                                <a className='github-link' href='https://github.com/iQuixotic/react-cards'>React Cards</a>
                             </div>
                             <em>Quick and dirty</em>
                             <table>
                                 <tbody>
                                     <tr><th>Subject</th><th>Tech</th></tr>
-                                    <tr><td>Frontend</td><td></td></tr>
-                                    <tr><td>Backend</td><td></td></tr>
+                                    <tr><td>Frontend</td><td>Reactjs</td></tr>
+                                    <tr><td>Backend</td><td>Express</td></tr>
                                     <tr><td>Database</td><td>None</td></tr>
                                     <tr><td>Mobile Responsive</td><td>Yes</td></tr>
                                 </tbody>
