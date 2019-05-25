@@ -1,4 +1,5 @@
 import React from "react";
+import { HelpPanelNav } from '../../../components';
 import './style.css';
 
 const helpPanel = (props) => {
@@ -7,11 +8,7 @@ const helpPanel = (props) => {
             <div className='help-panel-content'>
 
                 {/* Navigation area for help page */}
-                <nav className='help-nav-area'>
-                    <a href="help.js#help-pg-faqs">FAQ's</a>
-                    <a href="help.js#help-pg-how-to">How to</a>
-                    <a href="help.js#help-pg-acknowledgements">Acknowledgements</a>
-                </nav>
+                <HelpPanelNav />
 
 {/* - - - - - - - - - - - - - - - - - How do I - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */}
                     
@@ -45,6 +42,7 @@ const helpPanel = (props) => {
                         </li>
                     </ul>
 {/* - - - - - - - - - - - FAQs - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */}
+                <HelpPanelNav />                
                 <h4 id='help-pg-faqs'>FAQ's</h4>
                 <ul>
                     <li>
@@ -59,13 +57,13 @@ const helpPanel = (props) => {
                         my peers once told me that the style reminded them of the 90s... At some point, 
                         this website was destined to be.</p>
                     </li>
-                        <li>
-                            <p className='help-question'>What are the colors of iQuixotic Brand?</p>
-                            <p className='help-answer'>Orange, Lime Green, and my favorite Deep Purple.</p>
-                        </li>
+                    <li>
+                        <p className='help-question'>What are the colors of iQuixotic Brand?</p>
+                        <p className='help-answer'>Orange, Lime Green, and my favorite Deep Purple.</p>
+                    </li>
                     </ul>
 {/* - - - - - - - - - - - - - - - Acknowledgements - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */}
-         
+                <HelpPanelNav />         
                 <h4 id='help-pg-acknowledgements'>Acknowledgements</h4>    
                     <ul>
                         <li>

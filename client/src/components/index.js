@@ -21,6 +21,7 @@ export { default as Project } from './panel/options/project';
 export { default as AboutPanel } from './menu/about/about';
 export { default as ContactPanel } from './menu/contact/contact';
 export { default as HelpPanel } from './menu/help/help';
+export { default as HelpPanelNav } from './menu/help/nav';
 export { default as ShutdownPanel } from './menu/shutdown/shutdown';
 
 // export * from desktop

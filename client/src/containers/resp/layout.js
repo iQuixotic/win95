@@ -57,7 +57,7 @@ checkTime = (i) => {
   render() {
     return (
             <div className='Layout'>
-              <MQ lowerLimit={600}>
+              <MQ lowerLimit={1}>
                 <Taskbar 
                   head={this.props.head}
                   panelOpen={this.props.panelOpen}
@@ -71,12 +71,12 @@ checkTime = (i) => {
                   internetInputFocus={this.props.internetInputFocus}
                 /> 
               </MQ>
-              <MQ upperLimit={599}>
+              {/* <MQ upperLimit={599}>
                 {!this.state.sideDrawerOpen ?                  
                 <div className='mobile-burger'><Burger size='4x' onClick={this.sideDrawerToggle}/></div> :
                 <div onClick={this.sideDrawerToggle}><Sidedrawer/><Backdrop/></div>                            
                 }
-              </MQ>
+              </MQ> */}
               <div className='under-nav'>
                 {this.props.children}
               </div>
