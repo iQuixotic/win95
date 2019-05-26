@@ -17,12 +17,21 @@ export { default as Offline } from './panel/options/offline';
 export { default as Project } from './panel/options/project';
 
 
-// export * from menu
+// export * from menu - about
 export { default as AboutPanel } from './menu/about/about';
+export { default as AI } from './menu/about/textObj.js';
+export { default as AboutStruct } from './menu/about/aboutStruct';
+export { default as AboutTable } from './menu/about/table';
+
+
 export { default as ContactPanel } from './menu/contact/contact';
+export { default as ShutdownPanel } from './menu/shutdown/shutdown';
+
+// export * from menu - help
 export { default as HelpPanel } from './menu/help/help';
 export { default as HelpPanelNav } from './menu/help/nav';
-export { default as ShutdownPanel } from './menu/shutdown/shutdown';
+
+
 
 // export * from desktop
 export { default as Icon } from './desktop/icon/icon';

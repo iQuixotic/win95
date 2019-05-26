@@ -59,16 +59,17 @@ checkTime = (i) => {
             <div className='Layout'>
               <MQ lowerLimit={1}>
                 <Taskbar 
-                  head={this.props.head}
-                  panelOpen={this.props.panelOpen}
-                  minClick={this.props.minClick}
-                  minCn={this.props.minCn}
+                {...this.props}
+                  // head={this.props.head}
+                  // panelOpen={this.props.panelOpen}
+                  // minClick={this.props.minClick}
+                  // minCn={this.props.minCn}
                   click={this.props.sbClick}
-                  hover={this.props.hover}
-                  noHover={this.props.noHover}
-                  smiClick={this.props.smiClick}
-                  internetInputVal={this.props.internetInputVal}
-                  internetInputFocus={this.props.internetInputFocus}
+                  // hover={this.props.hover}
+                  // noHover={this.props.noHover}
+                  // smiClick={this.props.smiClick}
+                  // internetInputVal={this.props.internetInputVal}
+                  // internetInputFocus={this.props.internetInputFocus}
                 /> 
               </MQ>
               {/* <MQ upperLimit={599}>

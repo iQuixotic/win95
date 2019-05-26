@@ -15,6 +15,10 @@ const helpPanel = (props) => {
                 <h4 id='help-pg-how-to'>How?</h4>
                     <ul>
                         <li>
+                            <p className='help-question'>How do I get in contact with you?</p>
+                            <p className='help-answer'><br/>Email: <strong>treyw1850@gmail.com</strong> <br/>Phone: <strong>(334) 342-8086</strong></p>
+                        </li>
+                        <li>
                             <p className='help-question'>Are the panels draggable?</p>
                             <p className='help-answer'>Yes. All panels are draggable and can be grabbed
                             at the blue area and dropped anywhere on screen.</p>
