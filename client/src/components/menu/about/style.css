@@ -14,6 +14,14 @@
     height: 100%;
 }
 
+.gulls {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 55px;
+    left: 8%;
+}
+
 #about-panel-main-project {
     margin-top: 30px;
     text-align: center;
@@ -40,9 +48,7 @@
     position: relative;
     bottom: 11px;
     text-align: center;
-
 }
-
 
 .gray-line {
     border-bottom: 1px solid rgb(220, 123, 245);
@@ -50,7 +56,6 @@
 }
 
 .about-panel-header {
-    /* font-family: 'Kaushan Script', cursive; */
     font-family: 'Encode Sans Condensed', sans-serif;
     font-size: 3rem;
     background: white;
@@ -68,7 +73,9 @@
 }
 
 /* - - - - - - - - - - - - - - Fancy Eyeball Checkbox - - - - - - - - - - - - - - - - - - - - - - - */
-
+.fancy-checkbox:hover{
+    cursor: pointer;
+}
 .fancy-checkbox input[type="checkbox"],
 .fancy-checkbox .checked {
     display: none;
@@ -91,12 +98,10 @@
 
 .fancy-checkbox .checked {
     color: rgb(255, 102, 0);
-    /* font-weight: 500; */
 }
 
 .fancy-checkbox .unchecked {
     color: lime;   
-    /* font-weight: 500; */
 }
 
 .fancy-checkbox .unchecked,
@@ -113,9 +118,6 @@ input:checked ~ .about-project-info {
     display: block;
     border-bottom: 1px solid rgb(220, 123, 245);
     padding: 7px 4px;
-    /* position: relative; */
-    /* top: 0; */
-    /* right: 40%; */
     text-align: left;
 }
 
@@ -154,6 +156,7 @@ input:checked ~ .about-project-info {
     background: rgb(241, 255, 242);
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - Github - - - - - - - - - - - - - - - - - - - - */
 
 .github-token {
     width: 20px;
@@ -180,22 +183,14 @@ input:checked ~ .about-project-info {
     cursor: pointer
 }
 
-.gulls {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 55px;
-    left: 8%;
-}
-
-.palm-tree {
+/* .palm-tree {
     position: absolute;
     width: 40px;
     height: 40px;
     top: 70px;
     z-index: 1;
     right: 40%;
-}
+} */
 
 /* .image-block {
     top: 55px;

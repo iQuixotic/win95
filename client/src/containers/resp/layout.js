@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Backdrop, Burger,  Sidedrawer, Taskbar } from "../../components";
+import { Taskbar } from "../../components";
 // import { default as Draggable } from 'react-draggable';
 import { Loader, MQ } from "../../containers";
 import './style.css';
