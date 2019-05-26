@@ -1,5 +1,6 @@
 
 export default {
+    projectKeys: ['portfolio', 'zenith', 'catClicker', 'picturePuzzles', 'lilLibs', 'avatarCards' ],
     iquixotic: {
         projectName: 'This Project',
         q1: `This project turned out bigger, better, and more beautiful that I could have ever hoped for. I 
@@ -13,6 +14,18 @@ export default {
         backend: 'Express',
         db: 'None',
         mResponsive: 'Not Yet...'
+    },
+    catClicker: {
+        projectName: 'Cat Clicker',
+        q1: `This was the first really cool thing I made when I was learning Javascript. Although its super 
+        simple, I just loved it so much that I had to include it.`,
+        q2: `Random numbers are generated for each cat picture. A target number is generated. Click 
+        the cats to raise the current number to the target number.`,
+        href: 'https://github.com/iQuixotic/cat-clicker-game',
+        frontend: 'jQuery',
+        backend: 'Express',
+        db: 'None',
+        mResponsive: 'Yes'
     },
     portfolio: {
         projectName: 'Personal Portfolio',

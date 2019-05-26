@@ -18,6 +18,7 @@ const aboutStruct = (props) => {
                     <i className="fas  bg-white fa-eye-slash checked">
                         <span className='more-less bg-white'> Less</span></i>
                     
+                    {/* Questions about the project */}
                     <div className='about-project-info'>
                         <em>Why is this project important?</em>
                         <p>{props.question1}</p>

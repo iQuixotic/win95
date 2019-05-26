@@ -13,7 +13,7 @@ const aboutPanel = (props) => {
         <div className='about-panel'>
             <img className='gulls' src={Seagulls} alt='#'/>
 
-
+            {/* Do NOT map over this one for now */}
             <h4 id='about-panel-main-project' className='about-panel-header'>iQuixotic95</h4>
             <AboutStruct 
                 projectName={AI.iquixotic.projectName}
@@ -25,60 +25,21 @@ const aboutPanel = (props) => {
                 db={AI.iquixotic.db}
                 mResponsive={AI.iquixotic.mResponsive} />
 
-            <h4 className='about-panel-header'>Portfolio</h4>
-            <AboutStruct 
-            projectName={AI.portfolio.projectName}
-                question1={AI.portfolio.q1}
-                question2={AI.portfolio.q2}
-                projHref={AI.portfolio.href}
-                front={AI.portfolio.frontend}
-                back={AI.portfolio.backend}
-                db={AI.portfolio.db}
-                mResponsive={AI.portfolio.mResponsive} />
-
-            <h4 className='about-panel-header'>Zenith Holdings</h4>
-            <AboutStruct 
-                question1={AI.zenith.q1}
-                question2={AI.zenith.q2}
-                projHref={AI.zenith.href}
-                projectName={AI.zenith.projectName}
-                front={AI.zenith.frontend}
-                back={AI.zenith.backend}
-                db={AI.zenith.db}
-                mResponsive={AI.zenith.mResponsive} />
-
-            <h4 className='about-panel-header'>Picture Puzzles</h4>
-            <AboutStruct 
-                question1={AI.picturePuzzles.q1}
-                question2={AI.picturePuzzles.q2}
-                projHref={AI.picturePuzzles.href}
-                projectName={AI.picturePuzzles.projectName}
-                front={AI.picturePuzzles.frontend}
-                back={AI.picturePuzzles.backend}
-                db={AI.picturePuzzles.db}
-                mResponsive={AI.picturePuzzles.mResponsive} />
-
-            <h4 className='about-panel-header'>Lil Libs</h4>
-            <AboutStruct 
-               question1={AI.lilLibs.q1}
-               question2={AI.lilLibs.q2}
-               projHref={AI.lilLibs.href}
-               projectName={AI.lilLibs.projectName}
-               front={AI.lilLibs.frontend}
-               back={AI.lilLibs.backend}
-               db={AI.lilLibs.db}
-               mResponsive={AI.lilLibs.mResponszenith} />
-
-            <h4 className='about-panel-header'>Avatar Cards</h4>
-            <AboutStruct 
-                question1={AI.avatarCards.q1}
-                question2={AI.avatarCards.q2}
-                projHref={AI.avatarCards.href}
-                projectName={AI.avatarCards.projectName}
-                front={AI.avatarCards.frontend}
-                back={AI.avatarCards.backend}
-                db={AI.avatarCards.db} 
-                mResponsive={AI.avatarCards.mResponsive} />
+            {/* map over the AI (About Info) object to get inner text */}
+           {AI.projectKeys.map((el) => { return (
+                <span>
+                   <h4 className='about-panel-header'>{AI[el].projectName}</h4>
+                   <AboutStruct 
+                       projectName={AI[el].projectName}
+                       question1={AI[el].q1}
+                       question2={AI[el].q2}
+                       projHref={AI[el].href}
+                       front={AI[el].frontend}
+                       back={AI[el].backend}
+                       db={AI[el].db}
+                       mResponsive={AI[el].mResponsive} />
+               </span>)
+           })}
 
             {/* footer for about page */}
             <div className='nav-about-aws'>                
