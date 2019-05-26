@@ -1,6 +1,9 @@
 import * as React from "react";
-import { AwsSaCert, HelpBook, Programs,  Contact, Shutdown, Info, Logo } from '../../../assets';
+import { AwsSaCert, Programs, Shutdown, Logo } from '../../../assets';
+import { SM } from '../../../components';
+
 import './style.css';
+
 
 // start bar with clock at bottom of screen
 const taskbar = (props) => {
@@ -27,18 +30,15 @@ const taskbar = (props) => {
                         <img src={Programs} alt='#'/>
                         <span className='vertical-center'>Projects</span>
                     </li>
-                    <li onClick={props.smiClick} id='menu-item1' className='menu-item' >
-                        <img src={Info} alt='#'/>
-                        <span className='vertical-center'>About</span>
-                    </li>
-                    <li onClick={props.smiClick} id='menu-item2' className='menu-item'>
-                        <img src={HelpBook} alt='#'/>
-                        <span className='vertical-center'>Help</span>
-                    </li>
-                    <li onClick={props.smiClick} id='menu-item3' className='menu-item' >
-                        <img src={Contact} alt='#'/>
-                        <span className='vertical-center'>Contact</span>
-                    </li>
+
+                    { /*  List over the Contact, About, and Help menu items */}
+                    {SM.menuText.map((each) => { return (
+                        <li onClick={props.smiClick} id={SM.menuItemNumber[each]} className='menu-item' >
+                            <img src={SM.srcs[each]} alt='#'/>
+                            <span className='vertical-center'>{each}</span>
+                        </li>)
+                    })}
+                    
                 </ul>
                 <div className='one-line'></div>
                 <div onClick={props.smiClick} id='menu-item-SD' className='menu-item' >
