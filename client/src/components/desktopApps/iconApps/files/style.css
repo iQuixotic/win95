@@ -47,5 +47,34 @@
     font-size: 1.5rem;
     margin-left: 65%;
     width: 100%;
-    /* display: block; */
+}
+
+.files-footer {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    padding-right: 4px;
+    border-top: 1px solid rgb(110, 28, 187);
+    background: black;
+    height: 90px;
+}
+
+.files-footer em {
+    font-size: 1.8rem;
+    padding-right: 10px;
+}
+.files-footer-contact {
+    padding: 15px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.files-footer img {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    top: 10px;
 }

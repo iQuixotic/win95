@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Octocat, ReactLogo, Resume } from '../../../../assets';
+import { Linkedin, Octocat, ReactLogo, Resume, AwsSaCert } from '../../../../assets';
 import './style.css';
 
 const filesPanel = (props) => {
@@ -25,6 +25,14 @@ const filesPanel = (props) => {
                 <img src={ReactLogo} alt='#' />
                 <span className='line-txt'>Old Portfolio</span>
             </a>
+
+            <nav className='files-footer'>
+                <div className='files-footer-contact'>
+                    <em>Phone: </em>(334) 342-8086 <br/>
+                    <em>Email: </em>treyw1850@gmail.com
+                </div>
+                <img src={AwsSaCert} alt='#'></img>
+            </nav>
            
         </div>
     );

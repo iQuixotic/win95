@@ -88,6 +88,8 @@ class Main extends React.Component {
   // opens pannel with correct content (dispayed in title bar)
   panelShowingStatusUpdate = (arg) => {
     this.setState({
+      isMinimized: false,
+      minClass: 'minimizer-btn-open',
       panelOpen: false,
       head: arg,
       panelShowing: OBJ.panels.srcs[arg] ? OBJ.panels.srcs[arg] : (
