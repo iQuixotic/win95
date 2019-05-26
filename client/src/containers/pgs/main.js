@@ -60,6 +60,8 @@ class Main extends React.Component {
   // start-menu-item handler
   smiClickHandler = (e) => {
     this.setState({ 
+      isMinimized: false,
+      minClass: 'minimizer-btn-open',
       panelShowing: OBJ.startMenu[e.currentTarget.id].show, 
       head: OBJ.startMenu[e.currentTarget.id].head,
       panelOpen: true 
