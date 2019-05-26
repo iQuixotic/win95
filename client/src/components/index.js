@@ -29,6 +29,7 @@ export { default as ShutdownPanel } from './menu/shutdown/shutdown';
 
 // export * from menu - help
 export { default as HelpPanel } from './menu/help/help';
+export { default as QABlock } from './menu/help/qaBlock';
 export { default as QA } from './menu/help/textObj';
 export { default as HelpPanelNav } from './menu/help/nav';
 
