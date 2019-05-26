@@ -23,7 +23,7 @@ const helpPanel = (props) => {
                     </ul>
 {/* - - - - - - - - - - - FAQs - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */}
                 
-                <HelpPanelNav />                
+                {!props.panelSizeFull ? <HelpPanelNav />  : <div></div>}              
                 <h4 id='help-pg-faqs'>FAQ's</h4>
                 <ul>
                     <QABlock question={QA.questions.g}>{QA.answers.g}</QABlock>
@@ -32,7 +32,7 @@ const helpPanel = (props) => {
                 </ul>
 {/* - - - - - - - - - - - - - - - Acknowledgements - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */}
                 
-                <HelpPanelNav />         
+                {!props.panelSizeFull ? <HelpPanelNav />  : <div></div>}         
                 <h4 id='help-pg-acknowledgements'>Acknowledgements</h4>    
                 <ul>
                     <QABlock question={QA.questions.j}>{QA.answers.j}</QABlock>
