@@ -59,6 +59,7 @@
     border-radius: 7px;
     padding: 7px;
     right: 5px;
+    margin-bottom: 25px;
 }
 
 .help-nav-area a {
@@ -71,3 +72,4 @@
     font-size: 1.7rem; 
     color: green;
 }
+

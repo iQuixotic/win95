@@ -10,7 +10,6 @@ class Switch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // internetInput: '',
       resGifs: []
     };
     this.getIntenetInput = this.getIntenetInput.bind(this);

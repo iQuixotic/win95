@@ -38,7 +38,7 @@ export { default as ShutdownPanel } from './menuApps/shutdown/shutdown';
 // export * from nav
 export { default as Taskbar } from './nav/taskbar/taskbar';
 export { default as Sidedrawer } from './nav/sidedrawer/sidedrawer';
-export { default as SM } from './nav/navItems/textInfo';
+export { default as SM } from './nav/navItems/textObj';
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

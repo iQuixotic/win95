@@ -3,7 +3,7 @@ export default {
     giveMeInternet: (update, up) => {        
         setTimeout(() => {
             update(false);
-            up('Internet');
+            // up('Internet');
         }, 3000);
     },
 
