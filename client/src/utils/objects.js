@@ -7,8 +7,8 @@ export default {
 
     panels: {
       srcs: {
-        'Portfolio': 'http://www.iquixotic.com',
-        'Zenith': 'https://bank-manager-app-9485.herokuapp.com/',
+        'Portfolio': 'http://3.144.85.76:4040/',
+        'Zenith': 'https://github.com/iQuixotic/bank-app',
         'Cat Clicker': 'https://iquixotic.github.io/cat-clicker-game/',
         'Lil Libs': 'https://req-libs.herokuapp.com/',
         'Picture Puzzles': 'https://picture-puzzles.herokuapp.com/',
