@@ -21,7 +21,7 @@ const filesPanel = (props) => {
                 <span className='line-txt'>Linkedin</span>
             </a>
             <div className='space'></div>
-            <a href='http://www.iquixotic.com' alt='#' className='files-panel-line'>
+            <a href='http://3.144.85.76:4040/' alt='#' className='files-panel-line'>
                 <img src={ReactLogo} alt='#' />
                 <span className='line-txt'>Old Portfolio</span>
             </a>

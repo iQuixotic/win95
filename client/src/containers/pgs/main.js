@@ -14,7 +14,7 @@ class Main extends React.Component {
       isMinimized: false,
       minClass: 'minimizer-btn-open',
       panelOpen: true,
-      panelShowing: 'http://www.iquixotic.com',
+      panelShowing: 'http://3.144.85.76:4040/',
       panelSizeFull: false,
       projArrowHover: false,
       startButtonActive: false,

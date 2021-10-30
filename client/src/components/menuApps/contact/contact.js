@@ -11,7 +11,7 @@ const contactPanel = (props) => {
                      <p><span className='subj'> Phone: </span><span className='contact-panel-info'>(334) 342-8086</span> </p>
                      <p><span className='subj'> Github: </span> <a className='contact-panel-info' href='https://github.com/iQuixotic' alt='#'>https://github.com/iQuixotic </a></p>
                      <p><span className='subj'> Linkedin: </span><a className='contact-panel-info' href='https://www.linkedin.com/in/trey-warrick-928547169' alt='#'>https://www.linkedin.com/in/trey-warrick-928547169 </a></p>
-                     <p><span className='subj'> Alternate Portfolio: </span> <a  className='contact-panel-info' href='http://www.iquixotic.com' alt='#'>http://www.iquixotic.com </a></p>
+                     <p><span className='subj'> Alternate Portfolio: </span> <a  className='contact-panel-info' href='http://3.144.85.76:4040/' alt='#'>http://www.iquixotic.com </a></p>
                 </div>
                 <div className='cancel-btn'>                    
                     <button className='windows-btn' onClick={props.clickClosed} ><span>Got it!!!</span></button>
